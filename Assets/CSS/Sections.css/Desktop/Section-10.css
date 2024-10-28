@@ -1,0 +1,102 @@
+/* Sección 10 - Botón flotante */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Botón flotante */
+.unique-floating-container .unique-floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: url('https://koete.co/wp-content/uploads/2022/04/cropped-koete-lfav.png') no-repeat center center;
+    background-size: cover;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.unique-floating-container .unique-floating-button:hover {
+    transform: scale(1.1);
+}
+
+/* Mensaje emergente pequeño */
+.unique-floating-container .unique-popup-message {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    font-size: 16px;
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+/* Mensaje emergente grande */
+.unique-floating-container .unique-large-popup-message {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 18px;
+    text-align: center;
+}
+
+.unique-floating-container .unique-large-popup-message p {
+    margin: 0 0 20px;
+}
+
+/* Botón cerrar */
+.unique-floating-container .unique-close-button {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background: #3BB0D9;
+    border: none;
+    border-radius: 90%;
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón dentro del mensaje grande */
+.unique-floating-container .unique-large-popup-message button {
+    background-color: #3BB0D9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 0px;
+    transition: background-color 0.3s;
+}
+
+.unique-floating-container .unique-large-popup-message button:hover {
+    background-color: #288BD6;
+}

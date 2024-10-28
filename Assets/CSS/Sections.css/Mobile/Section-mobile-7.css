@@ -1,0 +1,147 @@
+#section-mobile-7 {
+    padding: 20px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Estilo para el título de la sección */
+#section-mobile-7 .section-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ffffff; /* Texto en blanco */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+/* Carrusel */
+#section-mobile-7 .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Diapositiva oculta por defecto */
+#section-mobile-7 .carousel-slide {
+    display: none;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Diapositiva activa */
+#section-mobile-7 .carousel-slide.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Imagen con filtro de degradado */
+#section-mobile-7 .image-wrapper {
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+#section-mobile-7 .image-wrapper img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+/* Añadimos el filtro degradado */
+#section-mobile-7 .image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+    border-radius: 0px; /* Mantener el borde redondeado */
+    pointer-events: none; /* Evitar que interfiera con las interacciones */
+}
+
+/* Transición para el texto */
+#section-mobile-7 .carousel-text {
+    padding: 15px;
+    transform: translateX(30px);
+    opacity: 0;
+    transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+#section-mobile-7 .carousel-text.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Cambiar color del texto a blanco */
+#section-mobile-7 .carousel-text h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+#section-mobile-7 .carousel-text p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+/* Botón */
+#section-mobile-7 .cta-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: black;
+    background-color: #FEDD00;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#section-mobile-7 .cta-button:hover {
+    background-color: #FFD700;
+}
+
+/* Controles del carrusel */
+#section-mobile-7 .carousel-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+#section-mobile-7 .carousel-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#section-mobile-7 .carousel-indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#section-mobile-7 .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#section-mobile-7 .dot.active {
+    background-color: #007bff;
+}

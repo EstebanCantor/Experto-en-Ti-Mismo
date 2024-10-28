@@ -1,0 +1,137 @@
+/* Encapsulación del carrusel de testimonios mobile */
+#testimonials-carousel-mobile {
+    width: 100%;
+    display: none; /* Oculto por defecto en escritorio */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0; /* Aumentado el padding vertical */
+    background-color: #fff; /* Fondo blanco para la sección */
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el tamaño total */
+}
+
+/* Solo se muestra en dispositivos móviles */
+@media (max-width: 768px) {
+    #testimonials-carousel-mobile {
+        display: flex;
+    }
+}
+
+#testimonials-carousel-mobile .carousel-container {
+    max-width: 80%; /* Más angosto */
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra pronunciada */
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el tamaño total */
+}
+
+#testimonials-carousel-mobile .carousel-slide {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+#testimonials-carousel-mobile .carousel-slide-content {
+    min-width: 100%;
+    margin: 0 40px; /* Ajuste del margen lateral */
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 60px 30px; /* Más alto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para cada testimonio */
+    scroll-snap-align: center;
+    text-align: center;
+    min-height: 350px; /* Altura mínima mayor */
+    max-width: 90%; /* Ajuste para que no ocupe todo el contenedor */
+    box-sizing: border-box;
+}
+
+/* Estilo de texto */
+#testimonials-carousel-mobile .carousel-slide-content p,
+#testimonials-carousel-mobile .carousel-slide-content h4 {
+    color: #333;
+    max-width: 80%; /* Contener más el texto */
+    margin: 0 auto; /* Centrar el texto dentro del contenedor */
+}
+
+#testimonials-carousel-mobile .carousel-slide-content p {
+    font-size: 16px;
+    margin-bottom: 45px; /* Mayor espacio entre el párrafo y el siguiente elemento */
+}
+
+#testimonials-carousel-mobile .carousel-slide-content h4 {
+    font-size: 18px;
+    margin-top: 40px; /* Mayor espacio entre el título y el párrafo anterior */
+    font-weight: bold;
+}
+
+/* Flechas de navegación */
+#testimonials-carousel-mobile .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff; /* Fondo blanco */
+    color: #333;
+    border: 2px solid #333; /* Borde negro delgado */
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    aspect-ratio: 1/1; /* Asegura que sea un círculo perfecto */
+    border-radius: 50%; /* Hacer las flechas circulares */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el tamaño total */
+    padding: 0; /* Elimina cualquier padding que pueda estar afectando la forma */
+}
+
+#testimonials-carousel-mobile .carousel-arrow.left {
+    left: -20px;
+}
+
+#testimonials-carousel-mobile .carousel-arrow.right {
+    right: -20px;
+}
+
+#testimonials-carousel-mobile .carousel-arrow:hover {
+    background-color: #f0f0f0; /* Fondo más claro al hacer hover */
+    color: #000;
+}
+
+/* Puntos de navegación */
+#testimonials-carousel-mobile .carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Mayor espacio entre los puntos de navegación y el contenedor */
+}
+
+#testimonials-carousel-mobile .carousel-dots .dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+#testimonials-carousel-mobile .carousel-dots .dot.active {
+    background-color: #717171;
+}
+
+/* Solución encapsulada para evitar desbordamiento horizontal solo en ciertas secciones */
+#section-mobile-4 {
+    max-width: 100vw; /* Limita el ancho de la sección al viewport */
+    overflow-x: hidden; /* Evita el desbordamiento horizontal en estas secciones */
+}
+
+/* Si tienes otras secciones que necesitan esta corrección, puedes incluirlas */
+.container, .wrapper, section.specific-class {
+    max-width: 100vw;
+    overflow-x: hidden;
+}

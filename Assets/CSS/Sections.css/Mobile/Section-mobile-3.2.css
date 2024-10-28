@@ -1,0 +1,65 @@
+/* Estilos encapsulados para la sección mobile 3.2, visibles solo en pantallas móviles */
+@media (max-width: 767px) {
+    /* Contenedor principal de la sección 3.2 */
+    #section-mobile-3-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        background-color: #000; /* Fondo negro */
+        margin-bottom: 30px; /* Aumentar el margen inferior debajo de los logos */
+    }
+
+    /* Encabezado de la sección "Algunos de nuestros clientes" */
+    #section-mobile-3-2 .client-heading {
+        text-align: center;
+        color: white; /* Texto en blanco */
+        font-size: 1.4em; /* Aumentar tamaño de fuente */
+        margin: 15px 0; /* Un poco más de margen */
+    }
+
+    /* Contenedor del carrusel */
+    #section-mobile-3-2 .carousel {
+        width: 100vw; /* Ocupa todo el ancho de la pantalla */
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Pista del carrusel que contiene los logos */
+    #section-mobile-3-2 .carousel-track {
+        display: flex;
+        justify-content: center;
+        gap: 50px; /* Aumentar aún más el espaciado entre los logos */
+        transition: transform 0.5s ease-in-out; /* Transición suave */
+        width: 100%; /* Ocupa el 100% del contenedor */
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Elementos del carrusel (los logos) */
+    #section-mobile-3-2 .carousel-items {
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Ajuste de los logos: agrandar y eliminar márgenes */
+    #section-mobile-3-2 .carousel-items img {
+        width: 160px; /* Aumentar el ancho de los logos */
+        height: auto;
+        object-fit: contain; /* Contener las imágenes sin distorsión */
+        filter: brightness(0) invert(1); /* Convertir los logos a blanco */
+        margin: 0; /* Eliminar cualquier margen en los logos */
+    }
+}
+
+/* Ocultar en pantallas más grandes (escritorio) */
+@media (min-width: 768px) {
+    #section-mobile-3-2 {
+        display: none; /* Se oculta en pantallas grandes */
+    }
+}

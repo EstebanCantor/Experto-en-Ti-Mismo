@@ -1,0 +1,146 @@
+/* Encapsulación de la sección 5 */
+#section-5 {
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fondo del video */
+#section-5 .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+}
+
+#section-5 .video-background iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    border: none;
+}
+
+/* Contenido de la sección */
+#section-5 .rating-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    color: #fff;
+    z-index: 1;
+}
+
+/* Texto a la izquierda */
+#section-5 .rating-left {
+    flex: 1;
+    margin-right: 40px;
+    max-width: 600px;
+}
+
+#section-5 .rating-left h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#section-5 .rating-left .highlight {
+    color: #00AEEF;
+}
+
+#section-5 .rating-left .blue-btn {
+    background-color: #3BB0D9;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#section-5 .rating-left .blue-btn:hover {
+    background-color: #288BD6;
+    transform: scale(1.05);
+}
+
+/* Contenedor de la barra y texto de la derecha */
+#section-5 .rating-right {
+    width: 350px;
+    height:550px;
+    padding: 30px;
+    background-color: rgba(24, 23, 23, 0.2);
+    box-shadow: 0 6px 8px rgba(188, 179, 179, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 0px;
+}
+
+#section-5 .rating-right h3 {
+    color: #A9E4F2;
+    font-size: 1.7em;
+    margin-bottom: 15px;
+}
+
+#section-5 .rating-right .rating-description {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#section-5 .circular-progress-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
+}
+
+#section-5 .progress-ring {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+#section-5 .progress-ring__circle {
+    stroke-dasharray: 377;
+    stroke-dashoffset: 377;
+    stroke: #288BD6;
+    stroke-width: 10;
+    fill: transparent;
+    transition: stroke-dashoffset 2s ease-in-out;
+}
+
+#section-5 .rating-score-number {
+    position: absolute;
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#section-5 .participants-info {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* Ocultar la sección en dispositivos móviles */
+@media (max-width: 768px) {
+    #section-5 {
+        display: none;
+    }
+}

@@ -1,0 +1,72 @@
+/* Estilos de la Sección 3.1 (solo visible en móviles) */
+@media (max-width: 767px) {
+    /* Encapsulado para la sección mobile 3.1 */
+    #section-mobile-3-1 {
+        background-color: #000; /* Fondo negro */
+        color: #FFFFFF; /* Texto blanco */
+        text-align: center;
+        padding: 10px 0; /* Ajuste del padding */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* Asegurar que todo esté alineado en columna */
+        margin: 0;
+        width: 100vw;
+    }
+
+    /* Contenido dentro de la columna derecha */
+    #section-mobile-3-1 .column-right {
+        width: 100%;
+        max-width: 100%; /* Asegurarse que use todo el ancho disponible */
+        padding: 10px 20px; /* Ajuste del padding */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Centrar el contenido verticalmente */
+        margin: 0;
+    }
+
+    /* Estilos para el título "Producido por" */
+    #section-mobile-3-1 h2 {
+        font-size: 1.8em;
+        color: #FFD700; /* Color dorado */
+        margin-bottom: 10px;
+        margin-top: 35;
+    }
+
+    /* Estilos para el subtítulo "Koete Desarrollo Acelerado" */
+    #section-mobile-3-1 h3 {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #FFFFFF;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        margin-top: 0;
+    }
+
+    /* Estilos para el párrafo de información adicional */
+    #section-mobile-3-1 p {
+        color: #FFFFFF;
+        font-size: 0.9em;
+        line-height: 1.5;
+        max-width: 340px;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        margin-bottom: 30px;
+        margin-top: 30;
+    }
+
+    /* Estilos para el logo de la empresa */
+    #section-mobile-3-1 .company-logo {
+        width: 120px;
+        height: auto;
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
+}
+
+/* Ocultar en pantallas más grandes */
+@media (min-width: 768px) {
+    #section-mobile-3-1 {
+        display: none;
+    }
+}
