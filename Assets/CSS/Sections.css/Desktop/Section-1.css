@@ -33,7 +33,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: url(/Assets/img/CieloKOETE.jpg);
+        /* Corregimos la ruta de la imagen */
+        background-image: url("Assets/img/CieloKOETE.jpg");
         background-size: cover;
         background-position: center;
         padding: 20px;
