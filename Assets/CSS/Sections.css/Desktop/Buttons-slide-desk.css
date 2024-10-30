@@ -1,0 +1,40 @@
+#buttons-slide-desk {
+    background-color: #FFFFFF;
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+}
+
+#buttons-slide-desk .cta-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Botón Izquierda */
+#buttons-slide-desk .cta-button-left {
+    background-color: #84B6CA; /* Color inicial */
+    color: white;
+}
+
+#buttons-slide-desk .cta-button-left:hover {
+    background-color: #288BD6; /* Color hover */
+    transform: scale(1.05);
+}
+
+/* Botón Derecha */
+#buttons-slide-desk .cta-button-right {
+    background-color: #FFB100; /* Color inicial */
+    color: white;
+}
+
+#buttons-slide-desk .cta-button-right:hover {
+    background-color: #F2F12C; /* Color hover */
+    transform: scale(1.05);
+}
