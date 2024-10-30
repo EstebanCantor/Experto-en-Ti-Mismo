@@ -34,7 +34,7 @@
         justify-content: center;
         align-items: center;
         /* Corregimos la ruta de la imagen */
-        background-image: url("Assets/img/CieloKOETE.jpg");
+        background-image: url("/Assets/img/CieloKOETE.jpg");
         background-size: cover;
         background-position: center;
         padding: 20px;
