@@ -34,7 +34,8 @@
         justify-content: center;
         align-items: center;
         /* Corregimos la ruta de la imagen */
-        background-image: url("/Assets/img/CieloKOETE.jpg");
+        background-image: url("https://estebancantor.github.io/Experto-en-Ti-Mismo/Assets/img/CieloKOETE.jpg");
+
         background-size: cover;
         background-position: center;
         padding: 20px;
