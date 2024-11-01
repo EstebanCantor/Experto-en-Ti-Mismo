@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let progress = 0;
         let currentScore = 0;
         const targetProgress = 95;
-        const targetScore = 4.9;
+        const targetScore = 4.8;
         const circleSpeed = 2;
         const numberSpeed = 0.02;
 
