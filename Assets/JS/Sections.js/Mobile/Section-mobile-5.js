@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let progress = 0;
         let currentScore = 0;
         const targetProgress = 95; // Target for progress bar
-        const targetScore = 4.9; // Target score number
+        const targetScore = 4.8; // Target score number
         const circleSpeed = 2; // Speed of the circle filling
         const numberSpeed = 0.02; // Speed of the number incrementing
 
