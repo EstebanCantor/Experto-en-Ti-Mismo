@@ -1,3 +1,15 @@
+/* Ocultar la sección por defecto */
+#section-mobile-7 {
+    display: none;
+}
+
+/* Mostrar la sección solo en pantallas móviles */
+@media only screen and (max-width: 767px) {
+    #section-mobile-7 {
+        display: block;
+    }
+}
+
 #section-mobile-7 {
     padding: 20px;
     background-color: #000000;
@@ -28,23 +40,24 @@
 #section-mobile-7 .carousel-slide {
     display: none;
     text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
 }
 
 /* Diapositiva activa */
 #section-mobile-7 .carousel-slide.active {
     display: block;
-    opacity: 1;
 }
 
-/* Imagen con filtro de degradado */
+/* Estado inicial para image-wrapper */
 #section-mobile-7 .image-wrapper {
     text-align: center;
     padding: 20px 0;
     position: relative;
+    transform: translateX(20px);
+    opacity: 0;
+    transition: transform 0.7s ease, opacity 0.7s ease;
 }
 
+/* Imagen */
 #section-mobile-7 .image-wrapper img {
     width: 100%;
     max-width: 100%;
@@ -53,7 +66,7 @@
     opacity: 1;
 }
 
-/* Añadimos el filtro degradado */
+/* Filtro degradado */
 #section-mobile-7 .image-wrapper::after {
     content: '';
     position: absolute;
@@ -62,11 +75,11 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
-    border-radius: 0px; /* Mantener el borde redondeado */
-    pointer-events: none; /* Evitar que interfiera con las interacciones */
+    border-radius: 0px;
+    pointer-events: none;
 }
 
-/* Transición para el texto */
+/* Estado inicial para carousel-text */
 #section-mobile-7 .carousel-text {
     padding: 15px;
     transform: translateX(30px);
@@ -74,12 +87,14 @@
     transition: transform 0.7s ease, opacity 0.7s ease;
 }
 
-#section-mobile-7 .carousel-text.active {
+/* Estilos cuando la diapositiva está activa */
+#section-mobile-7 .carousel-slide.active .image-wrapper,
+#section-mobile-7 .carousel-slide.active .carousel-text {
     transform: translateX(0);
     opacity: 1;
 }
 
-/* Cambiar color del texto a blanco */
+/* Títulos y párrafos */
 #section-mobile-7 .carousel-text h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
@@ -94,6 +109,7 @@
 
 /* Botón */
 #section-mobile-7 .cta-button {
+    display: inline-block;
     padding: 10px 20px;
     font-size: 1rem;
     color: black;
@@ -101,6 +117,7 @@
     border: none;
     border-radius: 0px;
     cursor: pointer;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
@@ -111,7 +128,7 @@
 /* Controles del carrusel */
 #section-mobile-7 .carousel-controls {
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 0;
     right: 0;
     display: flex;
