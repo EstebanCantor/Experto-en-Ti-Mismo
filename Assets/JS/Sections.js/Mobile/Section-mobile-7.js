@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll('#section-mobile-7 .image-wrapper');
     const texts = document.querySelectorAll('#section-mobile-7 .carousel-text');
     const dots = document.querySelectorAll('#section-mobile-7 .dot');
+    const carousel = document.getElementById('section-mobile-7-carousel');
+
+    let startX = 0;
+    let endX = 0;
 
     function updateSlide(slideIndex) {
         slides.forEach((slide, index) => {
@@ -49,6 +53,34 @@ document.addEventListener("DOMContentLoaded", function() {
     // Botones de navegación
     document.getElementById('section-mobile-7-nextSlide').addEventListener('click', nextSlide);
     document.getElementById('section-mobile-7-prevSlide').addEventListener('click', prevSlide);
+
+    // Agregar funcionalidad de deslizar
+    carousel.addEventListener('touchstart', handleTouchStart, false);
+    carousel.addEventListener('touchmove', handleTouchMove, false);
+    carousel.addEventListener('touchend', handleTouchEnd, false);
+
+    function handleTouchStart(event) {
+        startX = event.touches[0].clientX;
+    }
+
+    function handleTouchMove(event) {
+        endX = event.touches[0].clientX;
+    }
+
+    function handleTouchEnd() {
+        let deltaX = endX - startX;
+
+        if (deltaX > 50) {
+            // Deslizó hacia la derecha
+            prevSlide();
+        } else if (deltaX < -50) {
+            // Deslizó hacia la izquierda
+            nextSlide();
+        }
+        // Resetear valores
+        startX = 0;
+        endX = 0;
+    }
 
     // Mostrar la primera diapositiva al cargar la página
     updateSlide(currentSlide);
