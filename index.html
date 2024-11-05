@@ -732,42 +732,33 @@
 
 
 
-<!-- Sección 7: Slider Interactivo metodología -->
+<!-- Sección 7 desktop: Slider Interactivo metodología -->
 <section id="section-interactive" class="interactive-section">
     <div class="interactive">
         <div class="slider-left">
-            <img id="interactiveSliderImage" src="https://koete.co/wp-content/uploads/2024/08/pexels-matilda-wormwood-4099096.jpg" alt="Slider Image">
+            <div class="image-container">
+                <img src="Assets/img/Resultados-sostenibles-mobile.jpg" alt="Imagen 1">
+                <img src="Assets/img/Formatos-y-documentos-mobile.jpg" alt="Imagen 2">
+            </div>
             <button class="nav-arrow prev" onclick="prevImageInteractive()">&#10094;</button>
             <button class="nav-arrow next" onclick="nextImageInteractive()">&#10095;</button>
         </div>
         <div class="slider-right">
             <h2>Conoce la metodología <br> de Experto en Ti Mismo</h2>
-            <div class="option" onmouseover="showTextInteractive(1)">
-                <div class="option-number">1</div>
-                <div class="option-text">
-                    <h3> Ejecución 100% Virtual</h3>
-                    <p id="text1">Totalmente online, con sesiones semanales de 90 minutos durante 3 meses.</p>
+            <div class="options-container">
+                <div class="option" onmouseover="showTextInteractive(0)">
+                    <div class="option-number">1</div>
+                    <div class="option-text">
+                        <h3>Ejecución 100% Virtual</h3>
+                        <p>Totalmente online, con sesiones semanales de 90 minutos durante 3 meses con sesiones interactivas que agregan valor desde el minuto 1 acelerando tu progreso.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="option" onmouseover="showTextInteractive(2)">
-                <div class="option-number">2</div>
-                <div class="option-text">
-                    <h3> Desarrollo Práctico y Aplicable</h3>
-                    <p id="text2">Acompañamiento entre sesiones para aplicar y perfeccionar lo aprendido en tiempo real.</p>
-                </div>
-            </div>
-            <div class="option" onmouseover="showTextInteractive(3)">
-                <div class="option-number">3</div>
-                <div class="option-text">
-                    <h3>Herramientas y Ejercicios Digitales</h3>
-                    <p id="text3">Recibe recursos digitales para afianzar conocimientos desde cualquier lugar.</p>
-                </div>
-            </div>
-            <div class="option" onmouseover="showTextInteractive(4)">
-                <div class="option-number">4</div>
-                <div class="option-text">
-                    <h3>Sesiones Virtuales Dinámicas</h3>
-                    <p id="text4">Sesiones interactivas que agregan valor desde el minuto 1 acelerando tu progreso.</p>
+                <div class="option" onmouseover="showTextInteractive(1)">
+                    <div class="option-number">2</div>
+                    <div class="option-text">
+                        <h3>Desarrollo Práctico y Aplicable</h3>
+                        <p>Acompañamiento entre sesiones para aplicar y perfeccionar lo aprendido en tiempo real con recursos y herramientas digitales para afianzar conocimientos desde cualquier lugar.</p>
+                    </div>
                 </div>
             </div>
             <div class="buttons">
