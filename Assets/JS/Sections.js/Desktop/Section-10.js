@@ -1,8 +1,8 @@
 (function() {
-    const floatingButton = document.querySelector('.unique-floating-container .unique-floating-button');
-    const popupMessage = document.getElementById('uniqueFloatingPopupMessage');
-    const largePopupMessage = document.getElementById('uniqueFloatingLargePopupMessage');
-    const closeLargePopup = document.getElementById('uniqueFloatingCloseLargePopup');
+    const floatingButton = document.querySelector('#section-10 .unique-floating-button');
+    const popupMessage = document.querySelector('#section-10 #uniqueFloatingPopupMessage');
+    const largePopupMessage = document.querySelector('#section-10 #uniqueFloatingLargePopupMessage');
+    const closeLargePopup = document.querySelector('#section-10 #uniqueFloatingCloseLargePopup');
 
     // Mostrar el mensaje emergente pequeño después de 10 segundos
     setTimeout(() => {
@@ -36,3 +36,4 @@
         popupMessage.style.display = 'none';
     });
 })();
+    
