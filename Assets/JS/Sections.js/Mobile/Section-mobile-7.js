@@ -53,3 +53,4 @@ document.addEventListener("DOMContentLoaded", function() {
     // Mostrar la primera diapositiva al cargar la página
     updateSlide(currentSlide);
 });
+
