@@ -1,5 +1,5 @@
 /* Sección 10 - Botón flotante */
-body {
+#section-10 {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@ body {
 }
 
 /* Botón flotante */
-.unique-floating-container .unique-floating-button {
+#section-10 .unique-floating-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -23,12 +23,12 @@ body {
     transition: transform 0.3s;
 }
 
-.unique-floating-container .unique-floating-button:hover {
+#section-10 .unique-floating-button:hover {
     transform: scale(1.1);
 }
 
 /* Mensaje emergente pequeño */
-.unique-floating-container .unique-popup-message {
+#section-10 .unique-popup-message {
     display: none;
     position: fixed;
     bottom: 90px;
@@ -46,7 +46,7 @@ body {
 }
 
 /* Mensaje emergente grande */
-.unique-floating-container .unique-large-popup-message {
+#section-10 .unique-large-popup-message {
     display: none;
     position: fixed;
     bottom: 100px;
@@ -58,25 +58,29 @@ body {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
+    color: #000; /* Texto en negro */
 }
 
-.unique-floating-container .unique-large-popup-message p {
+/* Estilo del texto sobre los botones */
+#section-10 .unique-large-popup-message p {
     margin: 0 0 20px;
+    color: #000; /* Aseguramos que el texto sea negro */
+    font-size: 16px;
 }
 
 /* Botón cerrar */
-.unique-floating-container .unique-close-button {
+#section-10 .unique-close-button {
     position: absolute;
     top: -10px;
     left: -10px;
     background: #3BB0D9;
     border: none;
-    border-radius: 90%;
+    border-radius: 0%;
     width: 25px;
     height: 25px;
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
     cursor: pointer;
     display: flex;
@@ -85,8 +89,10 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Botón dentro del mensaje grande */
-.unique-floating-container .unique-large-popup-message button {
+/* Estilos generales para los botones de acción dentro del mensaje grande */
+#section-10 .unique-large-popup-message .action-button {
+    display: block;
+    width: 100%;
     background-color: #3BB0D9;
     color: #fff;
     border: none;
@@ -95,8 +101,30 @@ body {
     font-size: 16px;
     border-radius: 0px;
     transition: background-color 0.3s;
+    margin: 5px 0; /* Espacio entre botones */
 }
 
-.unique-floating-container .unique-large-popup-message button:hover {
-    background-color: #288BD6;
+/* Estilos específicos para el botón de Typeform */
+#section-10 .unique-large-popup-message .typeform-button {
+    background-color: #FF30A3; /* Rosado */
+}
+
+#section-10 .unique-large-popup-message .typeform-button:hover {
+    background-color: #FF8F2B; /* Rosado más claro */
+}
+
+/* Estilos específicos para el botón de WhatsApp */
+#section-10 .unique-large-popup-message .whatsapp-button {
+    background-color: #ff9900; /* Naranja */
+}
+
+#section-10 .unique-large-popup-message .whatsapp-button:hover {
+    background-color: #ffad33; /* Naranja más claro */
+}
+
+/* Estilos para los íconos dentro de los botones */
+#section-10 .unique-large-popup-message .action-button i {
+    margin-right: 8px;
+    font-size: 18px;
+    vertical-align: middle;
 }
