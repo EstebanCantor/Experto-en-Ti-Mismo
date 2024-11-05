@@ -1,49 +1,182 @@
-let currentImageIndexInteractive = 0;
-const imagesInteractive = [
-    'https://koete.co/wp-content/uploads/2024/08/pexels-matilda-wormwood-4099096.jpg',
-    'https://koete.co/wp-content/uploads/2024/08/pexels-rdne-7683825-scaled.jpg',
-    'https://koete.co/wp-content/uploads/2024/08/pexels-ekaterina-bolovtsova-4048767.jpg',
-    'https://koete.co/wp-content/uploads/2024/08/pexels-karolina-grabowska-8546801.jpg'
-];
-
-// Función para mostrar el texto correspondiente y cambiar la imagen
-function showTextInteractive(index) {
-    const textsInteractive = document.querySelectorAll('.option-text p');
-    const imageElementInteractive = document.getElementById('interactiveSliderImage');
-    const optionsInteractive = document.querySelectorAll('.option');
-
-    textsInteractive.forEach((text, i) => {
-        if (i === index - 1) {
-            text.style.display = 'block';
-        } else {
-            text.style.display = 'none';
-        }
-    });
-
-    optionsInteractive.forEach((option, i) => {
-        if (i === index - 1) {
-            option.classList.add('active');
-        } else {
-            option.classList.remove('active');
-        }
-    });
-
-    imageElementInteractive.src = imagesInteractive[index - 1];
-    currentImageIndexInteractive = index - 1;
+/* Encapsulado específico con # para evitar conflictos */
+#section-interactive {
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
-function prevImageInteractive() {
-    currentImageIndexInteractive = (currentImageIndexInteractive - 1 + imagesInteractive.length) % imagesInteractive.length;
-    document.getElementById('interactiveSliderImage').src = imagesInteractive[currentImageIndexInteractive];
-    showTextInteractive(currentImageIndexInteractive + 1);
+#section-interactive .interactive {
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
-function nextImageInteractive() {
-    currentImageIndexInteractive = (currentImageIndexInteractive + 1) % imagesInteractive.length;
-    document.getElementById('interactiveSliderImage').src = imagesInteractive[currentImageIndexInteractive];
-    showTextInteractive(currentImageIndexInteractive + 1);
+#section-interactive .slider-left,
+#section-interactive .slider-right {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    showTextInteractive(1);
-});
+#section-interactive .slider-left {
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section-interactive .slider-left .image-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 200%; /* Ajustar según el número de imágenes */
+    height: 100%;
+}
+
+#section-interactive .slider-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    flex: 1 0 100%;
+}
+
+#section-interactive .slider-right {
+    padding: 40px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: flex-start; /* Alinear al inicio horizontalmente */
+}
+
+#section-interactive .slider-right h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 60px; /* Aumentamos el margen inferior */
+    color: #fff;
+    max-width: 80%;
+    line-height: 1.2;
+}
+
+#section-interactive .slider-right .options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#section-interactive .slider-right .option {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+#section-interactive .slider-right .option-number {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    margin-right: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    flex-shrink: 0;
+}
+
+#section-interactive .slider-right .option:hover .option-number,
+#section-interactive .slider-right .option.active .option-number {
+    background-color: #007bff; /* Azul destacado */
+    color: #fff;
+}
+
+#section-interactive .slider-right .option-text {
+    max-width: calc(100% - 60px);
+}
+
+#section-interactive .slider-right .option-text h3 {
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 5px;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+#section-interactive .slider-right .option:hover .option-text h3,
+#section-interactive .slider-right .option.active .option-text h3 {
+    color: #007bff; /* Azul destacado */
+}
+
+#section-interactive .slider-right .option-text p {
+    margin: 0;
+    color: #fff;
+    transition: color 0.3s;
+    display: none;
+}
+
+#section-interactive .slider-right .option.active .option-text p {
+    display: block;
+}
+
+#section-interactive .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 50px; /* Aumentamos el margen superior */
+    align-self: center; /* Centramos horizontalmente */
+}
+
+#section-interactive .buttons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 180px;
+    padding: 15px 15px;
+    text-decoration: none;
+    border-radius: 0px;
+    transition: all 0.3s;
+    color: #000;
+    background-color: #FEDD00;
+}
+
+#section-interactive .buttons a:hover {
+    color: #fff;
+    background-color: #FFD700;
+    transform: scale(1.05);
+}
+
+#section-interactive .slider-left .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section-interactive .slider-left .nav-arrow.prev {
+    left: 10px;
+}
+
+#section-interactive .slider-left .nav-arrow.next {
+    right: 10px;
+}
+
+/* Ocultar en pantallas móviles */
+@media only screen and (max-width: 768px) {
+    #section-interactive {
+        display: none;
+    }
+}
