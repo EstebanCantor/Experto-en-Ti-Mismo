@@ -107,8 +107,8 @@
                     <strong>Modalidad:</strong> Virtual
                 </p>
                 <div class="buttons">
-                    <a href="https://8vl4j1kkdr3.typeform.com/to/bAETcfaF" class="btn reserve-btn">RESERVA TU CUPO</a>
-                    <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec" class="btn other-dates-btn">VER OTRAS FECHAS</a>
+                   <a href="https://8vl4j1kkdr3.typeform.com/to/bAETcfaF" class="btn reserve-btn" onclick="gtag('event', 'click', { 'event_category': 'Boton', 'event_label': 'Reserva Tu Cupo Desktop' });">RESERVA TU CUPO</a>
+                    <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec" class="btn other-dates-btn" onclick="gtag('event', 'click', { 'event_category': 'Boton', 'event_label': 'Ver Otras Fechas Desktop' });">VER OTRAS FECHAS</a>
                 </div>
             </div>
         </div>
@@ -255,8 +255,14 @@
     <a href="https://8vl4j1kkdr3.typeform.com/to/bAETcfaF" target="_blank" style="text-decoration: none;">
     <button class="cta-button cta-button-left">¡Reserva tu cupo!</button>
     </a>
-    <a href="https://wa.me/573009764661?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20programa%20Expert%40%20en%20Ti%20Mism%40.
-" target="_blank" style="text-decoration: none;">
+   <a href="https://wa.me/573009764661?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20programa%20Expert%40%20en%20Ti%20Mism%40." 
+   target="_blank" 
+   style="text-decoration: none;" 
+   class="cta-button cta-button-right" 
+   onclick="gtag('event', 'click', { 'event_category': 'Boton', 'event_label': 'Habla con un Asesor Desktop' });">
+   <i class="fab fa-whatsapp"></i> Habla con un asesor
+</a>
+
         <button class="cta-button cta-button-right">
             <i class="fab fa-whatsapp"></i> Habla con un asesor
         </button>
@@ -851,23 +857,40 @@
 
 <!-- Sección 10 con botón flotante -->
 <section id="section-10" class="unique-floating-container">
-    <button class="unique-floating-button"></button>
+    <!-- Botón flotante principal -->
+    <button class="unique-floating-button" 
+            onclick="gtag('event', 'click', { 'event_category': 'Boton Flotante', 'event_label': 'Abrir Popup de Dudas' });">
+    </button>
 
+    <!-- Mensaje emergente pequeño -->
     <div class="unique-popup-message" id="uniqueFloatingPopupMessage">
         ¿Aún tienes dudas?
     </div>
 
+    <!-- Mensaje emergente grande con botones de acción -->
     <div class="unique-large-popup-message" id="uniqueFloatingLargePopupMessage">
+        <!-- Botón de cierre para la ventana emergente -->
         <button class="unique-close-button" id="uniqueFloatingCloseLargePopup">&times;</button>
+        
         <p>¡Estás a punto de despegar con nosotros!</p>
-        <button class="action-button typeform-button" onclick="window.location.href='https://8vl4j1kkdr3.typeform.com/to/bAETcfaF'">
+        
+        <!-- Botón de reserva de sesión 01 -->
+        <button class="action-button typeform-button" 
+                onclick="gtag('event', 'click', { 'event_category': 'Popup', 'event_label': 'Reservar Sesion 01' }); 
+                         window.location.href='https://8vl4j1kkdr3.typeform.com/to/bAETcfaF';">
             Reservar sesión 01 
         </button>
-        <button class="action-button whatsapp-button" onclick="window.location.href='https://wa.me/573009764661?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20programa%20Expert%40%20en%20Ti%20Mism%40.'">
+        
+        <!-- Botón de WhatsApp para hablar con un asesor -->
+        <button class="action-button whatsapp-button" 
+                style="text-decoration: none;" 
+                onclick="gtag('event', 'click', { 'event_category': 'Popup', 'event_label': 'Habla con un Asesor Popup' }); 
+                         window.location.href='https://wa.me/573009764661?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20programa%20Expert%40%20en%20Ti%20Mism%40.';">
             <i class="fab fa-whatsapp"></i> Habla con un asesor
         </button>
     </div>
 </section>
+
 
 
 
