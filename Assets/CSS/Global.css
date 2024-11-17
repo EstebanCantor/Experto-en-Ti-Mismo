@@ -36,3 +36,35 @@ html, body {
     max-width: 100vw; /* Asegura que todos los contenedores ocupen solo el ancho del viewport */
     overflow-x: hidden; /* Evita desbordamiento dentro de secciones */
 }
+
+/* Contenedor del label (logo) */
+.label-koete {
+    position: fixed; /* Hace que el logo esté fijo en la pantalla */
+    top: 0px; /* Posición fija en la parte superior */
+    left: 20px; /* Posición fija en la parte izquierda */
+    z-index: 9999; /* Asegura que el logo esté por encima de todo */
+    transition: transform 0.5s ease; /* Suaviza la animación si es necesario */
+}
+
+/* Estilos de la imagen del logo */
+.label-koete img {
+    max-width: 80px; /* Ajusta el tamaño máximo del logo */
+    height: auto; /* Mantiene la proporción del logo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+    border-radius: 0px; /* Sin bordes redondeados */
+    min-height: 50px;
+}
+
+/* Animación para que el logo aparezca con una transición suave */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%); /* Comienza fuera de la pantalla */
+    }
+    to {
+        transform: translateY(0); /* Aparece en su posición final */
+    }
+}
+
+.label-koete {
+    animation: slideDown 0.8s ease forwards; /* Ejecuta la animación al cargar la página */
+}
