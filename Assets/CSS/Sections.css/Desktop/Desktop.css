@@ -1187,3 +1187,66 @@
         display: none;
     }
 }
+
+/* Tipografía Poppins */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+#buttons-slide-desk {
+    background-color: #FFFFFF;
+    padding: 50px;
+    padding-bottom: 80px; /* Agregamos más espacio en la parte inferior */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centramos los botones */
+    gap: 20px; /* Espacio entre los botones */
+    align-items: center;
+    border: 0px solid #000000;
+}
+
+#buttons-slide-desk .cta-button {
+    padding: 15px 30px;
+    font-size: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Borde negro muy sutil */
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif; /* Usamos la fuente Poppins */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el icono y el texto */
+}
+
+/* Botón Izquierda */
+#buttons-slide-desk .cta-button-left {
+    background-color: #84B6CA; /* Color inicial */
+    color: white;
+}
+
+#buttons-slide-desk .cta-button-left:hover {
+    background-color: #288BD6; /* Color hover */
+    transform: scale(1.05);
+}
+
+/* Botón Derecha con el ícono de WhatsApp */
+#buttons-slide-desk .cta-button-right {
+    background-color: #FFB100; /* Color inicial */
+    color: white;
+}
+
+#buttons-slide-desk .cta-button-right i {
+    font-size: 1.5em; /* Tamaño del ícono de WhatsApp */
+}
+
+#buttons-slide-desk .cta-button-right:hover {
+    background-color: #F2F12C; /* Color hover */
+    transform: scale(1.05);
+}
+
+/* Ocultar en móviles */
+@media (max-width: 768px) {
+    #buttons-slide-desk {
+        display: none;
+    }
+}
