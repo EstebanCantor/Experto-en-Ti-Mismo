@@ -395,3 +395,143 @@ body {
     background-color: #0066cc;
     color: #ffffff;
 }
+
+
+/* Estilos encapsulados para la sección mobile 3 */
+@media (max-width: 767px) {
+    /* Contenedor principal del carrusel (visible solo en móvil) */
+    #section-mobile-3 {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+        overflow-x: scroll; /* Permitir scroll horizontal */
+        scroll-snap-type: x mandatory; /* Snap entre slides */
+        position: relative;
+        -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
+    }
+
+    /* Contenedor del carrusel usando Grid */
+    #section-mobile-3 .carousel-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        height: auto;
+        overflow-x: auto; /* Mantener scroll horizontal manual */
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth; /* Suavizar el scroll manual */
+        position: relative;
+    }
+
+    /* Grid para las imágenes del carrusel */
+    #section-mobile-3 .carousel-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 100%);
+        grid-auto-rows: auto;
+        scroll-snap-align: start;
+    }
+
+    /* Cada imagen ocupa todo el ancho del contenedor */
+    #section-mobile-3 .carousel-item {
+        width: 100%;
+        height: auto;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        scroll-snap-align: center;
+    }
+
+    /* Imágenes del carrusel */
+    #section-mobile-3 .carousel-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Botón flotante dentro de la diapositiva para avanzar */
+    #section-mobile-3 .next-slide {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        background-color: transparent; /* Fondo transparente */
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 10;
+        transform: translateY(-50%);
+    }
+
+    /* Botón flotante dentro de la diapositiva para retroceder */
+    #section-mobile-3 .prev-slide {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        background-color: transparent; /* Fondo transparente */
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 10;
+        transform: translateY(-50%);
+    }
+
+    /* Flechas de los botones */
+    #section-mobile-3 .arrow-right, 
+    #section-mobile-3 .arrow-left {
+        border: solid white;
+        border-width: 0 4px 4px 0;
+        display: inline-block;
+        padding: 8px;
+    }
+
+    /* Flecha derecha */
+    #section-mobile-3 .arrow-right {
+        transform: rotate(-45deg);
+    }
+
+    /* Flecha izquierda */
+    #section-mobile-3 .arrow-left {
+        transform: rotate(135deg);
+    }
+
+    /* Botón de llamada a la acción */
+    #section-mobile-3 .cta-button {
+        width: 80%; /* Ancho del 80% del contenedor */
+        max-width: 250px;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #000;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1em;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        font-weight: 400;
+        border: none;
+        border-radius: 0;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.2s ease;
+        z-index: 100;
+    }
+
+    /* Efecto hover en el botón de llamada a la acción */
+    #section-mobile-3 .cta-button:hover {
+        background-color: #288BD6;
+        transform: translateX(-50%) scale(1.05);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Ocultar en pantallas grandes */
+@media (min-width: 768px) {
+    #section-mobile-3 {
+        display: none;
+    }
+}
+
