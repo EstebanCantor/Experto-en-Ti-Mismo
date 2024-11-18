@@ -152,4 +152,155 @@
 .close-button:hover {
     background: rgba(110, 82, 82, 0.7);
 }
+/* Importar la fuente Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+/* Aplicar Poppins a todo el documento */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos específicos para mobile */
+@media (max-width: 767px) {
+    #section-mobile-1 {
+        font-family: 'Poppins', sans-serif;
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    #section-mobile-1 .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .section-1-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .dark-container {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 40px 30px;
+        border-radius: 0;
+        max-width: 380px;
+        width: 100%;
+        text-align: center;
+        margin: 0px auto 0;
+    }
+
+    .countdown-container-mobile h2 {
+        font-family: 'Poppins', sans-serif;
+        color: #ffffff;
+        margin: 20px 0 10px 0;
+    }
+
+    .countdown-container-mobile p {
+        font-family: 'Poppins', sans-serif;
+        color: #ffffff;
+        margin: 0 0 20px;
+    }
+
+    .countdown {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .countdown-element {
+        font-family: 'Poppins', sans-serif;
+        background-color: #ffffff;
+        color: #000;
+        width: 70px;
+        height: 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .countdown-element span:first-child {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2em;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    .countdown-element span:last-child {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.7em;
+        font-weight: 700;
+    }
+
+    .event-details {
+        font-family: 'Poppins', sans-serif;
+        color: #ffffff;
+        text-align: left;
+        font-size: 1em;
+        line-height: 1.4;
+        margin: 25px 0 0;
+        padding-left: 6px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 90%;
+        margin: 20px auto;
+        align-items: center;
+    }
+
+    .btn {
+        font-family: 'Poppins', sans-serif;
+        padding: 10px 10px;
+        font-size: 0.9em;
+        font-weight: 500;
+        text-decoration: none;
+        border-radius: 0px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%;
+        text-align: center;
+    }
+
+    .reserve-btn {
+        background-color: #3BB0D9;
+        color: #ffffff;
+    }
+
+    .reserve-btn:hover {
+        background-color: #18C2B6;
+        color: #000000;
+    }
+
+    .other-dates-btn {
+        background-color: #FF8F2B;
+        color: #ffffff;
+    }
+
+    .other-dates-btn:hover {
+        background-color: #F2CB1C;
+        color: #000000;
+    }
+}
