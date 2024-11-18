@@ -1105,3 +1105,68 @@ body {
 #section-mobile-6-1 .nav-arrow:hover {
     background-color: #f0f0f0;
 }
+
+/* Encapsulado y específico para section-mobile-6 */
+@media only screen and (max-width: 768px) {
+    #section-mobile-6 {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 20px;
+        width: 100%;
+        align-items: center; /* Centramos todos los elementos */
+        margin-bottom: 0; /* Eliminamos márgenes en la parte inferior */
+        padding-bottom: 0; /* Reducimos el padding inferior */
+    }
+
+    /* Columna del título y la imagen */
+    #section-mobile-6 .left-title-column, 
+    #section-mobile-6 .middle-image-column {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        margin-bottom: -10; /* Reducimos los márgenes de los contenedores */
+    }
+
+    /* Estilo del título */
+    #section-mobile-6 .program-title h2 {
+        font-size: 1.5em;
+        text-align: center;
+        color: #000000;
+    }
+
+    /* Imagen del programa (reducida en tamaño un 5%) */
+    #section-mobile-6 .middle-image-column img {
+        width: 75%; /* Imagen más pequeña en un 5% */
+        height: auto;
+    }
+
+    /* Botón CTA más pequeño y centrado */
+    #section-mobile-6 .cta-button {
+        background-color: #FEDD00;
+        padding: 0.7rem 1.4rem; /* Botón reducido en un 20% */
+        text-decoration: none;
+        font-weight: 400;
+        color: black;
+        font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+        text-transform: uppercase;
+        margin: 10px auto 0 auto; /* Aseguramos que el margen inferior del botón sea 0 */
+        display: inline-block;
+        transition: background-color 0.3s ease;
+        text-align: center;
+        border-radius: 0px;
+        position: relative;
+        top: -100px; /* Movemos el botón hacia arriba */
+    }
+
+    #section-mobile-6 .cta-button:hover {
+        background-color: #F2CB1C;
+    }
+}
+
+/* Ocultar en escritorio */
+@media only screen and (min-width: 769px) {
+    #section-mobile-6 {
+        display: none;
+    }
+}
