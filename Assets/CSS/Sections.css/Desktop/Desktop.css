@@ -779,3 +779,228 @@
         display: none;
     }
 }
+
+
+@media only screen and (min-width: 769px) {
+    /* Estilos generales para la sección 6 */
+    #section-6.program-section {
+        display: flex;
+        position: relative;
+        min-height: 90vh;
+        background-color: white;
+    }
+
+    /* Columna 1: Imagen vertical completa */
+    #section-6 .left-title-column {
+        width: 10%;
+        background-color: #00AEEF;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: sticky;
+        top: 0; /* Ajustamos el valor a 0 para eliminar el espacio sobrante */
+        height: auto; /* Cambiamos de 100vh a auto para evitar el scroll no deseado */
+        padding: 0;
+    }
+
+    #section-6 .program-title {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    #section-6 .program-title .vertical-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Columna 2: Imagen principal y botón */
+    #section-6 .middle-image-column {
+        width: 32%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        height: auto; /* Cambiamos de 100vh a auto para evitar el scroll no deseado */
+        padding: 20px;
+        user-select: none;
+        margin-left: 3%;
+    }
+
+    #section-6 .program-image img {
+        width: 80%;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+        user-select: none;
+    }
+
+    #section-6 .cta-button {
+        background-color: #FEDD00;
+        padding: 0.7rem 1.5rem;
+        text-decoration: none;
+        font-weight: 600;
+        color: black;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 22%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        user-select: none;
+    }
+
+    #section-6 .cta-button:hover {
+        background-color: #FFD700;
+        transform: translateX(-50%) scale(1.05);
+    }
+
+    /* Columna 3: Carrusel horizontal */
+    #section-6 .right-sessions-column {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-color: white;
+        margin: 0 auto;
+    }
+
+    /* Contenedor del carrusel */
+    #section-6 .custom-carousel-container {
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+        background-color: #ffffff;
+        padding: 20px;
+        margin: 0 5%;
+        user-select: none;
+    }
+
+    #section-6 .custom-carousel-slide {
+        display: flex;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        white-space: nowrap;
+        transition: transform 0.5s ease;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Ajustes en el tamaño de los contenedores de las sesiones */
+    #section-6 .slide-content {
+        min-width: 35%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        padding: 10px;
+        height: auto;
+        background-color: #ffffff;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 0px;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Aumentar el tamaño de las imágenes */
+    #section-6 .slide-content img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+        border-radius: 0px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Tamaño del logo final (KOETE) y eliminar sombras */
+    #section-6 .slide-content.logo-final {
+        background-color: transparent; /* Fondo transparente */
+        box-shadow: none; /* Eliminamos cualquier sombra */
+        border: none; /* Eliminamos cualquier borde */
+    }
+
+    #section-6 .slide-content.logo-final img {
+        width: 30%; /* Reducimos el tamaño del logo */
+        height: auto;
+        object-fit: contain;
+        border: none; /* Eliminamos cualquier borde */
+        background-color: transparent; /* Aseguramos que no tenga fondo */
+        box-shadow: none; /* Aseguramos que no tenga sombras */
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Controles de navegación del carrusel */
+    #section-6 .carousel-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        gap: 20px;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Flechas de navegación */
+    #section-6 .nav-arrow {
+        cursor: pointer;
+        background-color: white;
+        color: #3BB0D9;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 2px solid black;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Efecto hover en las flechas */
+    #section-6 .nav-arrow:hover {
+        background-color: #e0e0e0;
+        transform: scale(1.1);
+    }
+
+    /* Puntos de navegación (dots) */
+    #section-6 .custom-dots {
+        display: flex;
+        gap: 10px;
+        user-select: none;
+    }
+
+    #section-6 .custom-dot {
+        cursor: pointer;
+        height: 12px;
+        width: 12px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        user-select: none;
+    }
+
+    #section-6 .custom-dot.active {
+        background-color: #717171;
+        user-select: none;
+    }
+}
+
+/* Ocultar la sección completa en pantallas móviles */
+@media only screen and (max-width: 768px) {
+    #section-6 {
+        display: none;
+    }
+}
