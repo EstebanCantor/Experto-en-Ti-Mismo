@@ -327,3 +327,185 @@
         display: none;
     }
 }
+
+
+/* Encapsulado solo para la sección de escritorio */
+@media (min-width: 768px) {
+    /* Contenedor principal de la sección de presentación */
+    #section-desktop-3 {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        min-height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Columna izquierda */
+    #section-desktop-3 .column-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 45%;
+        text-align: center;
+        background-color: #288BD6;
+        padding: 40px;
+        box-sizing: border-box;
+        flex-grow: 1;
+    }
+
+    /* Columna derecha */
+    #section-desktop-3 .column-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 55%;
+        text-align: center;
+        background-color: #000;
+        padding: 40px;
+        box-sizing: border-box;
+        flex-grow: 1;
+    }
+
+    /* Imagen circular */
+    #section-desktop-3 .circular-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+
+    /* Título y nombre */
+    #section-desktop-3 .title {
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    /* Estilo para el título de la columna izquierda */
+    #section-desktop-3 .title-left {
+        color: #000;
+    }
+
+    /* Estilo para el título de la columna derecha */
+    #section-desktop-3 .title-right {
+        color: #288BD6;
+    }
+
+    #section-desktop-3 .name {
+        font-size: 1.8em;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #FFF;
+        line-height: 1.2;
+    }
+
+    /* Información adicional */
+    #section-desktop-3 .additional-info {
+        font-size: 1.2em;
+        color: #FFF;
+        margin-bottom: 30px;
+        line-height: 1.4;
+    }
+
+    /* Contenedor de detalles (logros) */
+    #section-desktop-3 .detail-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start; /* Alineación superior */
+        width: 100%;
+        margin-top: 20px;
+        flex-wrap: nowrap; /* Evita el salto de línea para mantener los íconos en una sola fila */
+    }
+
+    /* Estilo para cada detalle */
+    #section-desktop-3 .detail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Centra verticalmente cada ícono */
+        text-align: center;
+        flex-basis: 33%; /* Cada ícono ocupa un tercio del ancho */
+        padding-top: 0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Estilo de los íconos dentro de los detalles */
+    #section-desktop-3 .detail img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    /* Texto debajo del ícono */
+    #section-desktop-3 .detail p {
+        font-size: 1em;
+        color: #FFF;
+        text-align: center;
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    /* Logo de la empresa */
+    #section-desktop-3 .company-logo {
+        width: 150px;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    /* Información adicional derecha */
+    #section-desktop-3 .additional-info-right {
+        font-size: 1.2em;
+        margin: 10px 0;
+        color: #fff;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    /* Estilo para el título "Algunos de nuestros clientes" */
+    #section-desktop-3 .client-heading {
+        font-size: 1.3em;
+        margin: 50px 0 10px;
+        color: #fff;
+        text-align: center;
+    }
+
+    /* Lista de clientes */
+    #section-desktop-3 .client-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    /* Estilo de los logos de clientes */
+    #section-desktop-3 .client-list img {
+        width: 122px;
+        height: auto;
+        margin: 15px;
+        filter: brightness(0) invert(1);
+        transition: filter 0.3s ease-in-out;
+    }
+
+    /* Hover en los logos de clientes */
+    #section-desktop-3 .client-list img:hover {
+        filter: brightness(0.5) invert(1);
+    }
+}
+
+/* Ocultar la sección en dispositivos móviles */
+@media (max-width: 767px) {
+    #section-desktop-3 {
+        display: none;
+    }
+}
