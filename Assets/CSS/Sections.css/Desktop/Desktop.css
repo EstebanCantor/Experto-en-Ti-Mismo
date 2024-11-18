@@ -206,3 +206,124 @@
         padding-top: 20px;
     }
 }
+
+/* Estilos para la sección 2 del carrusel, solo visible en escritorio */
+@media only screen and (min-width: 769px) {
+    #section-2 {
+        display: block;
+    }
+
+    /* Contenedor principal del carrusel */
+    #section-2 .custom-carousel-container {
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+        background-color: #ffffff;
+        padding: 20px;
+        user-select: none; /* Evitar selección de texto en todo el carrusel */
+    }
+
+    /* Contenedor de las slides */
+    #section-2 .custom-carousel-slide {
+        display: flex;
+        overflow-x: scroll; /* Permitir desplazamiento horizontal */
+        scroll-behavior: smooth; /* Desplazamiento suave */
+        white-space: nowrap; /* Evitar que las diapositivas se rompan en múltiples líneas */
+        transition: transform 0.5s ease;
+        user-select: none; /* Evitar selección de contenido */
+    }
+
+    /* Espacio extra en la izquierda */
+    #section-2 .carousel-extra-space-large {
+        min-width: 10%; /* Ajusta el porcentaje según el espacio que necesites */
+    }
+
+    /* Espacio extra a la derecha */
+    #section-2 .carousel-extra-space-small {
+        min-width: 5%;
+    }
+
+    /* Slide individual */
+    #section-2 .slide-content {
+        min-width: 80%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Mantén la sombra suave */
+        user-select: none; /* Evitar selección de contenido en las diapositivas */
+    }
+
+    /* Imagen dentro del slide */
+    #section-2 .slide-content img {
+        width: 100%;
+        height: auto;
+        border-radius: 0; /* Elimina el redondeo de las esquinas */
+        box-shadow: 0px 4px 8px rgba(181, 171, 171, 0.1); /* Sombra suave */
+        user-select: none; /* Evitar selección de imágenes */
+    }
+
+    /* Navegación del carrusel */
+    #section-2 .carousel-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    /* Flechas de navegación con estilo de fondo blanco, borde negro y flechas azules */
+    #section-2 .nav-arrow {
+        cursor: pointer;
+        background-color: white; /* Fondo blanco */
+        color: #3BB0D9; /* Color de las flechas azules */
+        width: 40px;
+        height: 40px;
+        font-size: 20px; /* Tamaño de las flechas */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%; /* Botones redondos */
+        border: 2px solid black; /* Borde negro */
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+        user-select: none; /* Evitar selección de botones */
+    }
+
+    /* Efecto hover en las flechas */
+    #section-2 .nav-arrow:hover {
+        background-color: #ffffff; /* Fondo ligeramente gris al hacer hover */
+        transform: scale(1.1); /* Aumentar ligeramente el tamaño al hacer hover */
+    }
+
+    /* Dots de navegación */
+    #section-2 .custom-dots {
+        display: flex;
+        gap: 10px;
+        user-select: none; /* Evitar selección de puntos */
+    }
+
+    #section-2 .custom-dot {
+        cursor: pointer;
+        height: 12px;
+        width: 12px;
+        background-color: #c19f9f;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        user-select: none; /* Evitar selección de puntos */
+    }
+
+    #section-2 .custom-dot.active {
+        background-color: #3BB0D9;
+    }
+}
+
+/* Ocultar la sección en dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    #section-2 {
+        display: none;
+    }
+}
