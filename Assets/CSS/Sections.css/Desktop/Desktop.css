@@ -1,1 +1,208 @@
+/* Estilos específicos para la Sección 1 de escritorio */
 
+/* Mostrar solo en escritorio */
+@media (min-width: 768px) {
+    .desktop-only {
+        display: block; /* Asegura que se muestren en pantallas grandes */
+    }
+    .mobile-only {
+        display: none; /* Oculta la versión móvil en pantallas grandes */
+    }
+
+    /* Estilos generales para la versión de escritorio */
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+        color: #fff;
+    }
+
+    /* Sección 1: Contenedor principal */
+    #section-1 .main-section {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    /* Contenedor izquierdo de la Sección 1 */
+    #section-1 .left-container {
+        flex: 0.9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* Corregimos la ruta de la imagen */
+        background-image: url("https://estebancantor.github.io/Experto-en-Ti-Mismo/Assets/img/CieloKOETE.jpg");
+
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 100%;
+    }
+
+    /* Contenedor de la cuenta regresiva */
+    #section-1 .countdown-container {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 60px 40px;
+        max-width: 480px;
+        width: 100%;
+        text-align: center;
+        border: 3px solid #000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 450px;
+    }
+
+    /* Títulos y párrafos de la Sección 1 */
+    #section-1 h2 {
+        font-size: 1.9em;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    #section-1 p {
+        font-size: 1em;
+        color: #ffffff;
+        margin-bottom: 15px;
+    }
+
+    /* Contenedor de la cuenta regresiva */
+    #section-1 .countdown {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(80px, 1fr));
+        justify-content: center;
+        margin: 20px 0;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    /* Elementos de la cuenta regresiva */
+    #section-1 .countdown-element {
+        background-color: #ffffff;
+        color: #000;
+        width: 80px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding-top: 5px;
+        border-radius: 0px;
+    }
+
+    #section-1 .countdown-element span:first-child {
+        font-size: 2.5em;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    #section-1 .countdown-element span:last-child {
+        font-size: 0.7em;
+        font-weight: 400;
+        margin-top: 5px;
+    }
+
+    /* Detalles del evento */
+    #section-1 .event-details {
+        margin-left: -65px;
+        width: auto;
+        text-align: left;
+        color: #ffffff;
+        margin-bottom: 35px;
+        padding-top: 20px;
+        line-height: 1.6;
+        max-width: 500px;
+    }
+
+    /* Botones de la Sección 1 */
+    #section-1 .buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 10px;
+        width: 90%;
+    }
+
+    #section-1 .btn {
+        padding: 15px 10px;
+        font-size: 0.9em;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 0px;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        flex: 1;
+        text-align: center;
+    }
+
+    #section-1 .btn:hover {
+        transform: scale(1.05);
+    }
+
+    #section-1 .reserve-btn {
+        background-color: #3BB0D9;
+        color: #ffffff;
+    }
+
+    #section-1 .reserve-btn:hover {
+        background-color: #18C2B6;
+        color: #000000;
+    }
+
+    #section-1 .other-dates-btn {
+        background-color: #FF8F2B;
+        color: #fff;
+    }
+
+    #section-1 .other-dates-btn:hover {
+        background-color: #F2CB1C;
+        color: #000000;
+    }
+
+    /* Contenedor derecho de la Sección 1 */
+    #section-1 .right-container {
+        flex: 1.2;
+        background-color: #000000;
+        color: #ffffff;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Título del video */
+    #section-1 .video-title {
+        display: flex;
+        text-align: center;
+        font-size: 2em;
+        font-weight: 700;
+        max-width: 750px;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+
+    /* Descripción del video */
+    #section-1 .video-description {
+        font-size: 1.2em;
+        max-width: 600px;
+        padding-top: 0px;
+    }
+
+    /* Contenedor del video */
+    #section-1 .video-wrapper {
+        margin-bottom: 30px;
+        padding-top: 20px;
+    }
+}
