@@ -812,3 +812,184 @@ body {
     max-width: 100vw;
     overflow-x: hidden;
 }
+
+/* Cambiamos el color del texto "Experto en Ti Mismo" a azul claro */
+#section-mobile-5 .rating-container-transparent h3 {
+    color: #80CCE6; /* Azul claro */
+}
+
+/* Encapsulación de la sección mobile */
+#section-mobile-5 {
+    width: 100vw;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: transparent;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    min-height: 120vh; /* Aseguramos que ocupe toda la vista sin espacios adicionales */
+    overflow-x: hidden; /* Prevenir desbordamientos laterales */
+}
+
+/* Fondo del video */
+#section-mobile-5 .video-container-mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 140vh; /* Aseguramos que ocupe toda la altura de la sección */
+    z-index: -1;
+    overflow: hidden;
+}
+
+#section-mobile-5 .video-container-mobile .youtube-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450vw; /* Aumentamos aún más el ancho para asegurarnos de cubrir todo */
+    height: 280vh; /* Aseguramos que el video cubra la altura completa */
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* Estilos del texto superior */
+#section-mobile-5 .intro-text-mobile h2 {
+    font-size: 1.6em;
+    color: #ffffff;
+    margin-top: 5px; /* Reducimos el margen superior aún más */
+    margin-bottom: 50px; /* Aumentamos el margen inferior para crear más espacio con el contenedor de abajo */
+    z-index: 1;
+    max-width: 90vw;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0px; /* Eliminamos el padding */
+}
+
+#section-mobile-5 .intro-text-mobile .highlight-mobile {
+    color: #00AEEF;
+    font-weight: bold;
+}
+
+/* Contenedor transparente oscuro para el círculo */
+#section-mobile-5 .rating-container-transparent {
+    background-color: rgba(0, 0, 0, 0.7); /* Transparente oscuro */
+    padding: 20px;
+    border-radius: 0px;
+    margin-top: 40px; /* Aumentamos el margen superior para crear espacio con el texto superior */
+    margin-bottom: 20px;
+}
+
+/* Contenedor oscuro transparente para los elementos de texto y barra */
+#section-mobile-5 .rating-content-container-mobile {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro transparente */
+    padding: 20px;
+    border-radius: 0px;
+    max-width: 90vw;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+/* Texto y puntaje */
+#section-mobile-5 .rating-text-mobile h3 {
+    font-size: 2em;
+    color: #A9E4F2;
+    margin-bottom: 15px;
+}
+
+#section-mobile-5 .rating-description-mobile {
+    font-size: 1.1em;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de la barra circular y el puntaje */
+#section-mobile-5 .circular-progress-container-mobile {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+}
+
+#section-mobile-5 .progress-ring-mobile {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+#section-mobile-5 .progress-ring__circle-mobile {
+    stroke-dasharray: 377;
+    stroke-dashoffset: 377;
+    stroke: #288BD6;
+    stroke-width: 10;
+    fill: transparent;
+    transition: stroke-dashoffset 2s ease-in-out;
+}
+
+#section-mobile-5 .rating-score-number-mobile {
+    position: absolute;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Información de participantes */
+#section-mobile-5 .participants-info-mobile {
+    font-size: 1em;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+/* Botón de inscripción fuera del contenedor oscuro */
+#section-mobile-5 .blue-btn-mobile {
+    background-color: #3BB0D9;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 15px; /* Ajustar el margen superior para reducir espacio con el texto superior */
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+    max-width: 90vw;
+}
+
+#section-mobile-5 .blue-btn-mobile:hover {
+    background-color: #288BD6;
+    transform: scale(1.05);
+}
+
+/* Mostrar en dispositivos móviles */
+@media (max-width: 768px) {
+    #section-mobile-5 {
+        display: flex;
+        overflow-x: hidden; /* Prevenir desplazamientos laterales */
+    }
+}
+
+/* Ocultar en pantallas de escritorio */
+@media (min-width: 769px) {
+    #section-mobile-5 {
+        display: none;
+    }
+}
+
+/* Solución encapsulada para evitar desbordamiento horizontal solo en ciertas secciones */
+#section-5, #section-mobile-5 {
+    max-width: 100vw; /* Limita el ancho de la sección al viewport */
+    overflow-x: hidden; /* Evita el desbordamiento horizontal en estas secciones */
+}
+
+/* Si tienes otras secciones que necesitan esta corrección, puedes incluirlas */
+.container, .wrapper, section.specific-class {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
