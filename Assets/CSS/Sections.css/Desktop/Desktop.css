@@ -818,7 +818,7 @@
 
     /* Columna 2: Imagen principal y botón */
     #section-6 .middle-image-column {
-        width: 32%;
+        width: 35%;
         background-color: white;
         display: flex;
         flex-direction: column;
@@ -829,7 +829,7 @@
         height: auto; /* Cambiamos de 100vh a auto para evitar el scroll no deseado */
         padding: 20px;
         user-select: none;
-        margin-left: 3%;
+        margin-left:   10%;
     }
 
     #section-6 .program-image img {
