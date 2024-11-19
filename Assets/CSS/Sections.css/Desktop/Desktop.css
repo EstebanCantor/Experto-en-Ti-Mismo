@@ -849,7 +849,7 @@
         font-size: 0.9rem;
         text-transform: uppercase;
         position: absolute;
-        bottom: 22%;
+        bottom: 20%;
         left: 50%;
         transform: translateX(-50%);
         z-index: 10;
