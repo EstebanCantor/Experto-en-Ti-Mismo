@@ -137,7 +137,7 @@
                     <strong>Modalidad:</strong> Virtual
                 </p>
                 <div class="buttons fade-in fade-in-delay-4">
-                    <a href="https://8vl4j1kkdr3.typeform.com/to/bAETcfaF" class="btn reserve-btn">RESERVA TU CUPO</a>
+                   <a href="https://8vl4j1kkdr3.typeform.com/to/bAETcfaF" id="reservaCupoBtn1" class="btn reserve-btn">RESERVA TU CUPO</a>
                     <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec" class="btn other-dates-btn">VER OTRAS FECHAS</a>
                 </div>
             </div>
@@ -884,17 +884,52 @@
 <script src="Assets/JS/Label.js"></script>
 
 <!-- Mobile Scripts Google Ads-->
-<script src="Assets/JS/Sections.js/Mobile/Mobile.js"></script>    
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    var btn = document.getElementById('verInvitacionBtn');
-    btn.addEventListener('click', function() {
-        gtag('event', 'ClicenVerInvitacionMobile', {
-            'event_category': 'Mobile Button',
-            'event_label': 'Ver Invitacion',
-            'value': 1
+    // Evento para el botón "Ver Invitación"
+    var verInvitacionBtn = document.getElementById('verInvitacionBtn');
+    if (verInvitacionBtn) {
+        verInvitacionBtn.addEventListener('click', function() {
+            gtag('event', 'ClicenVerInvitacionMobile', {
+                'event_category': 'Mobile Button',
+                'event_label': 'Ver Invitacion',
+                'value': 1
+            });
+            console.log('Evento enviado: ClicenVerInvitacionMobile');
         });
-    });
+    } else {
+        console.warn('El botón con id "verInvitacionBtn" no se encontró.');
+    }
+
+    // Evento para el botón "Reserva Tu Cupo" (Primer botón)
+    var reservaCupoBtn1 = document.getElementById('reservaCupoBtn1');
+    if (reservaCupoBtn1) {
+        reservaCupoBtn1.addEventListener('click', function() {
+            gtag('event', 'ClicReservaCupo1', {
+                'event_category': 'Boton',
+                'event_label': 'Reserva Tu Cupo Botón 1',
+                'value': 1
+            });
+            console.log('Evento enviado: ClicReservaCupo1');
+        });
+    } else {
+        console.warn('El botón con id "reservaCupoBtn1" no se encontró.');
+    }
+
+    // Evento para el botón "Reserva Tu Cupo" (Segundo botón, ejemplo para añadir otro)
+    var reservaCupoBtn2 = document.getElementById('reservaCupoBtn2');
+    if (reservaCupoBtn2) {
+        reservaCupoBtn2.addEventListener('click', function() {
+            gtag('event', 'ClicReservaCupo2', {
+                'event_category': 'Boton',
+                'event_label': 'Reserva Tu Cupo Botón 2',
+                'value': 1
+            });
+            console.log('Evento enviado: ClicReservaCupo2');
+        });
+    } else {
+        console.warn('El botón con id "reservaCupoBtn2" no se encontró.');
+    }
 });
 </script>
 
