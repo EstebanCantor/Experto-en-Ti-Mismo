@@ -161,7 +161,7 @@
             <img src="Assets/img/Experta en Ti Misma.webp" alt="Video de Experto en Ti Mismo" class="cover-image">
             <div class="video-overlay">
                 <p class="video-subtitle">¡Estás muy cerca de sacar todo el potencial que hay en ti!</p>
-                <button class="watch-trailer-button" onclick="openVideo()">Ver invitación</button>
+                <button class="watch-trailer-button" id="verInvitacionBtn" onclick="openVideo()">Ver invitación</button>
             </div>
         </div>
     </div>
@@ -883,8 +883,20 @@
 <!-- JavaScript de la animación del logo Desktop -->
 <script src="Assets/JS/Label.js"></script>
 
-<!-- Mobile Scripts -->
+<!-- Mobile Scripts Google Ads-->
 <script src="Assets/JS/Sections.js/Mobile/Mobile.js"></script>    
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('verInvitacionBtn');
+    btn.addEventListener('click', function() {
+        gtag('event', 'click', {
+            'event_category': 'Mobile Button',
+            'event_label': 'Ver Invitacion',
+            'value': 1
+        });
+    });
+});
+</script>
 
 
 
