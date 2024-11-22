@@ -138,7 +138,7 @@
                 </p>
                 <div class="buttons fade-in fade-in-delay-4">
                    <a href="https://8vl4j1kkdr3.typeform.com/to/bAETcfaF" id="reservaCupoBtn1" class="btn reserve-btn">RESERVA TU CUPO</a>
-                    <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec" class="btn other-dates-btn">VER OTRAS FECHAS</a>
+                    <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec" id="Verotrasfechasbtn1" class="btn other-dates-btn">VER OTRAS FECHAS</a>
                 </div>
             </div>
         </div>
@@ -276,11 +276,11 @@
 <!-- Call to action 1 versión móvil -->
 <section id="buttons-slide-mobile">
     <a href="https://8vl4j1kkdr3.typeform.com/to/bAETcfaF" target="_blank" style="text-decoration: none;">
-        <button class="cta-button cta-button-left">¡Reserva tu cupo Gratis!</button>
+        <button class="cta-button cta-button-left" id="ReservaCupoBtn2mobile">¡Reserva tu cupo Gratis!</button>
     </a>
     <a href="https://wa.me/573009764661?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20programa%20Expert%40%20en%20Ti%20Mism%40.
 " target="_blank" style="text-decoration: none;">
-        <button class="cta-button cta-button-right">
+        <button class="cta-button cta-button-right" id="Hablaconunasesormobile">
             <i class="fab fa-whatsapp"></i> Habla con un asesor
         </button>
     </a>
@@ -916,11 +916,39 @@ document.addEventListener('DOMContentLoaded', function() {
         console.warn('El botón con id "reservaCupoBtn1" no se encontró.');
     }
 
-    // Evento para el botón "Reserva Tu Cupo" (Segundo botón, ejemplo para añadir otro)
-    var reservaCupoBtn2 = document.getElementById('reservaCupoBtn2');
+    // Evento para el botón "Verotrasfechasbtn1" (Primer botón, ejemplo para añadir otro)
+    var Verotrasfechasbtn1 = document.getElementById('Verotrasfechasbtn1');
+    if (Verotrasfechasbtn1) {
+        Verotrasfechasbtn1.addEventListener('click', function() {
+            gtag('event', 'Verotrasfechasbtn1', {
+                'event_category': 'Boton',
+                'event_label': 'Ver otras fechas Botón 1',
+                'value': 1
+            });
+            console.log('Evento enviado: ClicReservaCupo2');
+        });
+    } else {
+        console.warn('El botón con id "reservaCupoBtn2" no se encontró.');
+    }
+      // Evento para el botón "¡Reservar cupo gratis!" (Segundo botón, mobile)
+    var ReservaCupoBtn2mobile = document.getElementById('ReservaCupoBtn2mobile');
+    if (ReservaCupoBtn2mobile) {
+        ReservaCupoBtn2mobile.addEventListener('click', function() {
+            gtag('event', 'ReservaCupoBtn2mobile', {
+                'event_category': 'Boton',
+                'event_label': 'Reserva Tu Cupo Botón 2',
+                'value': 1
+            });
+            console.log('Evento enviado: ClicReservaCupo2');
+        });
+    } else {
+        console.warn('El botón con id "reservaCupoBtn2" no se encontró.');
+    }
+       // Evento para el botón "Habla con un asesor"
+    var Hablaconunasesormobile = document.getElementById('reservaCupoBtn2');
     if (reservaCupoBtn2) {
         reservaCupoBtn2.addEventListener('click', function() {
-            gtag('event', 'ClicReservaCupo2', {
+            gtag('event', 'Verotrasfechasbtn1', {
                 'event_category': 'Boton',
                 'event_label': 'Reserva Tu Cupo Botón 2',
                 'value': 1
