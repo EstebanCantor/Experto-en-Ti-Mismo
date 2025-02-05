@@ -995,21 +995,35 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script>
-// Function to track LinkedIn conversions
-function trackLinkedInConversion(conversionId) {
-    window.lintrk('track', { conversion_id: conversionId });
-}
+  // Helper function for LinkedIn event tracking
+  function trackLinkedInConversion(conversionId) {
+      window.lintrk('track', { conversion_id: conversionId });
+  }
 
-// Event listener for 'Reserve Your Spot' button
-document.getElementById('DeskreservaCupoBtn1').addEventListener('click', function() {
-    trackLinkedInConversion(19841578); // Use the correct conversion ID
-});
+  // Ensure the DOM is loaded
+  document.addEventListener('DOMContentLoaded', function() {
 
-// Event listener for 'See Other Dates' button
-document.getElementById('DeskverOtrasFechasBtn').addEventListener('click', function() {
-    trackLinkedInConversion(19841578); // Use the same or a different conversion ID if required for separate tracking
-});
+      // 1) Link your first button (Reserve Cupo) by ID
+      var deskReservaCupoBtn1 = document.getElementById('DeskreservaCupoBtn1');
+      if (deskReservaCupoBtn1) {
+          deskReservaCupoBtn1.addEventListener('click', function() {
+              trackLinkedInConversion(19841578); // Replace with your ID if needed
+          });
+      }
+
+      // 2) Link your second button (Ver Otras Fechas) by ID
+      var deskVerOtrasFechasBtn = document.getElementById('DeskverOtrasFechasBtn');
+      if (deskVerOtrasFechasBtn) {
+          deskVerOtrasFechasBtn.addEventListener('click', function() {
+              trackLinkedInConversion(19841578);
+          });
+      }
+
+      // Repeat the pattern for more buttons if necessary
+      // e.g. other mobile buttons, etc.
+  });
 </script>
+
 
 
 
