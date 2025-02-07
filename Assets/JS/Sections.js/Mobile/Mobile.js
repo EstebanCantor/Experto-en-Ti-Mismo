@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const secondsElementMobile = document.querySelector('#section-mobile-1 #seconds-value');
             const countdownContainerMobile = document.querySelector('#section-mobile-1 .countdown');
 
-            const countDownDate = new Date("Nov 30, 2024 19:00:00").getTime();
+            const countDownDate = new Date("Mar 12, 2025 19:30:00").getTime();
             const countdownFunctionMobile = setInterval(function () {
                 const now = new Date().getTime();
                 const distance = countDownDate - now;
