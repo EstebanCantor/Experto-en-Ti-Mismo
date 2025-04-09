@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Manejo del Contador de Cuenta Regresiva
         function startCountdown() {
-            const countDownDate = new Date("Mar 12, 2025 19:30:00").getTime();
+            const countDownDate = new Date("Apr 30, 2025 19:30:00").getTime();
             const countdownFunction = setInterval(function () {
                 const now = new Date().getTime();
                 const distance = countDownDate - now;
