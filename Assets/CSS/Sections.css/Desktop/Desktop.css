@@ -65,29 +65,30 @@
 .countdown-item {
     background: #ffffff; /* White background */
     border-radius: 0; /* Already set to 0 */
-    padding: 5px 15px; /* Adjusted for longer vertical shape */
+    padding: 8px 12px; /* Adjusted for taller shape */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Center content vertically */
     min-width: 78px; /* Maintain referent width */
-    height: 60px; /* Increased for longer vertical shape */
+    height: 70px; /* Increased for taller vertical shape */
     box-shadow: 0 2px 13px rgba(0,0,0,0.13);
     font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
 .countdown-item span {
-    font-size: 1.8rem; /* Reduced for fit */
+    font-size: 2rem; /* Adjusted for better fit in taller box */
     font-weight: 900;
     color: #000; /* Black for contrast */
-    line-height: 1.1; /* Adjusted for vertical alignment */
+    line-height: 1; /* Tight vertical alignment */
     font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 .countdown-item small {
-    font-size: 0.7rem; /* Reduced for fit */
-    margin-top: 1px;
-    letter-spacing: 1.2px; /* Reduced */
+    font-size: 0.75rem; /* Adjusted for fit */
+    margin-top: 2px;
+    letter-spacing: 1px; /* Adjusted for readability */
     font-weight: 700;
-    color: #000; /* Changed to black */
+    color: #000; /* Black text */
     font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
@@ -103,23 +104,22 @@
 .cta-btn {
     background: #36c1ea;
     color: #fff;
-    font-weight: 800;
+    font-weight: 700;
     border: none;
     border-radius: 0; /* Already set to 0 */
-    padding: 18px 0;
-    font-size: 1.12rem;
+    padding: 16px 0;
+    font-size: 1.15rem;
     margin-bottom: 14px;
-    margin-top: 6px;
+    margin-top: 10px; /* Adjusted for alignment with timer */
     cursor: pointer;
     box-shadow: 0 2px 13px rgba(32,180,227,0.13);
     text-decoration: none;
     transition: background 0.16s;
-    letter-spacing: 1.1px;
+    letter-spacing: 1px;
     width: 420px;
     max-width: 96%;
     text-align: center;
     display: inline-block;
-    position: relative;
     font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 .cta-btn:hover, .cta-btn:focus {
