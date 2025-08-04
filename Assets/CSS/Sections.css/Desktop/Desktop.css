@@ -15,8 +15,8 @@
 #section-desktop-1 .section1-desktop-container {
     display: flex;
     gap: 120px;
-    max-width: 1200px; /* Reduced to match video size */
-    width: 85vw; /* Adjusted to avoid excess width */
+    max-width: 1200px;
+    width: 85vw;
     margin: 0 auto;
     padding-left: 20px;
     align-items: flex-start;
@@ -26,7 +26,7 @@
 #section-desktop-1 .section1-desktop-left {
     flex: 0.9 1 0;
     min-width: 280px;
-    max-width: 380px; /* Reduced to fit narrower layout */
+    max-width: 380px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -37,7 +37,7 @@
     font-size: 2.0rem;
     font-weight: 900;
     line-height: 1.1;
-    margin-bottom: 12px;
+    margin-bottom: 20px; /* Increased for space */
     letter-spacing: -1.1px;
     text-align: left;
     border-left: 3.5px solid #36c1ea;
@@ -51,7 +51,7 @@
     font-size: 1.15rem;
     font-weight: 400;
     opacity: 0.92;
-    margin-bottom: 33px;
+    margin-bottom: 40px; /* Increased for space */
     line-height: 1.47;
     text-align: left;
 }
@@ -60,7 +60,7 @@
 #section-desktop-1 .countdown-box {
     display: flex;
     gap: 22px;
-    margin-bottom: 14px;
+    margin-bottom: 20px; /* Increased for space */
     margin-top: 5px;
     justify-content: flex-start;
 }
@@ -98,7 +98,7 @@
     color: #36c1ea;
     font-weight: 800;
     font-size: 1.13rem;
-    margin: 17px 0 9px 0;
+    margin: 20px 0 10px 0; /* Increased top margin for space */
     text-align: left;
     width: 100%;
 }
@@ -110,14 +110,14 @@
     border-radius: 0;
     padding: 16px 0;
     font-size: 1.16rem;
-    margin-bottom: 16px;
+    margin-bottom: 20px; /* Increased for space */
     margin-top: 10px;
     cursor: pointer;
     box-shadow: 0 2px 13px rgba(32,180,227,0.13);
     text-decoration: none;
     letter-spacing: 1px;
     width: 100%;
-    max-width: 380px; /* Reduced to match narrower layout */
+    max-width: 380px;
     text-align: center;
     display: block;
     transition: background 0.18s;
@@ -142,7 +142,7 @@
 #section-desktop-1 .section1-desktop-right {
     flex: 2.0 1 0;
     min-width: 600px;
-    max-width: 720px; /* Adjusted to match typical 1280x720 video */
+    max-width: 720px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -153,7 +153,7 @@
 /* CONTENEDOR VIDEO Y BENEFICIOS PEGADOS */
 #section-desktop-1 .video-benefits-stack {
     width: 100%;
-    max-width: 720px; /* Matches video size to eliminate black bars */
+    max-width: 720px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -162,7 +162,7 @@
 /* VIDEO 16:9 SIEMPRE VISIBLE Y COMPLETO */
 #section-desktop-1 .video-embed {
     width: 100%;
-    max-width: 720px; /* Matches video resolution */
+    max-width: 720px;
     aspect-ratio: 16 / 9;
     margin-bottom: 0;
     border-radius: 0;
@@ -189,7 +189,7 @@
     border-radius: 0;
     box-shadow: none;
     min-width: 0;
-    max-width: 720px; /* Matches video size */
+    max-width: 720px;
     width: 100%;
     text-align: left;
     margin: 0;
@@ -220,7 +220,7 @@
     justify-content: center;
     align-items: flex-start;
     gap: 58px;
-    max-width: 1200px; /* Adjusted to match new layout */
+    max-width: 1200px;
     width: 100%;
     margin: 82px auto 0 auto;
     padding: 0;
