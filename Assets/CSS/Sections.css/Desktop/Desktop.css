@@ -31,7 +31,9 @@
     line-height: 1.08;
     margin-bottom: 12px;
     letter-spacing: -1.2px;
-    text-align: center; /* Center the title to match layout */
+    text-align: left; /* Changed to left-justified */
+    border-left: 3.5px solid #36c1ea; /* Added vertical blue line */
+    padding-left: 12px; /* Add padding to offset text from the line */
 }
 .hero-title .blue {
     color: #36c1ea;
@@ -43,7 +45,7 @@
     opacity: 0.92;
     margin-bottom: 32px;
     line-height: 1.5;
-    text-align: center; /* Center the subtitle */
+    text-align: center; /* Keep subtitle centered */
 }
 
 .countdown-box {
@@ -55,29 +57,29 @@
 }
 
 .countdown-item {
-    background: #ffffff; /* Changed to white */
-    border-radius: 0; /* Already set to 0 from previous update */
-    padding: 10px 15px; /* Adjusted for vertical shape (40px height, ~30px width) */
+    background: #ffffff; /* White background */
+    border-radius: 0; /* Already set to 0 */
+    padding: 5px 15px; /* Adjusted padding for better number fit */
     display: flex;
     flex-direction: column;
     align-items: center;
     min-width: 78px; /* Maintain referent width */
-    height: 40px; /* Make it more vertical */
+    height: 40px; /* Maintain vertical height */
     box-shadow: 0 2px 13px rgba(0,0,0,0.13);
 }
 
 .countdown-item span {
-    font-size: 2.36rem;
+    font-size: 1.8rem; /* Reduced from 2.36rem for better fit */
     font-weight: 900;
-    color: #000; /* Adjust text color for contrast on white background */
-    line-height: 1;
+    color: #000; /* Black for contrast */
+    line-height: 1.1; /* Adjusted for vertical alignment */
 }
 .countdown-item small {
-    font-size: 0.89rem;
-    margin-top: 2px;
-    letter-spacing: 1.5px;
+    font-size: 0.7rem; /* Reduced from 0.89rem for better fit */
+    margin-top: 1px;
+    letter-spacing: 1.2px; /* Reduced from 1.5px */
     font-weight: 700;
-    color: #36c1ea; /* Adjust color for contrast */
+    color: #36c1ea; /* Blue for contrast */
 }
 
 .next-session {
@@ -85,7 +87,7 @@
     font-weight: 800;
     font-size: 1.13rem;
     margin: 13px 0 7px 0;
-    text-align: center; /* Center the text */
+    text-align: center; /* Keep centered */
 }
 
 .cta-btn {
@@ -108,19 +110,7 @@
     text-align: center;
     display: inline-block;
     position: relative;
-}
-.cta-btn .arrow {
-    font-size: 1.13em;
-    margin-left: 13px;
-    font-weight: 900;
-    vertical-align: middle;
-    background: #191c23;
-    border-radius: 0; /* Already set to 0 */
-    padding: 7px 13px 7px 13px;
-    position: absolute;
-    right: 18px;
-    top: 50%;
-    transform: translateY(-50%);
+    /* Removed .arrow styling since it's now removed from HTML */
 }
 .cta-btn:hover, .cta-btn:focus {
     background: #229bbd;
@@ -132,7 +122,7 @@
     font-size: 1.01rem;
     margin-bottom: 18px;
     margin-top: 0;
-    text-align: center; /* Center the duration */
+    text-align: center; /* Keep centered */
 }
 
 .section1-desktop-right {
