@@ -14,13 +14,13 @@
 /* CONTENEDOR PRINCIPAL EN 2 COLUMNAS */
 #section-desktop-1 .section1-desktop-container {
     display: flex;
-    gap: 120px; /* Increased for more space between left and right */
+    gap: 120px;
     max-width: 1420px;
     width: 93vw;
-    margin: 0 auto; /* Centers the container harmoniously */
-    padding-left: 20px; /* Adds slight left padding for balance */
+    margin: 0 auto;
+    padding-left: 20px;
     align-items: flex-start;
-    justify-content: flex-start; /* Aligns content to the left */
+    justify-content: flex-start;
 }
 
 #section-desktop-1 .section1-desktop-left {
@@ -30,7 +30,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 0; /* Removed to move left */
+    margin-left: 0;
 }
 
 #section-desktop-1 .hero-title {
@@ -146,7 +146,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-right: 20px; /* Maintains right space */
+    margin-left: 20px; /* Moves video and benefits slightly to the right */
+    margin-right: 20px;
 }
 
 /* CONTENEDOR VIDEO Y BENEFICIOS PEGADOS */
@@ -163,21 +164,22 @@
     width: 100%;
     max-width: 800px;
     aspect-ratio: 16 / 9;
-    background: #000;
     margin-bottom: 0;
     border-radius: 0;
     overflow: hidden;
     display: block;
     position: relative;
+    background: transparent; /* Removes any black background */
 }
 #section-desktop-1 .video-embed iframe {
     width: 100%;
     height: 100%;
     border: none;
     display: block;
-    background: #000;
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
+    background: transparent; /* Ensures no black margins */
 }
 
 /* BENEFICIOS */
