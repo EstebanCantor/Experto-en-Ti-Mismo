@@ -14,25 +14,26 @@
 /* CONTENEDOR PRINCIPAL EN 2 COLUMNAS */
 #section-desktop-1 .section1-desktop-container {
     display: flex;
-    gap: 68px;
+    gap: 40px; /* Reduced gap for more right-side space */
     max-width: 1420px;
     width: 93vw;
-    margin: 0 auto;
+    margin: 0; /* Remove auto margin to allow left alignment */
+    padding-left: 20px; /* Push content slightly from left edge if needed */
     align-items: flex-start;
 }
 
 #section-desktop-1 .section1-desktop-left {
-    flex: 1 1 0;
-    min-width: 300px;
-    max-width: 450px;
+    flex: 0.9 1 0; /* Reduced flex to minimize left space */
+    min-width: 280px; /* Further reduced */
+    max-width: 420px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; /* Fully left-aligned */
     padding-left: 0;
 }
 
 #section-desktop-1 .hero-title {
-    font-size: 2.2rem;
+    font-size: 2.0rem; /* Slightly reduced further for balance */
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 12px;
@@ -65,30 +66,30 @@
 #section-desktop-1 .countdown-item {
     background: #fff;
     border-radius: 0;
-    padding: 12px 14px 8px 14px;
+    padding: 14px 14px 10px 14px; /* Adjusted for taller height */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center; /* Centered for better balance */
     min-width: 86px;
-    height: 120px;
+    height: 130px; /* Slightly increased for more vertical length */
     box-shadow: 0 2px 13px rgba(0,0,0,0.13);
 }
 #section-desktop-1 .countdown-item span {
-    font-size: 2.3rem;
+    font-size: 2.4rem; /* Adjusted for taller box */
     font-weight: 900;
     color: #000;
     line-height: 1;
-    margin-bottom: 0;
+    margin-bottom: 4px; /* Space before label */
 }
 #section-desktop-1 .countdown-item small {
     font-size: 0.85rem;
-    margin-top: auto;
-    margin-bottom: 2px;
+    margin-top: auto; /* Push to bottom */
+    margin-bottom: 0;
     letter-spacing: 1px;
     font-weight: 600;
     color: #111;
-    align-self: flex-end;
+    align-self: center; /* Centered label */
 }
 
 /* CTA Y FECHAS */
@@ -97,7 +98,7 @@
     font-weight: 800;
     font-size: 1.13rem;
     margin: 17px 0 9px 0;
-    text-align: center;
+    text-align: left; /* Left-aligned with left column */
     width: 100%;
 }
 #section-desktop-1 .cta-btn {
@@ -132,25 +133,25 @@
     font-size: 1.01rem;
     margin-bottom: 18px;
     margin-top: 0;
-    text-align: center;
+    text-align: left; /* Left-aligned */
     width: 100%;
 }
 
 /* ------- DERECHA ------- */
 #section-desktop-1 .section1-desktop-right {
-    flex: 1.8 1 0;
+    flex: 2.0 1 0; /* Increased to maximize right space */
     min-width: 600px;
-    max-width: 750px;
+    max-width: 800px; /* Increased for larger video and text */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-left: 20px;
+    margin-left: 10px; /* Reduced margin for more space */
 }
 
 /* CONTENEDOR VIDEO Y BENEFICIOS PEGADOS */
 #section-desktop-1 .video-benefits-stack {
     width: 100%;
-    max-width: 700px;
+    max-width: 800px; /* Increased */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -159,7 +160,7 @@
 /* VIDEO 16:9 SIEMPRE VISIBLE Y COMPLETO */
 #section-desktop-1 .video-embed {
     width: 100%;
-    max-width: 700px;
+    max-width: 800px; /* Increased */
     aspect-ratio: 16 / 9;
     background: #000;
     margin-bottom: 0;
@@ -185,7 +186,7 @@
     border-radius: 0;
     box-shadow: none;
     min-width: 0;
-    max-width: 700px;
+    max-width: 800px; /* Increased */
     width: 100%;
     text-align: left;
     margin: 0;
