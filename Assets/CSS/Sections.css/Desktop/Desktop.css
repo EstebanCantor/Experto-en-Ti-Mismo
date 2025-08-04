@@ -14,19 +14,19 @@
 /* CONTENEDOR PRINCIPAL EN 3 COLUMNAS */
 #section-desktop-1 .section1-desktop-container {
     display: flex;
-    gap: 0; /* Reset gap, handled by spacer width */
-    max-width: 1200px;
-    width: 85vw;
+    gap: 0;
+    max-width: 1400px; /* Increased to allow more space and centering */
+    width: 90vw;
     margin: 0 auto;
     padding-left: 20px;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 #section-desktop-1 .section1-desktop-left {
-    flex: 0 1 380px; /* Fixed width for left column */
-    min-width: 280px;
-    max-width: 380px;
+    flex: 0 1 400px; /* Slightly wider left column */
+    min-width: 300px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -37,7 +37,7 @@
     font-size: 2.0rem;
     font-weight: 900;
     line-height: 1.1;
-    margin-bottom: 20px;
+    margin-bottom: 25px; /* Increased for more space */
     letter-spacing: -1.1px;
     text-align: left;
     border-left: 3.5px solid #36c1ea;
@@ -51,7 +51,7 @@
     font-size: 1.15rem;
     font-weight: 400;
     opacity: 0.92;
-    margin-bottom: 40px;
+    margin-bottom: 45px; /* Increased for more space */
     line-height: 1.47;
     text-align: left;
 }
@@ -60,7 +60,7 @@
 #section-desktop-1 .countdown-box {
     display: flex;
     gap: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 25px; /* Increased for more space */
     margin-top: 5px;
     justify-content: flex-start;
 }
@@ -98,7 +98,7 @@
     color: #36c1ea;
     font-weight: 800;
     font-size: 1.13rem;
-    margin: 20px 0 10px 0;
+    margin: 25px 0 12px 0; /* Increased for more space */
     text-align: left;
     width: 100%;
 }
@@ -110,14 +110,14 @@
     border-radius: 0;
     padding: 16px 0;
     font-size: 1.16rem;
-    margin-bottom: 20px;
+    margin-bottom: 25px; /* Increased for more space */
     margin-top: 10px;
     cursor: pointer;
     box-shadow: 0 2px 13px rgba(32,180,227,0.13);
     text-decoration: none;
     letter-spacing: 1px;
     width: 100%;
-    max-width: 380px;
+    max-width: 400px;
     text-align: center;
     display: block;
     transition: background 0.18s;
@@ -132,7 +132,7 @@
 #section-desktop-1 .session-duration {
     color: #b6b6b6;
     font-size: 1.01rem;
-    margin-bottom: 18px;
+    margin-bottom: 20px; /* Increased for more space */
     margin-top: 0;
     text-align: left;
     width: 100%;
@@ -140,14 +140,14 @@
 
 /* ------- COLUMNA INVISIBLE CENTRAL ------- */
 #section-desktop-1 .section1-desktop-spacer {
-    flex: 0 0 200px; /* Fixed width for invisible spacer to match referent spacing */
-    min-width: 200px;
-    max-width: 200px;
+    flex: 0 0 250px; /* Increased to match referent spacing more closely */
+    min-width: 250px;
+    max-width: 250px;
 }
 
 /* ------- DERECHA ------- */
 #section-desktop-1 .section1-desktop-right {
-    flex: 0 1 720px; /* Fixed width for right column to match video */
+    flex: 0 1 720px;
     min-width: 600px;
     max-width: 720px;
     display: flex;
@@ -227,8 +227,8 @@
     justify-content: center;
     align-items: flex-start;
     gap: 58px;
-    max-width: 1200px;
-    width: 100%;
+    max-width: 1400px; /* Increased to match container */
+    width: 90vw;
     margin: 82px auto 0 auto;
     padding: 0;
     text-align: center;
@@ -255,6 +255,10 @@
 
 /* --------- Responsive --------- */
 @media (max-width: 1400px) {
+    #section-desktop-1 .section1-desktop-container {
+        max-width: 85vw;
+        width: 85vw;
+    }
     #section-desktop-1 .section1-desktop-right,
     #section-desktop-1 .video-benefits-stack,
     #section-desktop-1 .video-embed,
@@ -264,9 +268,13 @@
         min-width: 0;
     }
     #section-desktop-1 .section1-desktop-spacer {
-        flex: 0 0 150px; /* Reduced spacer on smaller screens */
-        min-width: 150px;
-        max-width: 150px;
+        flex: 0 0 200px; /* Reduced spacer on smaller screens */
+        min-width: 200px;
+        max-width: 200px;
+    }
+    #section-desktop-1 .testimonials-desktop-wide {
+        max-width: 85vw;
+        width: 85vw;
     }
 }
 @media (max-width: 1100px) {
