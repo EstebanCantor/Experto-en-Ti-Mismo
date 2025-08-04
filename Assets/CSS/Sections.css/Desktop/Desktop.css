@@ -1,347 +1,209 @@
-/* Estilos específicos para la Sección 1 de escritorio */
+/* --- DESKTOP SECTION 1 (Hero Principal) --- */
 
-/* Mostrar solo en escritorio */
-@media (min-width: 768px) {
-    .desktop-only {
-        display: block; /* Asegura que se muestren en pantallas grandes */
-    }
-    .mobile-only {
-        display: none; /* Oculta la versión móvil en pantallas grandes */
-    }
-
-    /* Estilos generales para la versión de escritorio */
-    body {
-        font-family: 'Poppins', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #333;
-        color: #fff;
-    }
-
-    /* Sección 1: Contenedor principal */
-    #section-1 .main-section {
-        display: flex;
-        justify-content: center;
-        height: 100vh;
-        width: 100vw;
-    }
-
-    /* Contenedor izquierdo de la Sección 1 */
-    #section-1 .left-container {
-        flex: 0.9;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* Corregimos la ruta de la imagen */
-        background-image: url("https://estebancantor.github.io/Experto-en-Ti-Mismo/Assets/img/CieloKOETE.webp");
-
-        background-size: cover;
-        background-position: center;
-        padding: 20px;
-        box-sizing: border-box;
-        height: 100%;
-    }
-
-    /* Contenedor de la cuenta regresiva */
-    #section-1 .countdown-container {
-        background-color: rgba(0, 0, 0, 0.7);
-        padding: 60px 40px;
-        max-width: 480px;
-        width: 100%;
-        text-align: center;
-        border: 3px solid #000;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 450px;
-    }
-
-    /* Títulos y párrafos de la Sección 1 */
-    #section-1 h2 {
-        font-size: 1.9em;
-        font-weight: 700;
-        color: #ffffff;
-        margin-bottom: 20px;
-    }
-
-    #section-1 p {
-        font-size: 1em;
-        color: #ffffff;
-        margin-bottom: 15px;
-    }
-
-    /* Contenedor de la cuenta regresiva */
-    #section-1 .countdown {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(80px, 1fr));
-        justify-content: center;
-        margin: 20px 0;
-        gap: 10px;
-        margin-bottom: 30px;
-    }
-
-    /* Elementos de la cuenta regresiva */
-    #section-1 .countdown-element {
-        background-color: #ffffff;
-        color: #000;
-        width: 80px;
-        height: 100px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        box-sizing: border-box;
-        padding-top: 5px;
-        border-radius: 0px;
-    }
-
-    #section-1 .countdown-element span:first-child {
-        font-size: 2.5em;
-        font-weight: 700;
-        margin-bottom: 5px;
-    }
-
-    #section-1 .countdown-element span:last-child {
-        font-size: 0.7em;
-        font-weight: 400;
-        margin-top: 5px;
-    }
-
-    /* Detalles del evento */
-    #section-1 .event-details {
-        margin-left: -65px;
-        width: auto;
-        text-align: left;
-        color: #ffffff;
-        margin-bottom: 35px;
-        padding-top: 20px;
-        line-height: 1.6;
-        max-width: 500px;
-    }
-
-    /* Botones de la Sección 1 */
-    #section-1 .buttons {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        margin-top: 10px;
-        width: 90%;
-    }
-
-    #section-1 .btn {
-        padding: 15px 10px;
-        font-size: 0.9em;
-        font-weight: 600;
-        text-decoration: none;
-        border-radius: 0px;
-        border: none;
-        cursor: pointer;
-        transition: transform 0.3s ease, background-color 0.3s ease;
-        flex: 1;
-        text-align: center;
-    }
-
-    #section-1 .btn:hover {
-        transform: scale(1.05);
-    }
-
-    #section-1 .reserve-btn {
-        background-color: #3BB0D9;
-        color: #ffffff;
-    }
-
-    #section-1 .reserve-btn:hover {
-        background-color: #18C2B6;
-        color: #000000;
-    }
-
-    #section-1 .other-dates-btn {
-        background-color: #FF8F2B;
-        color: #fff;
-    }
-
-    #section-1 .other-dates-btn:hover {
-        background-color: #F2CB1C;
-        color: #000000;
-    }
-
-    /* Contenedor derecho de la Sección 1 */
-    #section-1 .right-container {
-        flex: 1.2;
-        background-color: #000000;
-        color: #ffffff;
-        padding: 20px;
-        box-sizing: border-box;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* Título del video */
-    #section-1 .video-title {
-        display: flex;
-        text-align: center;
-        font-size: 2em;
-        font-weight: 700;
-        max-width: 750px;
-        margin-bottom: 20px;
-        justify-content: center;
-    }
-
-    /* Descripción del video */
-    #section-1 .video-description {
-        font-size: 1.2em;
-        max-width: 600px;
-        padding-top: 0px;
-    }
-
-    /* Contenedor del video */
-    #section-1 .video-wrapper {
-        margin-bottom: 30px;
-        padding-top: 20px;
-    }
+#section-desktop-1 {
+  width: 100vw;
+  min-height: 100vh;
+  background: #191c23 url('../../img/CieloKOETE.webp') repeat top center; /* Ajusta el path si tu fondo está en otra carpeta */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
-/* Estilos para la sección 2 del carrusel, solo visible en escritorio */
-@media only screen and (min-width: 769px) {
-    #section-2 {
-        display: block;
-    }
-
-    /* Contenedor principal del carrusel */
-    #section-2 .custom-carousel-container {
-        position: relative;
-        max-width: 100%;
-        overflow: hidden;
-        background-color: #ffffff;
-        padding: 20px;
-        user-select: none; /* Evitar selección de texto en todo el carrusel */
-    }
-
-    /* Contenedor de las slides */
-    #section-2 .custom-carousel-slide {
-        display: flex;
-        overflow-x: scroll; /* Permitir desplazamiento horizontal */
-        scroll-behavior: smooth; /* Desplazamiento suave */
-        white-space: nowrap; /* Evitar que las diapositivas se rompan en múltiples líneas */
-        transition: transform 0.5s ease;
-        user-select: none; /* Evitar selección de contenido */
-    }
-
-    /* Espacio extra en la izquierda */
-    #section-2 .carousel-extra-space-large {
-        min-width: 10%; /* Ajusta el porcentaje según el espacio que necesites */
-    }
-
-    /* Espacio extra a la derecha */
-    #section-2 .carousel-extra-space-small {
-        min-width: 5%;
-    }
-
-    /* Slide individual */
-    #section-2 .slide-content {
-        min-width: 80%;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 20px;
-        padding: 10px;
-        background-color: #f0f0f0;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Mantén la sombra suave */
-        user-select: none; /* Evitar selección de contenido en las diapositivas */
-    }
-
-    /* Imagen dentro del slide */
-    #section-2 .slide-content img {
-        width: 100%;
-        height: auto;
-        border-radius: 0; /* Elimina el redondeo de las esquinas */
-        box-shadow: 0px 4px 8px rgba(181, 171, 171, 0.1); /* Sombra suave */
-        user-select: none; /* Evitar selección de imágenes */
-    }
-
-    /* Navegación del carrusel */
-    #section-2 .carousel-controls {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-        gap: 20px;
-    }
-
-    /* Flechas de navegación con estilo de fondo blanco, borde negro y flechas azules */
-    #section-2 .nav-arrow {
-        cursor: pointer;
-        background-color: white; /* Fondo blanco */
-        color: #3BB0D9; /* Color de las flechas azules */
-        width: 40px;
-        height: 40px;
-        font-size: 20px; /* Tamaño de las flechas */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%; /* Botones redondos */
-        border: 2px solid black; /* Borde negro */
-        transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
-        user-select: none; /* Evitar selección de botones */
-    }
-
-    /* Efecto hover en las flechas */
-    #section-2 .nav-arrow:hover {
-        background-color: #ffffff; /* Fondo ligeramente gris al hacer hover */
-        transform: scale(1.1); /* Aumentar ligeramente el tamaño al hacer hover */
-    }
-
-    /* Dots de navegación */
-    #section-2 .custom-dots {
-        display: flex;
-        gap: 10px;
-        user-select: none; /* Evitar selección de puntos */
-    }
-
-    #section-2 .custom-dot {
-        cursor: pointer;
-        height: 12px;
-        width: 12px;
-        background-color: #c19f9f;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-        user-select: none; /* Evitar selección de puntos */
-    }
-
-    #section-2 .custom-dot.active {
-        background-color: #3BB0D9;
-    }
+.section1-desktop-container {
+  display: flex;
+  gap: 56px;
+  max-width: 1240px;
+  width: 90vw;
+  margin: 60px auto 0 auto;
 }
 
-/* Ocultar la sección en dispositivos móviles */
-@media only screen and (max-width: 768px) {
-    #section-2 {
-        display: none;
-    }
+.section1-desktop-left,
+.section1-desktop-right {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
+.hero-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  letter-spacing: -1.2px;
+}
+.hero-title .blue {
+  color: #38bbdf;
+}
 
-/* Encapsulado solo para la sección de escritorio */
-@media (min-width: 768px) {
-    /* Contenedor principal de la sección de presentación */
-    #section-desktop-3 {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: stretch;
-        min-height: 100vh;
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+.hero-subtitle {
+  font-size: 1.14rem;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-bottom: 32px;
+}
+
+.countdown-box {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+
+.countdown-item {
+  background: #23252d;
+  border-radius: 12px;
+  padding: 12px 22px 6px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.11);
+}
+
+.countdown-item span {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+.countdown-item small {
+  font-size: 0.83rem;
+  margin-top: 2px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: #8bd2e9;
+}
+
+.next-session {
+  color: #38bbdf;
+  font-weight: 800;
+  font-size: 1.11rem;
+  margin: 14px 0 12px 0;
+  letter-spacing: 0.5px;
+}
+
+.cta-btn {
+  background: #38bbdf;
+  color: #fff;
+  font-weight: 800;
+  border: none;
+  border-radius: 7px;
+  padding: 16px 34px;
+  font-size: 1.13rem;
+  margin-bottom: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(32,180,227,0.14);
+  text-decoration: none;
+  transition: background 0.2s;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+.cta-btn .arrow {
+  font-size: 1.15em;
+  margin-left: 10px;
+  font-weight: 800;
+  vertical-align: middle;
+}
+.cta-btn:hover, .cta-btn:focus {
+  background: #2478b5;
+  color: #fff;
+}
+
+.session-duration {
+  color: #b6b6b6;
+  font-size: 0.97rem;
+  margin-bottom: 16px;
+}
+
+.testimonials-box {
+  margin-top: 26px;
+  margin-bottom: 6px;
+  padding-left: 0;
+}
+.testimonials-box blockquote {
+  font-size: 1.06rem;
+  color: #fff;
+  border-left: 3px solid #38bbdf;
+  margin: 0 0 15px 0;
+  padding: 0 0 0 15px;
+  opacity: 0.87;
+  font-style: italic;
+}
+
+.section1-desktop-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.video-embed {
+  width: 100%;
+  max-width: 540px;
+  aspect-ratio: 16/9;
+  margin-bottom: 22px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #121217;
+  box-shadow: 0 3px 16px rgba(0,0,0,0.19);
+}
+
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.benefits-box {
+  background: rgba(32, 40, 59, 0.94);
+  padding: 22px 26px;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(32,180,227,0.07);
+  margin-bottom: 10px;
+}
+
+.benefits-box h3 {
+  color: #38bbdf;
+  font-size: 1.13rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.benefits-box ul {
+  list-style: disc;
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+.benefits-box li {
+  font-size: 1.03rem;
+  margin-bottom: 7px;
+  color: #e5f5fa;
+  line-height: 1.5;
+}
+
+/* Responsive solo para evitar desbordes en desktop muy pequeños */
+@media (max-width: 1050px) {
+  .section1-desktop-container {
+    flex-direction: column;
+    gap: 38px;
+    max-width: 98vw;
+  }
+  .section1-desktop-right,
+  .section1-desktop-left {
+    align-items: stretch;
+  }
+  .video-embed {
+    max-width: 100%;
+  }
+}
+
+/* ¡Oculta esta sección en mobile! */
+@media (max-width: 900px) {
+  #section-desktop-1 { display: none; }
+}
 
   
