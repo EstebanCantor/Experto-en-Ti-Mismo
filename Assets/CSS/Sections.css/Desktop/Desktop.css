@@ -4,16 +4,14 @@
     min-height: 100vh;
     position: relative;
     z-index: 1;
-    padding-top: 100px; /* Ajusta según tu logo fijo */
+    padding-top: 100px;
     font-family: 'Poppins', sans-serif;
-    background: url('../../../../img/FONDOS_Mesa de trabajo 1-05.jpg') no-repeat center top;
-    background-size: cover;
 }
 
 .section1-desktop-container {
     display: flex;
-    gap: 36px;
-    max-width: 1450px;
+    gap: 56px;
+    max-width: 1380px;
     width: 92vw;
     margin: 0 auto;
     align-items: flex-start;
@@ -21,16 +19,18 @@
 }
 
 .section1-desktop-left {
-    flex: 1.05 1 0;
+    flex: 1 1 0;
     min-width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-left: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 .hero-title {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 12px;
@@ -38,8 +38,8 @@
     text-align: left;
     border-left: 3.5px solid #36c1ea;
     padding-left: 12px;
+    font-family: 'Poppins', sans-serif;
 }
-
 .hero-title .blue {
     color: #36c1ea;
 }
@@ -51,6 +51,7 @@
     margin-bottom: 32px;
     line-height: 1.5;
     text-align: left;
+    font-family: 'Poppins', sans-serif;
 }
 
 .countdown-box {
@@ -59,6 +60,7 @@
     margin-bottom: 14px;
     margin-top: 5px;
     justify-content: flex-start;
+    font-family: 'Poppins', sans-serif;
 }
 
 .countdown-item {
@@ -72,6 +74,7 @@
     min-width: 78px;
     height: 90px;
     box-shadow: 0 2px 13px rgba(0,0,0,0.13);
+    font-family: 'Poppins', sans-serif;
 }
 
 .countdown-item span {
@@ -79,6 +82,7 @@
     font-weight: 900;
     color: #000;
     line-height: 1;
+    font-family: 'Poppins', sans-serif;
 }
 .countdown-item small {
     font-size: 0.8rem;
@@ -86,6 +90,7 @@
     letter-spacing: 1px;
     font-weight: 700;
     color: #000;
+    font-family: 'Poppins', sans-serif;
 }
 
 .next-session {
@@ -94,6 +99,7 @@
     font-size: 1.13rem;
     margin: 13px 0 7px 0;
     text-align: left;
+    font-family: 'Poppins', sans-serif;
 }
 
 .cta-btn {
@@ -115,6 +121,7 @@
     max-width: 96%;
     text-align: center;
     display: inline-block;
+    font-family: 'Poppins', sans-serif;
 }
 .cta-btn:hover, .cta-btn:focus {
     background: #229bbd;
@@ -127,24 +134,26 @@
     margin-bottom: 18px;
     margin-top: 0;
     text-align: left;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* --- COLUMNA DERECHA --- */
+/* ------ ACTUALIZACIONES DERECHA ------ */
 .section1-desktop-right {
-    flex: 1.5 1 0;        /* MÁS ANCHA que antes */
-    min-width: 540px;
+    flex: 1.35 1 0;
+    min-width: 560px;
+    max-width: 720px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-left: 30px;
 }
 
+/* VIDEO: más ancho y separado de beneficios */
 .video-embed {
     width: 100%;
-    max-width: 700px;      /* AUMENTADO */
+    max-width: 680px;
     aspect-ratio: 16/9;
-    height: auto;
-    min-height: 340px;
-    margin-bottom: 21px;
+    margin-bottom: 34px;
     border-radius: 0;
     overflow: hidden;
     background: #121217;
@@ -152,8 +161,7 @@
 }
 .video-embed iframe {
     width: 100%;
-    height: 380px;         /* MÁS ALTO */
-    min-height: 340px;
+    height: 380px;
     border: none;
     display: block;
 }
@@ -164,39 +172,47 @@
     text-decoration: none;
     margin-top: 10px;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
+/* BENEFICIOS: igual de ancho al video */
 .benefits-box {
-    background: rgba(25, 35, 47, 0.93);
-    padding: 21px 22px 14px 22px;
+    background: rgba(0, 0, 0, 0.84);
+    padding: 28px 32px 17px 28px;
     border-radius: 0;
     box-shadow: 0 2px 12px rgba(32,180,227,0.09);
     margin: 0;
-    margin-bottom: 9px;
-    max-width: 480px;      /* MÁS PEQUEÑO */
-    min-width: 240px;
-    margin-top: 18px;
+    margin-bottom: 7px;
+    margin-top: 0;
+    max-width: 680px;
+    width: 100%;
     text-align: left;
+    font-family: 'Poppins', sans-serif;
 }
+
 .benefits-box h3 {
     color: #36c1ea;
-    font-size: 1.13rem;
-    font-weight: 800;
-    margin-bottom: 10px;
+    font-size: 1.19rem;
+    font-weight: 900;
+    margin-bottom: 7px;
+    font-family: 'Poppins', sans-serif;
 }
+
 .benefits-box ul {
     list-style: disc;
     margin: 0 0 0 17px;
     padding: 0;
-}
-.benefits-box li {
-    font-size: 1.04rem;
-    margin-bottom: 6px;
-    color: #e5f5fa;
-    line-height: 1.49;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* --- TESTIMONIOS --- */
+.benefits-box li {
+    font-size: 1.09rem;
+    margin-bottom: 7px;
+    color: #e7e9f3;
+    line-height: 1.43;
+    font-family: 'Poppins', sans-serif;
+}
+
 .testimonials-desktop-wide {
     display: flex;
     justify-content: center;
@@ -207,6 +223,7 @@
     margin: 80px auto 0 auto;
     padding: 0;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 .testimonials-desktop-wide blockquote {
     font-size: 1.11rem;
@@ -217,77 +234,4 @@
     margin: 0;
     opacity: 0.92;
     font-style: italic;
-    min-width: 258px;
-    max-width: 340px;
-    line-height: 1.46;
-}
-
-.participant-attribution {
-    color: #b6b6b6;
-    font-size: 0.85rem;
-    text-align: center;
-    margin-top: 10px;
-}
-
-/* --- LOGO FLOTANTE --- */
-.label-koete {
-    position: fixed;
-    top: 0px;
-    left: 20px;
-    z-index: 9999;
-    transition: transform 0.5s ease;
-}
-
-.label-koete img {
-    max-width: 80px;
-    height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 0px;
-    min-height: 50px;
-}
-
-/* Animación para el logo */
-@keyframes slideDown {
-    from { transform: translateY(-100%); }
-    to   { transform: translateY(0); }
-}
-.label-koete { animation: slideDown 0.8s ease forwards; }
-
-/* --- GLOBALS/OVERFLOW --- */
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    width: 100vw;
-    box-sizing: border-box;
-}
-* { box-sizing: inherit; }
-
-.container, .wrapper, section {
-    max-width: 100vw;
-    overflow-x: hidden;
-}
-
-/* Responsive desktop to tablet */
-@media (max-width: 1100px) {
-    .section1-desktop-container {
-        flex-direction: column;
-        gap: 38px;
-        max-width: 99vw;
-        padding-top: 44px;
-    }
-    .section1-desktop-right,
-    .section1-desktop-left {
-        align-items: stretch;
-    }
-    .video-embed { max-width: 100%; }
-    .testimonials-desktop-wide {
-        flex-direction: column;
-        align-items: center;
-        gap: 22px;
-        max-width: 99vw;
-        margin: 60px auto 0 auto;
-        text-align: center;
-    }
-}
-
+    min-width: 2
