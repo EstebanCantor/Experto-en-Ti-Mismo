@@ -25,7 +25,9 @@ html, body {
     overflow-x: hidden; /* Evita desplazamiento horizontal */
     width: 100vw; /* Asegura que el contenido ocupe solo el ancho del viewport */
     box-sizing: border-box; /* Aplica box-sizing a todos los elementos */
-    background: #191c23; /* Base background color, overridden by sections if needed */
+    background: #191c23; /* Base background color, overridden by sections */
+    color: #fff;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 * {
