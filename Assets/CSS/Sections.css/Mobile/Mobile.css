@@ -1,9 +1,6 @@
 /* ---- SECTION 1 MOBILE ---- */
 
-#section-mobile-1-hero,
-#section-mobile-1-video,
-#section-mobile-1-benefits,
-#section-mobile-1-testimonials {
+.section-mobile-1-block {
     background: url('../../img/CieloKOETE.webp') repeat top center;
     width: 100vw;
     max-width: 100vw;
