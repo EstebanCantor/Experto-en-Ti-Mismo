@@ -5,6 +5,7 @@
     position: relative;
     z-index: 1;
     padding-top: 100px; /* Adjust to account for fixed logo */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
 .section1-desktop-container {
@@ -14,6 +15,7 @@
     width: 92vw;
     margin: 0 auto;
     align-items: flex-start;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
 .section1-desktop-left {
@@ -23,6 +25,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center; /* Center align items including timer and button */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
 .hero-title {
@@ -31,9 +34,10 @@
     line-height: 1.08;
     margin-bottom: 12px;
     letter-spacing: -1.2px;
-    text-align: left; /* Changed to left-justified */
-    border-left: 3.5px solid #36c1ea; /* Added vertical blue line */
-    padding-left: 12px; /* Add padding to offset text from the line */
+    text-align: left; /* Left-justified */
+    border-left: 3.5px solid #36c1ea; /* Vertical blue line */
+    padding-left: 12px; /* Offset text from line */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 .hero-title .blue {
     color: #36c1ea;
@@ -45,7 +49,8 @@
     opacity: 0.92;
     margin-bottom: 32px;
     line-height: 1.5;
-    text-align: center; /* Keep subtitle centered */
+    text-align: center; /* Keep centered */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
 .countdown-box {
@@ -54,32 +59,36 @@
     margin-bottom: 14px;
     margin-top: 5px;
     justify-content: center; /* Ensure timer is centered */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
 .countdown-item {
     background: #ffffff; /* White background */
     border-radius: 0; /* Already set to 0 */
-    padding: 5px 15px; /* Adjusted padding for better number fit */
+    padding: 5px 15px; /* Adjusted for longer vertical shape */
     display: flex;
     flex-direction: column;
     align-items: center;
     min-width: 78px; /* Maintain referent width */
-    height: 40px; /* Maintain vertical height */
+    height: 60px; /* Increased for longer vertical shape */
     box-shadow: 0 2px 13px rgba(0,0,0,0.13);
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
 .countdown-item span {
-    font-size: 1.8rem; /* Reduced from 2.36rem for better fit */
+    font-size: 1.8rem; /* Reduced for fit */
     font-weight: 900;
     color: #000; /* Black for contrast */
     line-height: 1.1; /* Adjusted for vertical alignment */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 .countdown-item small {
-    font-size: 0.7rem; /* Reduced from 0.89rem for better fit */
+    font-size: 0.7rem; /* Reduced for fit */
     margin-top: 1px;
-    letter-spacing: 1.2px; /* Reduced from 1.5px */
+    letter-spacing: 1.2px; /* Reduced */
     font-weight: 700;
-    color: #36c1ea; /* Blue for contrast */
+    color: #000; /* Changed to black */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
 .next-session {
@@ -88,6 +97,7 @@
     font-size: 1.13rem;
     margin: 13px 0 7px 0;
     text-align: center; /* Keep centered */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
 .cta-btn {
@@ -110,7 +120,7 @@
     text-align: center;
     display: inline-block;
     position: relative;
-    /* Removed .arrow styling since it's now removed from HTML */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 .cta-btn:hover, .cta-btn:focus {
     background: #229bbd;
@@ -123,6 +133,7 @@
     margin-bottom: 18px;
     margin-top: 0;
     text-align: center; /* Keep centered */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
 .section1-desktop-right {
@@ -131,6 +142,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
 .video-embed {
@@ -142,6 +154,7 @@
     overflow: hidden;
     background: #121217;
     box-shadow: 0 2px 14px rgba(0,0,0,0.17);
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 .video-embed iframe {
     width: 100%;
@@ -156,6 +169,7 @@
     text-decoration: none;
     margin-top: 10px;
     text-align: center;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
 .benefits-box {
@@ -168,23 +182,27 @@
     max-width: 480px;
     min-width: 240px;
     text-align: left;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 .benefits-box h3 {
     color: #36c1ea;
     font-size: 1.13rem;
     font-weight: 800;
     margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 .benefits-box ul {
     list-style: disc;
     margin: 0 0 0 17px;
     padding: 0;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 .benefits-box li {
     font-size: 1.04rem;
     margin-bottom: 6px;
     color: #e5f5fa;
     line-height: 1.49;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
 .testimonials-desktop-wide {
@@ -197,6 +215,7 @@
     margin: 80px auto 0 auto;
     padding: 0;
     text-align: center;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 .testimonials-desktop-wide blockquote {
     font-size: 1.11rem;
@@ -210,6 +229,7 @@
     min-width: 258px;
     max-width: 340px;
     line-height: 1.46;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
 .participant-attribution {
@@ -217,6 +237,7 @@
     font-size: 0.85rem;
     text-align: center;
     margin-top: 10px;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
 /* Responsive desktop to tablet */
