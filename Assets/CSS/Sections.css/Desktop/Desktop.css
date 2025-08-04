@@ -4,10 +4,9 @@
     min-height: 100vh;
     background: url('../../img/FONDOS_Mesa de trabajo 1-05.jpg') no-repeat center top;
     background-size: cover;
-    color: #fff;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     position: relative;
     z-index: 1;
+    padding-top: 100px; /* Adjust to account for fixed logo */
 }
 
 .section1-desktop-container {
@@ -16,16 +15,15 @@
     max-width: 1280px;
     width: 92vw;
     margin: 0 auto;
-    padding-top: 64px;
     align-items: flex-start;
 }
 
 .section1-desktop-left {
     flex: 1.15 1 0;
+    min-width: 430px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-width: 430px;
 }
 
 .hero-title {
@@ -132,37 +130,12 @@
     margin-top: 0;
 }
 
-.testimonials-desktop-wide {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 58px;
-    max-width: 1180px;
-    width: 100%;
-    margin: 80px 0 0 0;
-    padding: 0;
-}
-.testimonials-desktop-wide blockquote {
-    font-size: 1.11rem;
-    color: #fff;
-    border-left: 3.5px solid #36c1ea;
-    background: none;
-    padding: 0 0 0 18px;
-    margin: 0;
-    opacity: 0.92;
-    font-style: italic;
-    min-width: 258px;
-    max-width: 340px;
-    line-height: 1.46;
-}
-
-/* DERECHA */
 .section1-desktop-right {
     flex: 1 1 0;
+    min-width: 380px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    min-width: 380px;
 }
 
 .video-embed {
@@ -219,6 +192,30 @@
     line-height: 1.49;
 }
 
+.testimonials-desktop-wide {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 58px;
+    max-width: 1180px;
+    width: 100%;
+    margin: 80px 0 0 0;
+    padding: 0;
+}
+.testimonials-desktop-wide blockquote {
+    font-size: 1.11rem;
+    color: #fff;
+    border-left: 3.5px solid #36c1ea;
+    background: none;
+    padding: 0 0 0 18px;
+    margin: 0;
+    opacity: 0.92;
+    font-style: italic;
+    min-width: 258px;
+    max-width: 340px;
+    line-height: 1.46;
+}
+
 .participant-attribution {
     color: #b6b6b6;
     font-size: 0.85rem;
@@ -226,7 +223,7 @@
     margin-top: 10px;
 }
 
-/* Responsive desktop a tablet */
+/* Responsive desktop to tablet */
 @media (max-width: 1100px) {
     .section1-desktop-container {
         flex-direction: column;
@@ -238,12 +235,4 @@
     .section1-desktop-left {
         align-items: stretch;
     }
-    .video-embed { max-width: 100%; }
-    .testimonials-desktop-wide {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 22px;
-        max-width: 99vw;
-        margin: 60px 0 0 0;
-    }
-}
+    .video-embed { max-width: 100
