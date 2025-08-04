@@ -1,12 +1,13 @@
-/* =====================
-   SECTION MOBILE 1 HERO
-   ===================== */
+/* ========== MOBILE HERO - KOETE ========== */
+
 #section-mobile-1-hero {
-    max-width: 420px;
+    max-width: 410px;
     margin: 0 auto;
     padding: 38px 0 20px 0;
     text-align: center;
+    width: 100vw;
 }
+
 #section-mobile-1-hero .hero-title {
     font-size: 2.3rem;
     font-weight: 900;
@@ -15,7 +16,8 @@
     text-align: left;
     border-left: 3.5px solid #36c1ea;
     padding-left: 12px;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
+    margin-top: 0;
 }
 #section-mobile-1-hero .hero-title .blue {
     color: #36c1ea;
@@ -24,7 +26,7 @@
     font-size: 1.09rem;
     font-weight: 400;
     opacity: 0.93;
-    margin-bottom: 22px;
+    margin-bottom: 24px;
     line-height: 1.46;
     text-align: left;
 }
@@ -32,56 +34,60 @@
 #section-mobile-1-hero .countdown-box {
     display: flex;
     justify-content: center;
-    gap: 18px;
+    gap: 13px;
     margin-bottom: 18px;
     margin-top: 10px;
     width: 100%;
+    max-width: 390px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #section-mobile-1-hero .countdown-item {
     background: #fff;
     border-radius: 0;
-    min-width: 78px;
-    max-width: 78px;
-    height: 110px; /* MÁS ALTO */
+    min-width: 66px;
+    max-width: 76px;
+    height: 102px; /* MÁS ALTO */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    padding: 10px 6px 13px 6px; /* más relleno abajo */
+    padding: 10px 6px 13px 6px;
     box-shadow: 0 2px 13px rgba(0,0,0,0.13);
     flex: 1;
 }
 
 #section-mobile-1-hero .countdown-item span {
-    font-size: 2.13rem;
+    font-size: 2.12rem;
     font-weight: 900;
     color: #000;
     line-height: 1;
-    margin-bottom: 8px; /* separa del label */
+    margin-bottom: 10px;
 }
 
 #section-mobile-1-hero .countdown-item small {
-    font-size: 0.90rem;
+    font-size: 0.97rem;
     font-weight: 600;
-    color: #2e2e2e;
-    margin-top: auto;
-    margin-bottom: 0;
+    color: #232323;
     letter-spacing: 1px;
     text-align: center;
     opacity: 0.93;
-    /* Los labels ("DÍAS", etc) pegados abajo */
-    align-self: flex-end;
+    margin-bottom: 0;
+    margin-top: auto;
+    align-self: center;
     width: 100%;
     display: block;
+    line-height: 1.2;
 }
 
 #section-mobile-1-hero .next-session {
     color: #36c1ea;
     font-weight: 800;
-    font-size: 1.08rem;
-    margin: 18px 0 8px 0;
-    text-align: center;  /* CENTRADO */
+    font-size: 1.10rem;
+    margin: 22px 0 8px 0;
+    text-align: center;
+    width: 100%;
 }
 #section-mobile-1-hero .cta-btn {
     background: #36c1ea;
@@ -98,6 +104,7 @@
     text-decoration: none;
     letter-spacing: 1px;
     width: 100%;
+    max-width: 380px;
     text-align: center;
     display: block;
     transition: background 0.18s;
@@ -109,22 +116,35 @@
     font-size: 1.01rem;
     margin-bottom: 0;
     margin-top: 6px;
-    text-align: center; /* CENTRADO */
+    text-align: center;
+    width: 100%;
 }
 
-/* Pequeño ajuste para mobile max-width, para evitar desbordes */
-@media (max-width: 480px) {
+/* Pequeño ajuste para mobile max-width */
+@media (max-width: 500px) {
     #section-mobile-1-hero {
         max-width: 99vw;
-        padding: 20px 0 10px 0;
+        padding: 20px 0 8px 0;
+    }
+    #section-mobile-1-hero .hero-title {
+        font-size: 1.25rem;
+        padding-left: 8px;
+    }
+    #section-mobile-1-hero .countdown-box {
+        gap: 8px;
+        max-width: 99vw;
     }
     #section-mobile-1-hero .countdown-item {
-        min-width: 62px;
-        max-width: 62px;
-        height: 94px;
-        padding-left: 2px;
-        padding-right: 2px;
+        min-width: 45px;
+        max-width: 53px;
+        height: 72px;
+        padding-left: 1px;
+        padding-right: 1px;
     }
-    #section-mobile-1-hero .hero-title { font-size: 1.3rem; }
+    #section-mobile-1-hero .cta-btn {
+        font-size: 0.99rem;
+        padding: 13px 0;
+        max-width: 99vw;
+    }
 }
 
