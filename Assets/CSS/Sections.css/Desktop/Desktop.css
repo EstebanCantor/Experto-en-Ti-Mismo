@@ -1,23 +1,13 @@
 /* ----- DESKTOP SECTION 1 KOETE LANDING ----- */
 
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
+#section-desktop-1 {
     min-height: 100vh;
+    background: url('../../img/FONDOS_Mesa de trabajo 1-05.jpg') no-repeat center top;
+    background-size: cover;
     color: #fff;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    background: #191c23 url('../../img/FONDOS_Mesa de trabajo 1-05.jpg') no-repeat center top;
-    background-size: cover;
-    box-sizing: border-box;
-}
-
-#section-desktop-1 {
-    width: 100vw;
-    min-height: 100vh;
-    background: transparent;
-    color: #fff;
-    display: block;
+    position: relative;
+    z-index: 1;
 }
 
 .section1-desktop-container {
