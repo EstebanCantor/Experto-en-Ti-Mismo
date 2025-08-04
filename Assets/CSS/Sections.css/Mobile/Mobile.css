@@ -1,1402 +1,190 @@
-/* Importación de la fuente Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-/* Estilos para la sección mobile 1.1 */
-@media only screen and (max-width: 768px) {
-    .mobile-only {
-        display: block;
-    }
-}
-
-@media only screen and (min-width: 769px) {
-    .mobile-only {
-        display: none;
-    }
-}
-
-#section-mobile-1-1 {
-    font-family: 'Poppins', sans-serif; /* Aplica la fuente Poppins a toda la sección */
-    background-color: #000; /* Fondo negro para toda la sección */
-    color: #fff;
-    padding: 20px 0;
-}
-
-.text-container {
-    padding: 20px;
-    text-align: center;
-}
-
-.main-title {
-    font-size: 2em;
-    margin: 0;
-}
-
-.video-cover-wrapper {
-    position: relative;
-    max-width: 90%;
-    margin: 0 auto;
-    height: 0;
-    padding-bottom: 130%;
-    background-color: #000;
-    border-radius: 0px;
-    overflow: hidden;
-}
-
-.video-cover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.cover-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.video-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 0) 100%);
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.video-subtitle {
-    font-size: 1.2em;
-    margin-bottom: 15px;
-}
-
-.watch-trailer-button {
-    background-color: #FF8F2B;
-    color: #fff;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 0px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    font-family: 'Poppins', sans-serif; /* Asegura que la fuente también se aplique al botón */
-}
-
-.watch-trailer-button:hover {
-    background-color: #FFC900;
-}
-
-.text-container-below {
-    background-color: #000;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    margin-top: 20px;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Poppins', sans-serif; /* Asegura que la fuente también se aplique al texto debajo */
-}
-
-.additional-text {
-    font-size: 1em;
-    margin: 0;
-    text-align: center;
-}
-
-.video-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    font-family: 'Poppins', sans-serif; /* Asegura que la fuente se aplique al contenido del modal */
-}
-
-.video-content {
-    position: relative;
-    width: 98%;
-    max-width: 650px;
-    height: 28vh; /* Ajuste para que sea más alto */
-    background-color: #000;
-}
-
-.close-button {
-    position: absolute;
-    top: -25px;
-    right: 0px;
-    font-size: 24px;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    font-family: 'Poppins', sans-serif;
-}
-
-.close-button:hover {
-    background: rgba(110, 82, 82, 0.7);
-}
-/* Importar la fuente Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-/* Aplicar Poppins a todo el documento */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Estilos específicos para mobile */
-@media (max-width: 767px) {
-    #section-mobile-1 {
-        font-family: 'Poppins', sans-serif;
-        position: relative;
-        width: 100%;
-        min-height: 100vh;
-        padding: 20px 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    }
-
-    #section-mobile-1 .background-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-    }
-
-    .section-1-mobile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 20px;
-    }
-
-    .dark-container {
-        background-color: rgba(0, 0, 0, 0.7);
-        padding: 40px 30px;
-        border-radius: 0;
-        max-width: 380px;
-        width: 100%;
-        text-align: center;
-        margin: 0px auto 0;
-    }
-
-    .countdown-container-mobile h2 {
-        font-family: 'Poppins', sans-serif;
-        color: #ffffff;
-        margin: 20px 0 10px 0;
-    }
-
-    .countdown-container-mobile p {
-        font-family: 'Poppins', sans-serif;
-        color: #ffffff;
-        margin: 0 0 20px;
-    }
-
-    .countdown {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 30px;
-    }
-
-    .countdown-element {
-        font-family: 'Poppins', sans-serif;
-        background-color: #ffffff;
-        color: #000;
-        width: 70px;
-        height: 90px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 5px;
-        box-sizing: border-box;
-    }
-
-    .countdown-element span:first-child {
-        font-family: 'Poppins', sans-serif;
-        font-size: 2em;
-        font-weight: 600;
-        margin-bottom: 5px;
-    }
-
-    .countdown-element span:last-child {
-        font-family: 'Poppins', sans-serif;
-        font-size: 0.7em;
-        font-weight: 700;
-    }
-
-    .event-details {
-        font-family: 'Poppins', sans-serif;
-        color: #ffffff;
-        text-align: left;
-        font-size: 1em;
-        line-height: 1.4;
-        margin: 25px 0 0;
-        padding-left: 6px;
-    }
-
-    .buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        width: 90%;
-        margin: 20px auto;
-        align-items: center;
-    }
-
-    .btn {
-        font-family: 'Poppins', sans-serif;
-        padding: 10px 10px;
-        font-size: 0.9em;
-        font-weight: 500;
-        text-decoration: none;
-        border-radius: 0px;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        width: 100%;
-        text-align: center;
-    }
-
-    .reserve-btn {
-        background-color: #3BB0D9;
-        color: #ffffff;
-    }
-
-    .reserve-btn:hover {
-        background-color: #18C2B6;
-        color: #000000;
-    }
-
-    .other-dates-btn {
-        background-color: #FF8F2B;
-        color: #ffffff;
-    }
-
-    .other-dates-btn:hover {
-        background-color: #F2CB1C;
-        color: #000000;
-    }
-}
-
-/* Encapsulado para Section Mobile 2 */
-
-/* Solo visible en móviles */
-@media only screen and (max-width: 768px) {
-    #section-mobile-2 {
-        display: block;
-        margin-top: 30px;
-    }
-}
-
-/* Ocultar en escritorio */
-@media only screen and (min-width: 769px) {
-    #section-mobile-2 {
-        display: none;
-    }
-}
-
-/* Contenedor principal del carrusel */
-#section-mobile-2 .carousel-container {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    background-color: #ffffff;
-    padding: 10px;
-    scroll-behavior: smooth;
-}
-
-/* Contenedor del slider */
-#section-mobile-2 .carousel-slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    will-change: transform;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-padding: 10px;
-}
-
-/* Slide individual */
-#section-mobile-2 .carousel-slide {
-    min-width: 90%;
-    margin: 0 5%;
-    box-sizing: border-box;
-    display: inline-block;
-    scroll-snap-align: center;
-    border: 5px solid #ffffff; /* Borde blanco */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más prominente */
-    border-radius: 0px; /* Bordes redondeados opcionales */
-}
-
-/* Imagen dentro del slide */
-#section-mobile-2 .carousel-slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 0px; /* Bordes redondeados solo para la imagen */
-    box-shadow: none; /* Sin sombra extra en la imagen */
-}
-
-/* Navegación del carrusel */
-#section-mobile-2 .carousel-nav {
-    position: static;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-/* Ajustes de estilo para las flechas */
-#section-mobile-2 .nav-arrow {
-    cursor: pointer;
-    background-color: #ffffff;
-    color: #0066cc;
-    border: 2px solid #000000;
-    padding: 5px;
-    font-size: 20px;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0 10px;
-}
-
-/* Hover effect para las flechas */
-#section-mobile-2 .nav-arrow:hover {
-    background-color: #0066cc;
-    color: #ffffff;
-}
-
-
-/* Estilos encapsulados para la sección mobile 3 */
-@media (max-width: 767px) {
-    /* Contenedor principal del carrusel (visible solo en móvil) */
-    #section-mobile-3 {
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: auto;
-        background-color: transparent;
-        overflow-x: scroll; /* Permitir scroll horizontal */
-        scroll-snap-type: x mandatory; /* Snap entre slides */
-        position: relative;
-        -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
-    }
-
-    /* Contenedor del carrusel usando Grid */
-    #section-mobile-3 .carousel-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
-        height: auto;
-        overflow-x: auto; /* Mantener scroll horizontal manual */
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth; /* Suavizar el scroll manual */
-        position: relative;
-    }
-
-    /* Grid para las imágenes del carrusel */
-    #section-mobile-3 .carousel-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 100%);
-        grid-auto-rows: auto;
-        scroll-snap-align: start;
-    }
-
-    /* Cada imagen ocupa todo el ancho del contenedor */
-    #section-mobile-3 .carousel-item {
-        width: 100%;
-        height: auto;
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        scroll-snap-align: center;
-    }
-
-    /* Imágenes del carrusel */
-    #section-mobile-3 .carousel-image {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
-
-    /* Botón flotante dentro de la diapositiva para avanzar */
-    #section-mobile-3 .next-slide {
-        position: absolute;
-        top: 50%;
-        right: 10px;
-        background-color: transparent; /* Fondo transparente */
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        z-index: 10;
-        transform: translateY(-50%);
-    }
-
-    /* Botón flotante dentro de la diapositiva para retroceder */
-    #section-mobile-3 .prev-slide {
-        position: absolute;
-        top: 50%;
-        left: 10px;
-        background-color: transparent; /* Fondo transparente */
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        z-index: 10;
-        transform: translateY(-50%);
-    }
-
-    /* Flechas de los botones */
-    #section-mobile-3 .arrow-right, 
-    #section-mobile-3 .arrow-left {
-        border: solid white;
-        border-width: 0 4px 4px 0;
-        display: inline-block;
-        padding: 8px;
-    }
-
-    /* Flecha derecha */
-    #section-mobile-3 .arrow-right {
-        transform: rotate(-45deg);
-    }
-
-    /* Flecha izquierda */
-    #section-mobile-3 .arrow-left {
-        transform: rotate(135deg);
-    }
-
-    /* Botón de llamada a la acción */
-    #section-mobile-3 .cta-button {
-        width: 80%; /* Ancho del 80% del contenedor */
-        max-width: 250px;
-        position: absolute;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #000;
-        color: #fff;
-        padding: 10px 20px;
-        font-size: 1em;
-        font-family: 'Poppins', sans-serif;
-        text-transform: uppercase;
-        font-weight: 400;
-        border: none;
-        border-radius: 0;
-        text-align: center;
-        text-decoration: none;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        transition: background-color 0.2s ease;
-        z-index: 100;
-    }
-
-    /* Efecto hover en el botón de llamada a la acción */
-    #section-mobile-3 .cta-button:hover {
-        background-color: #288BD6;
-        transform: translateX(-50%) scale(1.05);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    }
-}
-
-/* Ocultar en pantallas grandes */
-@media (min-width: 768px) {
-    #section-mobile-3 {
-        display: none;
-    }
-}
-
-/* Estilos de la Sección 3.1 (solo visible en móviles) */
-@media (max-width: 767px) {
-    /* Encapsulado para la sección mobile 3.1 */
-    #section-mobile-3-1 {
-        background-color: #000; /* Fondo negro */
-        color: #FFFFFF; /* Texto blanco */
-        text-align: center;
-        padding: 10px 0; /* Ajuste del padding */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; /* Asegurar que todo esté alineado en columna */
-        margin: 0;
-        width: 100vw;
-    }
-
-    /* Contenido dentro de la columna derecha */
-    #section-mobile-3-1 .column-right {
-        width: 100%;
-        max-width: 100%; /* Asegurarse que use todo el ancho disponible */
-        padding: 10px 20px; /* Ajuste del padding */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; /* Centrar el contenido verticalmente */
-        margin: 0;
-    }
-
-    /* Estilos para el título "Producido por" */
-    #section-mobile-3-1 h2 {
-        font-size: 1.8em;
-        color: #FFD700; /* Color dorado */
-        margin-bottom: 10px;
-        margin-top: 35;
-    }
-
-    /* Estilos para el subtítulo "Koete Desarrollo Acelerado" */
-    #section-mobile-3-1 h3 {
-        font-size: 1.5em;
-        font-weight: bold;
-        margin-bottom: 20px;
-        color: #FFFFFF;
-        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        margin-top: 0;
-    }
-
-    /* Estilos para el párrafo de información adicional */
-    #section-mobile-3-1 p {
-        color: #FFFFFF;
-        font-size: 0.9em;
-        line-height: 1.5;
-        max-width: 340px;
-        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        margin-bottom: 30px;
-        margin-top: 30;
-    }
-
-    /* Estilos para el logo de la empresa */
-    #section-mobile-3-1 .company-logo {
-        width: 120px;
-        height: auto;
-        margin-bottom: 30px;
-        margin-top: 0;
-    }
-}
-
-/* Ocultar en pantallas más grandes */
-@media (min-width: 768px) {
-    #section-mobile-3-1 {
-        display: none;
-    }
-}
-
-
-/* Estilos encapsulados para la sección mobile 3.2, visibles solo en pantallas móviles */
-@media (max-width: 767px) {
-    /* Contenedor principal de la sección 3.2 */
-    #section-mobile-3-2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-        background-color: #000; /* Fondo negro */
-        margin-bottom: 30px; /* Aumentar el margen inferior debajo de los logos */
-    }
-
-    /* Encabezado de la sección "Algunos de nuestros clientes" */
-    #section-mobile-3-2 .client-heading {
-        text-align: center;
-        color: white; /* Texto en blanco */
-        font-size: 1.4em; /* Aumentar tamaño de fuente */
-        margin: 15px 0; /* Un poco más de margen */
-    }
-
-    /* Contenedor del carrusel */
-    #section-mobile-3-2 .carousel {
-        width: 100vw; /* Ocupa todo el ancho de la pantalla */
-        overflow: hidden;
-        padding: 0;
-        margin: 0;
-    }
-
-    /* Pista del carrusel que contiene los logos */
-    #section-mobile-3-2 .carousel-track {
-        display: flex;
-        justify-content: center;
-        gap: 50px; /* Aumentar aún más el espaciado entre los logos */
-        transition: transform 0.5s ease-in-out; /* Transición suave */
-        width: 100%; /* Ocupa el 100% del contenedor */
-        padding: 0;
-        margin: 0;
-    }
-
-    /* Elementos del carrusel (los logos) */
-    #section-mobile-3-2 .carousel-items {
-        display: flex;
-        padding: 0;
-        margin: 0;
-    }
-
-    /* Ajuste de los logos: agrandar y eliminar márgenes */
-    #section-mobile-3-2 .carousel-items img {
-        width: 160px; /* Aumentar el ancho de los logos */
-        height: auto;
-        object-fit: contain; /* Contener las imágenes sin distorsión */
-        filter: brightness(0) invert(1); /* Convertir los logos a blanco */
-        margin: 0; /* Eliminar cualquier margen en los logos */
-    }
-}
-
-/* Ocultar en pantallas más grandes (escritorio) */
-@media (min-width: 768px) {
-    #section-mobile-3-2 {
-        display: none; /* Se oculta en pantallas grandes */
-    }
-}
-
-/* Encapsulación del carrusel de testimonios mobile */
-#testimonials-carousel-mobile {
-    width: 100%;
-    display: none; /* Oculto por defecto en escritorio */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 0; /* Aumentado el padding vertical */
-    background-color: #fff; /* Fondo blanco para la sección */
-    box-sizing: border-box; /* Asegura que padding y border se incluyan en el tamaño total */
-}
-
-/* Solo se muestra en dispositivos móviles */
-@media (max-width: 768px) {
-    #testimonials-carousel-mobile {
-        display: flex;
-    }
-}
-
-#testimonials-carousel-mobile .carousel-container {
-    max-width: 80%; /* Más angosto */
-    position: relative;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra pronunciada */
-    box-sizing: border-box; /* Asegura que padding y border se incluyan en el tamaño total */
-}
-
-#testimonials-carousel-mobile .carousel-slide {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-    width: 100%;
-}
-
-#testimonials-carousel-mobile .carousel-slide-content {
-    min-width: 100%;
-    margin: 0 40px; /* Ajuste del margen lateral */
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 60px 30px; /* Más alto */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para cada testimonio */
-    scroll-snap-align: center;
-    text-align: center;
-    min-height: 350px; /* Altura mínima mayor */
-    max-width: 90%; /* Ajuste para que no ocupe todo el contenedor */
-    box-sizing: border-box;
-}
-
-/* Estilo de texto */
-#testimonials-carousel-mobile .carousel-slide-content p,
-#testimonials-carousel-mobile .carousel-slide-content h4 {
-    color: #333;
-    max-width: 80%; /* Contener más el texto */
-    margin: 0 auto; /* Centrar el texto dentro del contenedor */
-}
-
-#testimonials-carousel-mobile .carousel-slide-content p {
-    font-size: 16px;
-    margin-bottom: 45px; /* Mayor espacio entre el párrafo y el siguiente elemento */
-}
-
-#testimonials-carousel-mobile .carousel-slide-content h4 {
-    font-size: 18px;
-    margin-top: 40px; /* Mayor espacio entre el título y el párrafo anterior */
-    font-weight: bold;
-}
-
-/* Flechas de navegación */
-#testimonials-carousel-mobile .carousel-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #fff; /* Fondo blanco */
-    color: #333;
-    border: 2px solid #333; /* Borde negro delgado */
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1;
-    width: 40px;
-    height: 40px;
-    aspect-ratio: 1/1; /* Asegura que sea un círculo perfecto */
-    border-radius: 50%; /* Hacer las flechas circulares */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box; /* Asegura que padding y border se incluyan en el tamaño total */
-    padding: 0; /* Elimina cualquier padding que pueda estar afectando la forma */
-}
-
-#testimonials-carousel-mobile .carousel-arrow.left {
-    left: -20px;
-}
-
-#testimonials-carousel-mobile .carousel-arrow.right {
-    right: -20px;
-}
-
-#testimonials-carousel-mobile .carousel-arrow:hover {
-    background-color: #f0f0f0; /* Fondo más claro al hacer hover */
-    color: #000;
-}
-
-/* Puntos de navegación */
-#testimonials-carousel-mobile .carousel-dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px; /* Mayor espacio entre los puntos de navegación y el contenedor */
-}
-
-#testimonials-carousel-mobile .carousel-dots .dot {
-    height: 8px;
-    width: 8px;
-    margin: 0 4px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-#testimonials-carousel-mobile .carousel-dots .dot.active {
-    background-color: #717171;
-}
-
-/* Solución encapsulada para evitar desbordamiento horizontal solo en ciertas secciones */
-#section-mobile-4 {
-    max-width: 100vw; /* Limita el ancho de la sección al viewport */
-    overflow-x: hidden; /* Evita el desbordamiento horizontal en estas secciones */
-}
-
-/* Si tienes otras secciones que necesitan esta corrección, puedes incluirlas */
-.container, .wrapper, section.specific-class {
+/* ---- SECTION 1 MOBILE ---- */
+
+@media (max-width: 900px) {
+
+  .mobile-only {
+    display: block !important;
+  }
+  .desktop-only {
+    display: none !important;
+  }
+
+  /* Bloque general */
+  .section-mobile-1-block {
+    width: 100vw;
     max-width: 100vw;
-    overflow-x: hidden;
-}
-
-/* Cambiamos el color del texto "Experto en Ti Mismo" a azul claro */
-#section-mobile-5 .rating-container-transparent h3 {
-    color: #80CCE6; /* Azul claro */
-}
-
-/* Encapsulación de la sección mobile */
-#section-mobile-5 {
-    width: 100vw;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 20px;
-    background-color: transparent;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+    padding: 0 5vw 30px 5vw;
+    background: #191c23 url('../../img/CieloKOETE.webp') repeat top center; /* Ajusta la ruta según tu estructura */
     box-sizing: border-box;
-    min-height: 120vh; /* Aseguramos que ocupe toda la vista sin espacios adicionales */
-    overflow-x: hidden; /* Prevenir desbordamientos laterales */
-}
+  }
 
-/* Fondo del video */
-#section-mobile-5 .video-container-mobile {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 140vh; /* Aseguramos que ocupe toda la altura de la sección */
-    z-index: -1;
-    overflow: hidden;
-}
-
-#section-mobile-5 .video-container-mobile .youtube-background {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 450vw; /* Aumentamos aún más el ancho para asegurarnos de cubrir todo */
-    height: 280vh; /* Aseguramos que el video cubra la altura completa */
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    pointer-events: none;
-}
-
-/* Estilos del texto superior */
-#section-mobile-5 .intro-text-mobile h2 {
-    font-size: 1.6em;
-    color: #ffffff;
-    margin-top: 5px; /* Reducimos el margen superior aún más */
-    margin-bottom: 50px; /* Aumentamos el margen inferior para crear más espacio con el contenedor de abajo */
-    z-index: 1;
-    max-width: 90vw;
-    margin: 0 auto;
+  /* HERO + COPY + COUNTDOWN */
+  #section-mobile-1-hero {
+    padding-top: 42px;
     text-align: center;
-    padding: 0px; /* Eliminamos el padding */
-}
+  }
 
-#section-mobile-5 .intro-text-mobile .highlight-mobile {
-    color: #00AEEF;
-    font-weight: bold;
-}
+  #section-mobile-1-hero .hero-title {
+    font-size: 2.1rem;
+    font-weight: 800;
+    line-height: 1.17;
+    margin-bottom: 9px;
+    letter-spacing: -1.2px;
+  }
+  #section-mobile-1-hero .blue {
+    color: #38bbdf;
+  }
 
-/* Contenedor transparente oscuro para el círculo */
-#section-mobile-5 .rating-container-transparent {
-    background-color: rgba(0, 0, 0, 0.7); /* Transparente oscuro */
-    padding: 20px;
-    border-radius: 0px;
-    margin-top: 40px; /* Aumentamos el margen superior para crear espacio con el texto superior */
-    margin-bottom: 20px;
-}
+  #section-mobile-1-hero .hero-subtitle {
+    font-size: 1.01rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 25px;
+  }
 
-/* Contenedor oscuro transparente para los elementos de texto y barra */
-#section-mobile-5 .rating-content-container-mobile {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro transparente */
-    padding: 20px;
-    border-radius: 0px;
-    max-width: 90vw;
-    margin-bottom: 20px;
-    z-index: 2;
-}
+  #countdown-mobile.countdown-box {
+    display: flex;
+    gap: 7px;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
 
-/* Texto y puntaje */
-#section-mobile-5 .rating-text-mobile h3 {
-    font-size: 2em;
-    color: #A9E4F2;
-    margin-bottom: 15px;
-}
+  #countdown-mobile .countdown-item {
+    background: #23252d;
+    border-radius: 10px;
+    padding: 8px 12px 4px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 44px;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.09);
+  }
+  #countdown-mobile .countdown-item span {
+    font-size: 1.27rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+  }
+  #countdown-mobile .countdown-item small {
+    font-size: 0.7rem;
+    margin-top: 1px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #8bd2e9;
+  }
 
-#section-mobile-5 .rating-description-mobile {
-    font-size: 1.1em;
-    color: #ffffff;
-    margin-bottom: 30px;
-}
+  #section-mobile-1-hero .next-session {
+    color: #38bbdf;
+    font-weight: 800;
+    font-size: 0.96rem;
+    margin: 13px 0 6px 0;
+  }
 
-/* Contenedor de la barra circular y el puntaje */
-#section-mobile-5 .circular-progress-container-mobile {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    margin: 20px auto;
-}
-
-#section-mobile-5 .progress-ring-mobile {
-    width: 100%;
-    height: 100%;
-    transform: rotate(-90deg);
-}
-
-#section-mobile-5 .progress-ring__circle-mobile {
-    stroke-dasharray: 377;
-    stroke-dashoffset: 377;
-    stroke: #288BD6;
-    stroke-width: 10;
-    fill: transparent;
-    transition: stroke-dashoffset 2s ease-in-out;
-}
-
-#section-mobile-5 .rating-score-number-mobile {
-    position: absolute;
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #ffffff;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Información de participantes */
-#section-mobile-5 .participants-info-mobile {
-    font-size: 1em;
-    color: #ffffff;
-    margin-top: 10px;
-}
-
-/* Botón de inscripción fuera del contenedor oscuro */
-#section-mobile-5 .blue-btn-mobile {
-    background-color: #3BB0D9;
-    color: white;
-    padding: 12px 25px;
+  #section-mobile-1-hero .cta-btn {
+    background: #38bbdf;
+    color: #fff;
+    font-weight: 800;
+    border: none;
+    border-radius: 7px;
+    padding: 14px 20px;
+    font-size: 1rem;
+    margin-bottom: 9px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(32,180,227,0.12);
     text-decoration: none;
-    font-weight: 600;
-    text-transform: uppercase;
     display: inline-block;
-    margin-top: 15px; /* Ajustar el margen superior para reducir espacio con el texto superior */
-    z-index: 2;
-    transition: all 0.3s ease-in-out;
-    max-width: 90vw;
-}
+    letter-spacing: 0.6px;
+    transition: background 0.2s;
+  }
+  #section-mobile-1-hero .cta-btn .arrow {
+    font-size: 1.13em;
+    margin-left: 7px;
+    font-weight: 800;
+    vertical-align: middle;
+  }
+  #section-mobile-1-hero .cta-btn:hover, 
+  #section-mobile-1-hero .cta-btn:focus {
+    background: #2478b5;
+    color: #fff;
+  }
 
-#section-mobile-5 .blue-btn-mobile:hover {
-    background-color: #288BD6;
-    transform: scale(1.05);
-}
+  #section-mobile-1-hero .session-duration {
+    color: #b6b6b6;
+    font-size: 0.91rem;
+    margin-bottom: 12px;
+  }
 
-/* Mostrar en dispositivos móviles */
-@media (max-width: 768px) {
-    #section-mobile-5 {
-        display: flex;
-        overflow-x: hidden; /* Prevenir desplazamientos laterales */
-    }
-}
-
-/* Ocultar en pantallas de escritorio */
-@media (min-width: 769px) {
-    #section-mobile-5 {
-        display: none;
-    }
-}
-
-/* Solución encapsulada para evitar desbordamiento horizontal solo en ciertas secciones */
-#section-5, #section-mobile-5 {
-    max-width: 100vw; /* Limita el ancho de la sección al viewport */
-    overflow-x: hidden; /* Evita el desbordamiento horizontal en estas secciones */
-}
-
-/* Si tienes otras secciones que necesitan esta corrección, puedes incluirlas */
-.container, .wrapper, section.specific-class {
-    max-width: 100vw;
-    overflow-x: hidden;
-}
-
-/* Ocultar por defecto la sección en pantallas más grandes */
-#section-mobile-6-1 {
-    display: none;
-    background-color: white;
-    padding: 0 20px; /* Reducimos el padding lateral */
-}
-
-/* Mostrar la sección solo en dispositivos móviles */
-@media only screen and (max-width: 768px) {
-    #section-mobile-6-1 {
-        display: block;
-        margin-top: -20px; /* Reducimos aún más el margen superior */
-        padding-top: 0; /* Eliminamos el padding superior */
-        margin-bottom: 60px; /* Aumentamos el margen inferior para evitar que se pegue la siguiente sección */
-    }
-}
-
-/* Contenedor principal del carrusel */
-#section-mobile-6-1 .mobile-carousel-container {
-    position: relative;
-    max-width: 100%;
+  /* VIDEO */
+  #section-mobile-1-video {
+    padding-top: 0;
+    padding-bottom: 17px;
+    text-align: center;
+  }
+  #section-mobile-1-video .video-embed {
+    width: 97vw;
+    max-width: 450px;
+    margin: 0 auto;
+    aspect-ratio: 16/9;
+    border-radius: 13px;
     overflow: hidden;
-    background-color: #ffffff;
-    user-select: none;
-}
-
-/* Configuración del deslizamiento del carrusel */
-#section-mobile-6-1 .mobile-carousel-slide {
-    display: flex;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    white-space: nowrap;
-    transition: transform 0.5s ease;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-/* Estilo para los items del carrusel, aumentando el tamaño de los contenedores */
-#section-mobile-6-1 .slide-content {
-    min-width: 60%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
-    padding: 10px;
-    height: auto;
-    background-color: #ffffff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 0px;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    margin-top: 0; /* Eliminamos margen superior */
-}
-
-/* Configuración de las imágenes */
-#section-mobile-6-1 .slide-content img {
+    background: #121217;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.14);
+  }
+  #section-mobile-1-video .video-embed iframe {
     width: 100%;
-    height: auto;
-    max-height: 500px;
-    object-fit: contain;
-    border-radius: 0px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-/* Estilo especial para el logo final */
-#section-mobile-6-1 .slide-content.logo-final {
-    background-color: transparent;
-    box-shadow: none;
+    height: 200px;
     border: none;
+    display: block;
+    max-width: 100%;
+  }
+
+  /* BENEFICIOS */
+  #section-mobile-1-benefits .benefits-box {
+    background: rgba(32, 40, 59, 0.93);
+    padding: 18px 13px 14px 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 9px rgba(32,180,227,0.06);
+    margin: 0 auto 13px auto;
+    max-width: 99vw;
+    text-align: left;
+  }
+  #section-mobile-1-benefits .benefits-box h3 {
+    color: #38bbdf;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  #section-mobile-1-benefits .benefits-box ul {
+    list-style: disc;
+    margin: 0 0 0 17px;
+    padding: 0;
+  }
+  #section-mobile-1-benefits .benefits-box li {
+    font-size: 0.97rem;
+    margin-bottom: 6px;
+    color: #e5f5fa;
+    line-height: 1.49;
+  }
+
+  /* TESTIMONIOS */
+  #section-mobile-1-testimonials .testimonials-box {
+    margin-top: 19px;
+    margin-bottom: 10px;
+    padding-left: 0;
+  }
+  #section-mobile-1-testimonials blockquote {
+    font-size: 0.96rem;
+    color: #fff;
+    border-left: 3px solid #38bbdf;
+    margin: 0 0 11px 0;
+    padding: 0 0 0 13px;
+    opacity: 0.89;
+    font-style: italic;
+    background: none;
+  }
 }
 
-#section-mobile-6-1 .slide-content.logo-final img {
-    width: 18%;
-    height: auto;
-    object-fit: contain;
-    border: none;
-    background-color: transparent;
-    box-shadow: none;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-/* Flechas de navegación */
-#section-mobile-6-1 .carousel-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px; /* Reducimos el margen superior de las flechas */
-    gap: 30px;
-}
-
-#section-mobile-6-1 .nav-arrow {
-    cursor: pointer;
-    background-color: white;
-    color: #3BB0D9;
-    width: 35px;
-    height: 35px;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 1.5px solid black;
-}
-
-#section-mobile-6-1 .nav-arrow:hover {
-    background-color: #f0f0f0;
-}
-
-/* Encapsulado y específico para section-mobile-6 */
-@media only screen and (max-width: 768px) {
-    #section-mobile-6 {
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-        padding: 20px;
-        width: 100%;
-        align-items: center; /* Centramos todos los elementos */
-        margin-bottom: 0; /* Eliminamos márgenes en la parte inferior */
-        padding-bottom: 0; /* Reducimos el padding inferior */
-    }
-
-    /* Columna del título y la imagen */
-    #section-mobile-6 .left-title-column, 
-    #section-mobile-6 .middle-image-column {
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-        margin-bottom: -10; /* Reducimos los márgenes de los contenedores */
-    }
-
-    /* Estilo del título */
-    #section-mobile-6 .program-title h2 {
-        font-size: 1.5em;
-        text-align: center;
-        color: #000000;
-    }
-
-    /* Imagen del programa (reducida en tamaño un 5%) */
-    #section-mobile-6 .middle-image-column img {
-        width: 75%; /* Imagen más pequeña en un 5% */
-        height: auto;
-    }
-
-    /* Botón CTA más pequeño y centrado */
-    #section-mobile-6 .cta-button {
-        background-color: #FEDD00;
-        padding: 0.7rem 1.4rem; /* Botón reducido en un 20% */
-        text-decoration: none;
-        font-weight: 400;
-        color: black;
-        font-size: 0.9rem; /* Tamaño de fuente más pequeño */
-        text-transform: uppercase;
-        margin: 10px auto 0 auto; /* Aseguramos que el margen inferior del botón sea 0 */
-        display: inline-block;
-        transition: background-color 0.3s ease;
-        text-align: center;
-        border-radius: 0px;
-        position: relative;
-        top: -100px; /* Movemos el botón hacia arriba */
-    }
-
-    #section-mobile-6 .cta-button:hover {
-        background-color: #F2CB1C;
-    }
-}
-
-/* Ocultar en escritorio */
-@media only screen and (min-width: 769px) {
-    #section-mobile-6 {
-        display: none;
-    }
-}
-
-/* Ocultar la sección por defecto en todos los dispositivos */
-#section-mobile-7 {
-    display: none;
-}
-
-/* Mostrar y aplicar estilos solo en dispositivos móviles */
-@media only screen and (max-width: 767px) {
-    #section-mobile-7 {
-        display: block;
-        padding: 20px;
-        background-color: #000000;
-        color: #ffffff;
-    }
-
-    /* Estilo para el título de la sección */
-    #section-mobile-7 .section-title {
-        text-align: center;
-        font-size: 1.5rem;
-        color: #ffffff;
-        margin-bottom: 20px;
-    }
-
-    /* Carrusel */
-    #section-mobile-7 .carousel {
-        position: relative;
-        width: 100%;
-        max-width: 400px;
-        overflow: hidden;
-        margin: 0 auto;
-        background-color: black;
-        border-radius: 15px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Diapositiva oculta por defecto */
-    #section-mobile-7 .carousel-slide {
-        display: none;
-        text-align: center;
-    }
-
-    /* Diapositiva activa */
-    #section-mobile-7 .carousel-slide.active {
-        display: block;
-    }
-
-    /* Estado inicial para image-wrapper */
-    #section-mobile-7 .image-wrapper {
-        text-align: center;
-        padding: 20px 0;
-        position: relative;
-        transform: translateX(20px);
-        opacity: 0;
-        transition: transform 0.7s ease, opacity 0.7s ease;
-    }
-
-    /* Imagen */
-    #section-mobile-7 .image-wrapper img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-        opacity: 1;
-    }
-
-    /* Filtro degradado */
-    #section-mobile-7 .image-wrapper::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
-        border-radius: 0px;
-        pointer-events: none;
-    }
-
-    /* Estado inicial para carousel-text */
-    #section-mobile-7 .carousel-text {
-        padding: 15px;
-        transform: translateX(30px);
-        opacity: 0;
-        transition: transform 0.7s ease, opacity 0.7s ease;
-    }
-
-    /* Estilos cuando la diapositiva está activa */
-    #section-mobile-7 .carousel-slide.active .image-wrapper,
-    #section-mobile-7 .carousel-slide.active .carousel-text {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-    /* Títulos y párrafos */
-    #section-mobile-7 .carousel-text h3 {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-        color: #ffffff;
-    }
-
-    #section-mobile-7 .carousel-text p {
-        font-size: 1rem;
-        color: #ffffff;
-        margin-bottom: 15px;
-    }
-
-    /* Botón */
-    #section-mobile-7 .cta-button {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 1rem;
-        color: black;
-        background-color: #FEDD00;
-        border: none;
-        border-radius: 0px;
-        cursor: pointer;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-    }
-
-    #section-mobile-7 .cta-button:hover {
-        background-color: #FFD700;
-    }
-
-    /* Controles del carrusel */
-    #section-mobile-7 .carousel-controls {
-        position: absolute;
-        top: 65%;
-        left: 0;
-        right: 0;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        transform: translateY(-50%);
-    }
-
-    #section-mobile-7 .carousel-btn {
-        background: none;
-        border: none;
-        font-size: 2rem;
-        color: #ffffff;
-        cursor: pointer;
-    }
-
-    /* Indicadores del carrusel */
-    #section-mobile-7 .carousel-indicators {
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    #section-mobile-7 .dot {
-        height: 10px;
-        width: 10px;
-        margin: 0 5px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-    }
-
-    #section-mobile-7 .dot.active {
-        background-color: #007bff;
-    }
-}
-
-/* Tipografía Poppins para toda la página */
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Estilos específicos para la versión móvil de la sección */
-#buttons-slide-mobile {
-    background-color: #FFFFFF;
-    padding: 50px 20px;
-    width: 100%;
-    display: flex;
-    flex-direction: column; /* Coloca los botones en columna */
-    align-items: center;
-    gap: 15px; /* Espacio entre los botones en columna */
-}
-
-/* Estilos para los botones en la versión móvil */
-#buttons-slide-mobile .cta-button {
-    padding: 15px 40px; /* Tamaño adecuado para móvil */
-    font-size: 16px; /* Tamaño de texto similar al botón superior */
-    border: none; /* Sin borde */
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    font-family: 'Poppins', sans-serif; /* Tipografía Poppins */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; /* Espacio entre el icono y el texto */
-    width: 100%; /* Ocupa todo el ancho del contenedor en móvil */
-    max-width: 300px; /* Ancho fijo para coincidir con el botón superior */
-    border-radius: 0px; /* Bordes ligeramente redondeados como el botón superior */
-}
-
-/* Botón Izquierda (ahora el botón superior) */
-#buttons-slide-mobile .cta-button-left {
-    background-color: #84B6CA; /* Color inicial similar */
-    color: white;
-}
-
-#buttons-slide-mobile .cta-button-left:hover {
-    background-color: #288BD6; /* Color de fondo al hacer hover */
-    transform: scale(1.05);
-}
-
-/* Botón Derecha con el ícono de WhatsApp (ahora el botón inferior) */
-#buttons-slide-mobile .cta-button-right {
-    background-color: #FFB100; /* Color inicial */
-    color: white;
-}
-
-#buttons-slide-mobile .cta-button-right i {
-    font-size: 1.3em; /* Tamaño del ícono de WhatsApp */
-}
-
-#buttons-slide-mobile .cta-button-right:hover {
-    background-color: #F2F12C; /* Color de fondo al hacer hover */
-    transform: scale(1.05);
-}
-
-/* Ocultar la sección en pantallas de escritorio */
-@media (min-width: 769px) {
-    #buttons-slide-mobile {
-        display: none;
-    }
+/* Por si usas mobile-only/desktop-only en otras secciones */
+@media (min-width: 901px) {
+  .mobile-only { display: none !important; }
 }
