@@ -1,85 +1,85 @@
+/* ===============================
+   SECTION DESKTOP 1 (KOETE LANDING)
+   =============================== */
 #section-desktop-1 {
     min-height: 100vh;
     position: relative;
     z-index: 1;
-    padding-top: 80px;
+    padding-top: 100px;
     font-family: 'Poppins', sans-serif;
-    background: url('../../../../img/FONDOS_Mesa\ de\ trabajo\ 1-05.jpg') no-repeat center top;
+    background: url('../../../../img/FONDOS_Mesa de trabajo 1-05.jpg') no-repeat center top;
     background-size: cover;
 }
 
 #section-desktop-1 .section1-desktop-container {
     display: flex;
-    gap: 60px;
-    max-width: 1280px;
+    gap: 56px;
+    max-width: 1400px;
     width: 93vw;
     margin: 0 auto;
     align-items: flex-start;
 }
 
 #section-desktop-1 .section1-desktop-left {
-    flex: 1 1 0;
-    min-width: 340px;
-    max-width: 490px;
+    flex: 1.08 1 0;
+    min-width: 330px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-left: 0;
 }
 
 #section-desktop-1 .hero-title {
-    font-size: 2.7rem;
+    font-size: 2.55rem;
     font-weight: 900;
-    line-height: 1.12;
-    margin-bottom: 18px;
+    line-height: 1.1;
+    margin-bottom: 12px;
     letter-spacing: -1.2px;
     text-align: left;
     border-left: 3.5px solid #36c1ea;
-    padding-left: 18px;
-    font-family: 'Poppins', sans-serif;
+    padding-left: 15px;
 }
 #section-desktop-1 .hero-title .blue {
     color: #36c1ea;
 }
 
 #section-desktop-1 .hero-subtitle {
-    font-size: 1.19rem;
+    font-size: 1.16rem;
     font-weight: 400;
     opacity: 0.92;
     margin-bottom: 32px;
     line-height: 1.5;
     text-align: left;
-    width: 98%;
 }
 
 #section-desktop-1 .countdown-box {
     display: flex;
-    gap: 24px;
-    margin-bottom: 18px;
+    gap: 18px;
+    margin-bottom: 14px;
     margin-top: 5px;
     justify-content: flex-start;
 }
-
 #section-desktop-1 .countdown-item {
     background: #fff;
     border-radius: 0;
-    width: 96px;
-    height: 96px;
+    padding: 10px 14px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-width: 82px;
+    height: 90px;
     box-shadow: 0 2px 13px rgba(0,0,0,0.13);
 }
-
 #section-desktop-1 .countdown-item span {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     font-weight: 900;
     color: #000;
     line-height: 1;
 }
 #section-desktop-1 .countdown-item small {
-    font-size: 0.85rem;
+    font-size: 0.81rem;
     margin-top: 2px;
     letter-spacing: 1px;
     font-weight: 700;
@@ -89,21 +89,21 @@
 #section-desktop-1 .next-session {
     color: #36c1ea;
     font-weight: 800;
-    font-size: 1.13rem;
-    margin: 14px 0 10px 0;
+    font-size: 1.11rem;
+    margin: 13px 0 7px 0;
     text-align: left;
 }
 
 #section-desktop-1 .cta-btn {
     background: #36c1ea;
     color: #fff;
-    font-weight: 800;
+    font-weight: 700;
     border: none;
     border-radius: 0;
-    padding: 18px 0;
+    padding: 16px 0;
     font-size: 1.17rem;
     margin-bottom: 14px;
-    margin-top: 7px;
+    margin-top: 10px;
     cursor: pointer;
     box-shadow: 0 2px 13px rgba(32,180,227,0.13);
     text-decoration: none;
@@ -111,29 +111,29 @@
     width: 420px;
     max-width: 96%;
     text-align: center;
-    display: block;
-    text-transform: uppercase;
-    transition: background 0.16s;
+    display: inline-block;
+    transition: background 0.18s;
 }
 #section-desktop-1 .cta-btn:hover, 
 #section-desktop-1 .cta-btn:focus {
     background: #229bbd;
     color: #fff;
 }
-#section-desktop-1 .cta-btn .arrow { display: none; }
+#section-desktop-1 .cta-btn .arrow { display: none; } /* Elimina flecha del botón */
 
 #section-desktop-1 .session-duration {
     color: #b6b6b6;
     font-size: 1.01rem;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
     margin-top: 0;
     text-align: left;
 }
 
+/* ------- DERECHA ------- */
 #section-desktop-1 .section1-desktop-right {
     flex: 1.5 1 0;
-    min-width: 530px;
-    max-width: 650px;
+    min-width: 640px;
+    max-width: 850px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -141,39 +141,30 @@
 }
 
 #section-desktop-1 .video-embed {
-    width: 520px;
+    width: 650px;
     max-width: 100%;
-    aspect-ratio: 16/9;
-    margin-bottom: 34px;
+    margin-bottom: 32px;
     border-radius: 0;
     overflow: hidden;
-    background: #121217;
-    box-shadow: 0 2px 14px rgba(0,0,0,0.17);
+    /* Sin background ni box-shadow para eliminar el marco */
 }
 #section-desktop-1 .video-embed iframe {
     width: 100%;
-    height: 295px;
+    height: 365px;
     border: none;
     display: block;
-}
-#section-desktop-1 .video-embed .youtube-link {
-    display: block;
-    color: #36c1ea;
-    font-size: 0.9rem;
-    text-decoration: none;
-    margin-top: 10px;
-    text-align: center;
+    background: #000; /* Solo por si el video no carga */
 }
 
 #section-desktop-1 .benefits-box {
     background: rgba(14, 19, 26, 0.93);
-    padding: 25px 28px 20px 28px;
+    padding: 22px 34px 17px 34px;
     border-radius: 0;
-    box-shadow: 0 2px 12px rgba(32,180,227,0.09);
+    box-shadow: none;
     margin: 0;
-    min-width: 430px;
-    max-width: 520px;
-    width: 520px;
+    min-width: 510px;
+    max-width: 650px;
+    width: 650px;
     text-align: left;
     margin-right: 0;
     margin-left: 0;
@@ -183,62 +174,68 @@
     color: #36c1ea;
     font-size: 1.17rem;
     font-weight: 800;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 #section-desktop-1 .benefits-box ul {
     list-style: disc;
-    margin: 0 0 0 18px;
+    margin: 0 0 0 20px;
     padding: 0;
 }
 #section-desktop-1 .benefits-box li {
-    font-size: 1.09rem;
-    margin-bottom: 8px;
+    font-size: 1rem;
+    margin-bottom: 6px;
     color: #fff;
-    line-height: 1.54;
+    line-height: 1.55;
+    font-family: 'Poppins', sans-serif;
 }
 
+/* ------- TESTIMONIOS ------- */
 #section-desktop-1 .testimonials-desktop-wide {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 75px;
-    max-width: 1160px;
+    gap: 58px;
+    max-width: 1250px;
     width: 100%;
-    margin: 92px auto 0 auto;
+    margin: 80px auto 0 auto;
     padding: 0;
     text-align: center;
 }
 #section-desktop-1 .testimonials-desktop-wide blockquote {
-    font-size: 1.12rem;
+    font-size: 1.11rem;
     color: #fff;
     border-left: 3.5px solid #36c1ea;
     background: none;
-    padding: 0 0 0 21px;
+    padding: 0 0 0 18px;
     margin: 0;
-    opacity: 0.94;
+    opacity: 0.92;
     font-style: italic;
-    min-width: 260px;
+    min-width: 258px;
     max-width: 340px;
     line-height: 1.46;
-    position: relative;
 }
-#section-desktop-1 .testimonials-desktop-wide blockquote:after {
-    content: '';
-    display: block;
-    height: 0;
-    border-bottom: 3px solid #36c1ea;
-    margin-top: 24px;
-}
-
 #section-desktop-1 .participant-attribution {
     color: #b6b6b6;
-    font-size: 0.86rem;
+    font-size: 0.85rem;
     text-align: center;
-    margin-top: 14px;
+    margin-top: 10px;
 }
 
-/* Responsive tablet adjustments */
-@media (max-width: 1150px) {
+/* --------- Responsive --------- */
+@media (max-width: 1400px) {
+    #section-desktop-1 .section1-desktop-right {
+        min-width: 400px;
+        max-width: 96vw;
+        margin-left: 10px;
+    }
+    #section-desktop-1 .video-embed,
+    #section-desktop-1 .benefits-box {
+        width: 96vw;
+        min-width: 0;
+        max-width: 96vw;
+    }
+}
+@media (max-width: 1100px) {
     #section-desktop-1 .section1-desktop-container {
         flex-direction: column;
         gap: 38px;
@@ -249,18 +246,24 @@
     #section-desktop-1 .section1-desktop-left {
         align-items: stretch;
     }
-    #section-desktop-1 .video-embed { max-width: 100%; }
+    #section-desktop-1 .video-embed,
     #section-desktop-1 .benefits-box {
-        width: 98vw;
+        width: 97vw;
         min-width: 0;
-        max-width: 100vw;
+        max-width: 97vw;
     }
     #section-desktop-1 .testimonials-desktop-wide {
         flex-direction: column;
         align-items: center;
-        gap: 32px;
+        gap: 22px;
         max-width: 99vw;
         margin: 60px auto 0 auto;
-        text-align: center;
     }
 }
+
+@media (max-width: 800px) {
+    #section-desktop-1 {
+        display: none; /* Ya hay mobile-only */
+    }
+}
+
