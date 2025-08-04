@@ -25,6 +25,7 @@ html, body {
     overflow-x: hidden; /* Evita desplazamiento horizontal */
     width: 100vw; /* Asegura que el contenido ocupe solo el ancho del viewport */
     box-sizing: border-box; /* Aplica box-sizing a todos los elementos */
+    background: #191c23; /* Base background color, overridden by sections if needed */
 }
 
 * {
@@ -46,7 +47,6 @@ html, body {
     transition: transform 0.5s ease; /* Suaviza la animación si es necesario */
 }
 
-/* Estilos de la imagen del logo */
 .label-koete img {
     max-width: 80px; /* Ajusta el tamaño máximo del logo */
     height: auto; /* Mantiene la proporción del logo */
@@ -68,9 +68,6 @@ html, body {
 .label-koete {
     animation: slideDown 0.8s ease forwards; /* Ejecuta la animación al cargar la página */
 }
-
-
-
 
 /* Sección 10 - Botón flotante */
 #section-10 {
