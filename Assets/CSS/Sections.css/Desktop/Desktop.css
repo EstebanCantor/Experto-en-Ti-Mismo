@@ -15,8 +15,8 @@
 #section-desktop-1 .section1-desktop-container {
     display: flex;
     gap: 120px;
-    max-width: 1420px;
-    width: 93vw;
+    max-width: 1200px; /* Reduced to match video size */
+    width: 85vw; /* Adjusted to avoid excess width */
     margin: 0 auto;
     padding-left: 20px;
     align-items: flex-start;
@@ -26,7 +26,7 @@
 #section-desktop-1 .section1-desktop-left {
     flex: 0.9 1 0;
     min-width: 280px;
-    max-width: 420px;
+    max-width: 380px; /* Reduced to fit narrower layout */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -117,7 +117,7 @@
     text-decoration: none;
     letter-spacing: 1px;
     width: 100%;
-    max-width: 420px;
+    max-width: 380px; /* Reduced to match narrower layout */
     text-align: center;
     display: block;
     transition: background 0.18s;
@@ -142,18 +142,18 @@
 #section-desktop-1 .section1-desktop-right {
     flex: 2.0 1 0;
     min-width: 600px;
-    max-width: 800px;
+    max-width: 720px; /* Adjusted to match typical 1280x720 video */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 20px; /* Moves video and benefits slightly to the right */
+    margin-left: 20px;
     margin-right: 20px;
 }
 
 /* CONTENEDOR VIDEO Y BENEFICIOS PEGADOS */
 #section-desktop-1 .video-benefits-stack {
     width: 100%;
-    max-width: 800px;
+    max-width: 720px; /* Matches video size to eliminate black bars */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -162,14 +162,14 @@
 /* VIDEO 16:9 SIEMPRE VISIBLE Y COMPLETO */
 #section-desktop-1 .video-embed {
     width: 100%;
-    max-width: 800px;
+    max-width: 720px; /* Matches video resolution */
     aspect-ratio: 16 / 9;
     margin-bottom: 0;
     border-radius: 0;
     overflow: hidden;
     display: block;
     position: relative;
-    background: transparent; /* Removes any black background */
+    background: transparent;
 }
 #section-desktop-1 .video-embed iframe {
     width: 100%;
@@ -179,7 +179,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: transparent; /* Ensures no black margins */
+    background: transparent;
 }
 
 /* BENEFICIOS */
@@ -189,7 +189,7 @@
     border-radius: 0;
     box-shadow: none;
     min-width: 0;
-    max-width: 800px;
+    max-width: 720px; /* Matches video size */
     width: 100%;
     text-align: left;
     margin: 0;
@@ -220,7 +220,7 @@
     justify-content: center;
     align-items: flex-start;
     gap: 58px;
-    max-width: 1300px;
+    max-width: 1200px; /* Adjusted to match new layout */
     width: 100%;
     margin: 82px auto 0 auto;
     padding: 0;
@@ -252,7 +252,7 @@
     #section-desktop-1 .video-benefits-stack,
     #section-desktop-1 .video-embed,
     #section-desktop-1 .benefits-box {
-        max-width: 98vw;
+        max-width: 85vw;
         width: 100%;
         min-width: 0;
     }
@@ -261,7 +261,7 @@
     #section-desktop-1 .section1-desktop-container {
         flex-direction: column;
         gap: 40px;
-        max-width: 99vw;
+        max-width: 85vw;
         padding-top: 44px;
     }
     #section-desktop-1 .section1-desktop-right,
@@ -271,15 +271,15 @@
     #section-desktop-1 .video-benefits-stack,
     #section-desktop-1 .video-embed,
     #section-desktop-1 .benefits-box {
-        width: 99vw;
+        width: 85vw;
         min-width: 0;
-        max-width: 99vw;
+        max-width: 85vw;
     }
     #section-desktop-1 .testimonials-desktop-wide {
         flex-direction: column;
         align-items: center;
         gap: 22px;
-        max-width: 99vw;
+        max-width: 85vw;
         margin: 60px auto 0 auto;
     }
 }
