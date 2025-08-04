@@ -22,18 +22,19 @@
 }
 
 #section-desktop-1 .section1-desktop-left {
-    flex: 1.13 1 0;
-    min-width: 335px;
-    max-width: 500px;
+    flex: 1 1 0;
+    min-width: 300px;
+    max-width: 450px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding-left: 0;
 }
 
 #section-desktop-1 .hero-title {
-    font-size: 2.65rem;
+    font-size: 2.2rem;
     font-weight: 900;
-    line-height: 1.08;
+    line-height: 1.1;
     margin-bottom: 12px;
     letter-spacing: -1.1px;
     text-align: left;
@@ -64,24 +65,24 @@
 #section-desktop-1 .countdown-item {
     background: #fff;
     border-radius: 0;
-    padding: 10px 14px 7px 14px;
+    padding: 12px 14px 8px 14px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     min-width: 86px;
-    height: 100px;
+    height: 120px;
     box-shadow: 0 2px 13px rgba(0,0,0,0.13);
 }
 #section-desktop-1 .countdown-item span {
-    font-size: 2.19rem;
+    font-size: 2.3rem;
     font-weight: 900;
     color: #000;
     line-height: 1;
     margin-bottom: 0;
 }
 #section-desktop-1 .countdown-item small {
-    font-size: 0.83rem;
+    font-size: 0.85rem;
     margin-top: auto;
     margin-bottom: 2px;
     letter-spacing: 1px;
@@ -137,29 +138,28 @@
 
 /* ------- DERECHA ------- */
 #section-desktop-1 .section1-desktop-right {
-    flex: 1.6 1 0;
+    flex: 1.8 1 0;
     min-width: 600px;
-    max-width: 700px;
+    max-width: 750px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-left: 32px;
+    margin-left: 20px;
 }
 
 /* CONTENEDOR VIDEO Y BENEFICIOS PEGADOS */
 #section-desktop-1 .video-benefits-stack {
     width: 100%;
-    max-width: 650px;
+    max-width: 700px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    position: relative;
 }
 
 /* VIDEO 16:9 SIEMPRE VISIBLE Y COMPLETO */
 #section-desktop-1 .video-embed {
     width: 100%;
-    max-width: 650px;
+    max-width: 700px;
     aspect-ratio: 16 / 9;
     background: #000;
     margin-bottom: 0;
@@ -185,7 +185,7 @@
     border-radius: 0;
     box-shadow: none;
     min-width: 0;
-    max-width: 650px;
+    max-width: 700px;
     width: 100%;
     text-align: left;
     margin: 0;
