@@ -14,27 +14,27 @@
 /* CONTENEDOR PRINCIPAL EN 2 COLUMNAS */
 #section-desktop-1 .section1-desktop-container {
     display: flex;
-    gap: 40px;
+    gap: 80px; /* Increased for more space between left and right */
     max-width: 1420px;
     width: 93vw;
-    margin-left: auto; /* Aligns content to the right */
-    padding-right: 20px; /* Adds space on the right if needed */
+    margin-left: auto; /* Aligns content to the right, but moderated */
+    padding-right: 20px;
     align-items: flex-start;
-    justify-content: flex-end; /* Moves content to the right */
+    justify-content: flex-end; /* Maintains right alignment but less extreme */
 }
 
 #section-desktop-1 .section1-desktop-left {
-    flex: 0.8 1 0; /* Reduced to shift right and give more left space */
+    flex: 0.9 1 0; /* Slightly increased for balance */
     min-width: 280px;
     max-width: 420px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 50px; /* Pushes left column to the right */
+    margin-left: 20px; /* Reduced to moderate right shift */
 }
 
 #section-desktop-1 .hero-title {
-    font-size: 2.0rem; /* Maintained as reduced size */
+    font-size: 2.0rem;
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 12px;
@@ -73,7 +73,7 @@
     align-items: center;
     justify-content: center;
     min-width: 86px;
-    height: 130px; /* Maintained taller height */
+    height: 130px;
     box-shadow: 0 2px 13px rgba(0,0,0,0.13);
 }
 #section-desktop-1 .countdown-item span {
@@ -140,13 +140,13 @@
 
 /* ------- DERECHA ------- */
 #section-desktop-1 .section1-desktop-right {
-    flex: 2.2 1 0; /* Increased to expand leftward */
+    flex: 2.0 1 0; /* Adjusted back to balance space */
     min-width: 600px;
     max-width: 800px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Changed to start for left expansion */
-    margin-right: 20px; /* Space from right edge */
+    align-items: flex-start;
+    margin-right: 20px;
 }
 
 /* CONTENEDOR VIDEO Y BENEFICIOS PEGADOS */
@@ -155,7 +155,7 @@
     max-width: 800px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Aligns left for expansion */
+    align-items: flex-start;
 }
 
 /* VIDEO 16:9 SIEMPRE VISIBLE Y COMPLETO */
