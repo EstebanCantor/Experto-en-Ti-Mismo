@@ -55,7 +55,7 @@
     margin-bottom: 20px;
     line-height: 1.47;
     text-align: left;
-   max-width: 55%;
+    max-width: 55%;
 }
 
 /* COUNTDOWN */
@@ -73,8 +73,8 @@
     padding: 14px 14px 10px 14px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center numbers horizontally */
-    justify-content: center; /* Center numbers vertically */
+    align-items: center;
+    justify-content: center;
     min-width: 80px;
     height: 100px;
     box-shadow: 0 2px 13px rgba(0,0,0,0.13);
@@ -85,7 +85,7 @@
     color: #000;
     line-height: 1;
     margin-bottom: 4px;
-    text-align: center; /* Ensure horizontal centering */
+    text-align: center;
 }
 #section-desktop-1 .countdown-item small {
     font-size: 0.65rem;
@@ -121,7 +121,7 @@
     text-decoration: none;
     letter-spacing: 1px;
     width: 100%;
-    max-width: 400px; /* Match the total width of 4 countdown items (90px * 4) */
+    max-width: 400px;
     text-align: center;
     display: block;
     transition: background 0.18s;
@@ -170,10 +170,11 @@
     align-items: flex-start;
 }
 
-/* VIDEO 16:11 PARA MÁS ALTURA Y ELIMINAR BORDES NEGROS */
+/* VIDEO 16:9 RESTAURADO PARA DESKTOP */
 #section-desktop-1 .video-embed {
     width: 100%;
     max-width: 700px;
+    aspect-ratio: 16 / 9; /* Restaurado a 16:9 para desktop */
     margin-bottom: 0;
     border-radius: 0;
     overflow: hidden;
@@ -233,7 +234,7 @@
     gap: 58px;
     max-width: 1400px;
     width: 90vw;
-    margin: 60px auto 0 auto; /* Increased margin-top to lower testimonials */
+    margin: 60px auto 0 auto;
     padding: 0;
     text-align: center;
 }
