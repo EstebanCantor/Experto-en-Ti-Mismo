@@ -75,7 +75,7 @@
     align-items: center; /* Center numbers horizontally */
     justify-content: center; /* Center numbers vertically */
     min-width: 90px;
-    height: 60px;
+    height: 100px;
     box-shadow: 0 2px 13px rgba(0,0,0,0.13);
 }
 #section-desktop-1 .countdown-item span {
@@ -108,7 +108,7 @@
 #section-desktop-1 .cta-btn {
     background: #36c1ea;
     color: #fff;
-    font-weight: 700;
+    font-weight: 600;
     border: none;
     border-radius: 0;
     padding: 16px 0;
@@ -120,7 +120,7 @@
     text-decoration: none;
     letter-spacing: 1px;
     width: 100%;
-    max-width: 360px; /* Match the total width of 4 countdown items (90px * 4) */
+    max-width: 450px; /* Match the total width of 4 countdown items (90px * 4) */
     text-align: center;
     display: block;
     transition: background 0.18s;
