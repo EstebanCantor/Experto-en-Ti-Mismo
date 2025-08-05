@@ -151,7 +151,7 @@
 /* ------- DERECHA ------- */
 #section-desktop-1 .section1-desktop-right {
     flex: 0 1 720px;
-    min-width: 600px;
+    min-width: 720px;
     max-width: 720px;
     display: flex;
     flex-direction: column;
