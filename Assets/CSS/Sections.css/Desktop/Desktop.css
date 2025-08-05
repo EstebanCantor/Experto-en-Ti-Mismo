@@ -24,9 +24,9 @@
 }
 
 #section-desktop-1 .section1-desktop-left {
-    flex: 0 1 580px;
-    min-width: 580px;
-    max-width: 580px;
+    flex: 0 1 600px;
+    min-width: 600px;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -42,7 +42,7 @@
     text-align: left;
     border-left: 3.5px solid #36c1ea;
     padding-left: 15px;
-    max-width: 80%;
+    max-width: 100%;
 }
 #section-desktop-1 .hero-title .blue {
     color: #36c1ea;
@@ -55,7 +55,7 @@
     margin-bottom: 20px;
     line-height: 1.47;
     text-align: left;
-   max-width: 60%;
+   max-width: 55%;
 }
 
 /* COUNTDOWN */
@@ -104,7 +104,7 @@
     font-size: 1.13rem;
     margin: 10px 0 10px 0;
     text-align: center;
-    width: 80%;
+    width: 70%;
 }
 #section-desktop-1 .cta-btn {
     background: #36c1ea;
@@ -139,7 +139,7 @@
     margin-bottom: 20px;
     margin-top: 0;
     text-align: center;
-    width: 80%;
+    width: 70%;
 }
 
 /* ------- COLUMNA INVISIBLE CENTRAL ------- */
