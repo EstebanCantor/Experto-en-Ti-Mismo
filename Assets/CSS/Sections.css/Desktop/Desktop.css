@@ -26,7 +26,7 @@
 #section-desktop-1 .section1-desktop-left {
     flex: 0 1 400px;
     min-width: 400px;
-    max-width: 400px; /* Fixed width to match countdown */
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -36,13 +36,13 @@
 #section-desktop-1 .hero-title {
     font-size: 2.0rem;
     font-weight: 900;
-    line-height: 1.1; /* Reduced to avoid extra line breaks */
+    line-height: 1.2;
     margin-bottom: 20px;
     letter-spacing: -1.1px;
     text-align: left;
     border-left: 3.5px solid #36c1ea;
     padding-left: 15px;
-    white-space: nowrap; /* Prevent line breaks */
+    max-width: 350px; /* Limit width to allow line breaks */
 }
 #section-desktop-1 .hero-title .blue {
     color: #36c1ea;
@@ -64,7 +64,7 @@
     margin-bottom: 20px;
     margin-top: 5px;
     justify-content: flex-start;
-    width: 100%; /* Ensure it matches left column width */
+    width: 100%;
 }
 #section-desktop-1 .countdown-item {
     background: #fff;
@@ -72,15 +72,15 @@
     padding: 14px 14px 10px 14px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-width: 90px; /* Uniform width for all items */
+    align-items: center; /* Center numbers horizontally */
+    justify-content: center; /* Center numbers vertically */
+    min-width: 90px;
     height: 130px;
     box-shadow: 0 2px 13px rgba(0,0,0,0.13);
 }
 #section-desktop-1 .countdown-item span {
-    font-size: 2.2rem; /* Slightly reduced size */
-    font-weight: 600; /* Reduced weight */
+    font-size: 2.2rem;
+    font-weight: 600;
     color: #000;
     line-height: 1;
     margin-bottom: 4px;
@@ -101,7 +101,7 @@
     font-weight: 800;
     font-size: 1.13rem;
     margin: 20px 0 10px 0;
-    text-align: center; /* Centered */
+    text-align: center;
     width: 100%;
 }
 #section-desktop-1 .cta-btn {
@@ -136,7 +136,7 @@
     font-size: 1.01rem;
     margin-bottom: 20px;
     margin-top: 0;
-    text-align: center; /* Centered */
+    text-align: center;
     width: 100%;
 }
 
@@ -168,11 +168,11 @@
     align-items: flex-start;
 }
 
-/* VIDEO 16:9 SIEMPRE VISIBLE Y COMPLETO */
+/* VIDEO 16:10 PARA MÁS ALTURA Y ELIMINAR BORDES NEGROS */
 #section-desktop-1 .video-embed {
     width: 100%;
     max-width: 720px;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 10; /* More vertical to eliminate side black borders */
     margin-bottom: 0;
     border-radius: 0;
     overflow: hidden;
@@ -189,13 +189,13 @@
     top: 0;
     left: 0;
     background: transparent;
-    object-fit: cover; /* Ensure no black margins */
+    object-fit: cover;
 }
 
 /* BENEFICIOS */
 #section-desktop-1 .benefits-box {
     background: rgba(14, 19, 26, 0.93);
-    padding: 23px 34px 17px 34px;
+    padding: 15px 34px 25px 34px; /* Reduced top padding, increased bottom for space */
     border-radius: 0;
     box-shadow: none;
     min-width: 0;
@@ -203,7 +203,7 @@
     width: 100%;
     text-align: left;
     margin: 0;
-    margin-top: 0;
+    margin-top: -10px; /* Subir texto para reducir espacio con video */
 }
 #section-desktop-1 .benefits-box h3 {
     color: #36c1ea;
@@ -232,7 +232,7 @@
     gap: 58px;
     max-width: 1400px;
     width: 90vw;
-    margin: 40px auto 0 auto; /* Reduced margin-top to bring testimonials up */
+    margin: 40px auto 0 auto;
     padding: 0;
     text-align: center;
 }
