@@ -55,6 +55,7 @@
     margin-bottom: 20px;
     line-height: 1.47;
     text-align: left;
+   max-width: 80%;
 }
 
 /* COUNTDOWN */
@@ -120,7 +121,7 @@
     text-decoration: none;
     letter-spacing: 1px;
     width: 100%;
-    max-width: 500px; /* Match the total width of 4 countdown items (90px * 4) */
+    max-width: 400px; /* Match the total width of 4 countdown items (90px * 4) */
     text-align: center;
     display: block;
     transition: background 0.18s;
