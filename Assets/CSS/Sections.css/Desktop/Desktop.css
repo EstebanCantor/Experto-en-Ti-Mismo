@@ -173,7 +173,7 @@
 #section-desktop-1 .video-embed {
     width: 100%;
     max-width: 720px;
-    aspect-ratio: 16 / 9; /* More vertical to eliminate side black borders */
+    aspect-ratio: 20 / 9; /* More vertical to eliminate side black borders */
     margin-bottom: 0;
     border-radius: 0;
     overflow: hidden;
@@ -204,7 +204,7 @@
     width: 100%;
     text-align: left;
     margin: 0;
-    margin-top: -10px;
+    margin-top: -20px;
 }
 #section-desktop-1 .benefits-box h3 {
     color: #36c1ea;
