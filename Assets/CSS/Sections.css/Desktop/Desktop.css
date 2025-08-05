@@ -25,7 +25,7 @@
 
 #section-desktop-1 .section1-desktop-left {
     flex: 0 1 600px;
-    min-width: 300px; /* Reducido para pantallas más pequeñas */
+    min-width: 300px;
     max-width: 600px;
     display: flex;
     flex-direction: column;
@@ -75,12 +75,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 70px; /* Reducido para pantallas pequeñas */
-    height: 90px; /* Reducido para pantallas pequeñas */
+    min-width: 70px;
+    height: 90px;
     box-shadow: 0 2px 13px rgba(0,0,0,0.13);
 }
 #section-desktop-1 .countdown-item span {
-    font-size: 1.8rem; /* Reducido para pantallas pequeñas */
+    font-size: 1.8rem;
     font-weight: 600;
     color: #000;
     line-height: 1;
@@ -88,7 +88,7 @@
     text-align: center;
 }
 #section-desktop-1 .countdown-item small {
-    font-size: 0.6rem; /* Reducido para pantallas pequeñas */
+    font-size: 0.6rem;
     margin-top: auto;
     margin-bottom: 0;
     letter-spacing: 1px;
@@ -112,8 +112,8 @@
     font-weight: 600;
     border: none;
     border-radius: 0;
-    padding: 12px 0; /* Reducido para pantallas pequeñas */
-    font-size: 1.1rem; /* Reducido para pantallas pequeñas */
+    padding: 12px 0;
+    font-size: 1.1rem;
     margin-bottom: 20px;
     margin-top: 10px;
     cursor: pointer;
@@ -121,10 +121,11 @@
     text-decoration: none;
     letter-spacing: 1px;
     width: 100%;
-    max-width: 320px; /* Reducido para pantallas pequeñas */
+    max-width: 355px; /* Ajustado a 70px * 4 + 25px * 3 (gap) para alinear con el temporizador */
     text-align: center;
     display: block;
     transition: background 0.18s;
+    margin-left: 0; /* Asegurar alineación desde el inicio */
 }
 #section-desktop-1 .cta-btn:hover, 
 #section-desktop-1 .cta-btn:focus {
@@ -135,7 +136,7 @@
 
 #section-desktop-1 .session-duration {
     color: #b6b6b6;
-    font-size: 0.9rem; /* Reducido para pantallas pequeñas */
+    font-size: 0.9rem;
     margin-bottom: 20px;
     margin-top: 0;
     text-align: center;
@@ -145,14 +146,14 @@
 /* ------- COLUMNA INVISIBLE CENTRAL ------- */
 #section-desktop-1 .section1-desktop-spacer {
     flex: 0 0 120px;
-    min-width: 80px; /* Reducido para pantallas pequeñas */
+    min-width: 80px;
     max-width: 120px;
 }
 
 /* ------- DERECHA ------- */
 #section-desktop-1 .section1-desktop-right {
     flex: 0 1 640px;
-    min-width: 300px; /* Reducido para pantallas más pequeñas */
+    min-width: 300px;
     max-width: 640px;
     display: flex;
     flex-direction: column;
@@ -164,7 +165,7 @@
 /* CONTENEDOR VIDEO Y BENEFICIOS PEGADOS */
 #section-desktop-1 .video-benefits-stack {
     width: 100%;
-    max-width: 600px; /* Reducido para pantallas pequeñas */
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -173,7 +174,7 @@
 /* VIDEO 16:9 RESTAURADO PARA DESKTOP */
 #section-desktop-1 .video-embed {
     width: 100%;
-    max-width: 600px; /* Reducido para pantallas pequeñas */
+    max-width: 600px;
     aspect-ratio: 16 / 9;
     margin-bottom: 0;
     border-radius: 0;
@@ -197,11 +198,11 @@
 /* BENEFICIOS */
 #section-desktop-1 .benefits-box {
     background: rgba(14, 19, 26, 0.93);
-    padding: 15px 25px 20px 25px; /* Reducido para pantallas pequeñas */
+    padding: 15px 25px 20px 25px;
     border-radius: 0;
     box-shadow: none;
     min-width: 0;
-    max-width: 600px; /* Reducido para pantallas pequeñas */
+    max-width: 600px;
     width: 100%;
     text-align: left;
     margin: 0;
@@ -209,20 +210,20 @@
 }
 #section-desktop-1 .benefits-box h3 {
     color: #36c1ea;
-    font-size: 1rem; /* Reducido para pantallas pequeñas */
+    font-size: 1rem;
     font-weight: 800;
     margin-bottom: 10px;
 }
 #section-desktop-1 .benefits-box ul {
     list-style: disc;
-    margin: 0 0 0 18px; /* Reducido para pantallas pequeñas */
+    margin: 0 0 0 18px;
     padding: 0;
 }
 #section-desktop-1 .benefits-box li {
-    font-size: 0.9rem; /* Reducido para pantallas pequeñas */
-    margin-bottom: 5px; /* Reducido para pantallas pequeñas */
+    font-size: 0.9rem;
+    margin-bottom: 5px;
     color: #fff;
-    line-height: 1.4; /* Ajustado para pantallas pequeñas */
+    line-height: 1.4;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -231,31 +232,31 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 40px; /* Reducido para pantallas pequeñas */
+    gap: 40px;
     max-width: 1400px;
     width: 90vw;
-    margin: 40px auto 0 auto; /* Reducido para pantallas pequeñas */
+    margin: 40px auto 0 auto;
     padding: 0;
     text-align: center;
 }
 #section-desktop-1 .testimonials-desktop-wide blockquote {
-    font-size: 0.95rem; /* Reducido para pantallas pequeñas */
+    font-size: 0.95rem;
     color: #fff;
-    border-left: 3px solid #36c1ea; /* Reducido para pantallas pequeñas */
+    border-left: 3px solid #36c1ea;
     background: none;
-    padding: 0 0 0 15px; /* Reducido para pantallas pequeñas */
+    padding: 0 0 0 15px;
     margin: 0;
     opacity: 0.92;
     font-style: italic;
-    min-width: 220px; /* Reducido para pantallas pequeñas */
-    max-width: 300px; /* Reducido para pantallas pequeñas */
-    line-height: 1.4; /* Ajustado para pantallas pequeñas */
+    min-width: 220px;
+    max-width: 300px;
+    line-height: 1.4;
 }
 #section-desktop-1 .participant-attribution {
     color: #b6b6b6;
-    font-size: 0.75rem; /* Reducido para pantallas pequeñas */
+    font-size: 0.75rem;
     text-align: center;
-    margin-top: 8px; /* Reducido para pantallas pequeñas */
+    margin-top: 8px;
 }
 
 /* --------- Responsive --------- */
@@ -274,7 +275,7 @@
     }
     #section-desktop-1 .section1-desktop-spacer {
         flex: 0 0 200px;
-        min-width: 150px; /* Ajustado */
+        min-width: 150px;
         max-width: 200px;
     }
     #section-desktop-1 .testimonials-desktop-wide {
@@ -310,7 +311,7 @@
         font-size: 0.5rem;
     }
     #section-desktop-1 .cta-btn {
-        max-width: 280px;
+        max-width: 280px; /* Ajustado para 60px * 4 + 25px * 3 */
         font-size: 1rem;
         padding: 10px 0;
     }
