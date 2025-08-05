@@ -1,218 +1,263 @@
-/* ===============================
-   SECTION MOBILE 1 (KOETE LANDING)
-   =============================== */
-#section-mobile-1 {
-    display: none; /* Controlled by media queries in Global.css */
-    min-height: 100vh;
-    position: relative;
-    z-index: 2; /* Superior al fondo global del body */
-    padding: 20px;
-    font-family: 'Poppins', sans-serif;
-    background: url('../../img/FONDOS-06.jpg') no-repeat center; /* Ruta relativa desde Mobile.css */
-    background-size: cover;
-    background-color: #1a1a1a; /* Fallback color if image fails */
-    color: #fff; /* Ensure text is visible */
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- LinkedIn para Google Tag Manager -->
+    <script type="text/javascript">
+        _linkedin_partner_id = "6834914";
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+    <script type="text/javascript">
+        (function(l) {
+            if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+            window.lintrk.q=[]}
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript";b.async = true;
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);})(window.lintrk);
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=6834914&fmt=gif" />
+    </noscript>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-58QPDKK9');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOETE - Programa Experto en Ti Mismo ®</title>
+    <meta property="og:image" content="http://www.expertoentimismo.com/Assets/img/favicon redondo.png"/>
+    <meta name="description" content="Únete al programa Experto en Ti Mismo y descubre cómo maximizar tu potencial personal y profesional con los programas de KOETE ¡Empieza hoy tu transformación!">
 
-#section-mobile-1 .section-mobile-container {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCKPF52Y8R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-DCKPF52Y8R');
+    </script>
 
-#section-mobile-1 .hero-title-mobile {
-    font-size: 1.8rem;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 15px;
-    letter-spacing: -0.8px;
-    text-align: left;
-    border-left: 3px solid #36c1ea;
-    padding-left: 10px;
-    max-width: 100%;
-    color: #fff;
-}
-#section-mobile-1 .hero-title-mobile .blue {
-    color: #36c1ea;
-}
+    <!-- Favicon -->
+    <link rel="icon" href="Assets/img/favicon redondo.png" type="image/png">
 
-#section-mobile-1 .hero-subtitle-mobile {
-    font-size: 0.9rem;
-    font-weight: 400;
-    opacity: 0.92;
-    margin-bottom: 15px;
-    line-height: 1.5;
-    text-align: left;
-    max-width: 100%;
-    color: #fff;
-}
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="Assets/CSS/Global.css">
+    <!-- Desktop Styles -->
+    <link rel="stylesheet" href="Assets/CSS/Sections.css/Desktop/Desktop.css">
+    <!-- Mobile Styles -->
+    <link rel="stylesheet" href="Assets/CSS/Sections.css/Mobile/Mobile.css">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58QPDKK9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-/* COUNTDOWN AND CTA CONTAINER MOBILE */
-#section-mobile-1 .countdown-cta-container-mobile {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    margin-bottom: 20px;
-}
+    <!-- Logo fijo -->
+    <section id="label-section" class="label-koete-section">
+        <div class="label-koete">
+            <img src="Assets/img/Logo-Koete_HOME.png" alt="KOETE desarrollo acelerado">
+        </div>
+    </section>
 
-#section-mobile-1 .countdown-box-mobile {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
-    justify-content: flex-start;
-    width: 100%;
-}
-#section-mobile-1 .countdown-item-mobile {
-    background: #fff;
-    border-radius: 5px;
-    padding: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-width: 45px;
-    height: 60px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-#section-mobile-1 .countdown-item-mobile span {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #000;
-    line-height: 1;
-    margin-bottom: 2px;
-    text-align: center;
-}
-#section-mobile-1 .countdown-item-mobile small {
-    font-size: 0.45rem;
-    margin-top: auto;
-    letter-spacing: 0.5px;
-    font-weight: 400;
-    color: #111;
-    align-self: center;
-}
+    <!-- SECTION 1 DESKTOP -->
+    <section id="section-desktop-1" class="desktop-only" style="background: url('Assets/img/FONDOS_Mesa de trabajo 1-05.jpg') no-repeat center top; background-size: cover; min-height: 100vh;">
+        <div class="section1-desktop-container">
+            <!-- COLUMNA IZQUIERDA: COPY + COUNTDOWN + CTA -->
+            <div class="section1-desktop-left">
+                <h2 class="hero-title">
+                    Descubre qué te está frenando
+                    y <span class="blue">empieza a avanzar en serio</span>
+                </h2>
+                <p class="hero-subtitle">
+                    Una clase en vivo que cambiará cómo te ves... y cómo actúas.
+                </p>
+                <div class="countdown-cta-container">
+                    <div class="countdown-box" id="countdown-desktop">
+                        <div class="countdown-item"><span id="days">35</span><small>DÍAS</small></div>
+                        <div class="countdown-item"><span id="hours">21</span><small>HORAS</small></div>
+                        <div class="countdown-item"><span id="minutes">1</span><small>MINUTOS</small></div>
+                        <div class="countdown-item"><span id="seconds">34</span><small>SEGUNDOS</small></div>
+                    </div>
+                    <p class="next-session">¡Próxima sesión grupal gratuita!</p>
+                    <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec" class="cta-btn">
+                        ELIGE TU FECHA Y ÚNETE GRATIS
+                    </a>
+                    <p class="session-duration">Duración: 90 minutos</p>
+                </div>
+            </div>
+            <!-- COLUMNA INVISIBLE CENTRAL -->
+            <div class="section1-desktop-spacer"></div>
+            <!-- COLUMNA DERECHA: VIDEO + BENEFICIOS (apilados, igual ancho, pegados) -->
+            <div class="section1-desktop-right">
+                <div class="video-benefits-stack">
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube.com/embed/4WalvlpryC8?si=XqN-NFYRy1Z15W-s"
+                            title="Bienvenida a Experto en Ti Mismo" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="benefits-box">
+                        <h3>¿Qué te llevas de la primera sesión de Experto en Ti Mismo?</h3>
+                        <ul>
+                            <li>Ver con claridad por qué no logras eso que tanto quieres.</li>
+                            <li>Entender lo que sí controlas y cómo enfocarlo hacia tus metas.</li>
+                            <li>Aprender un modelo simple y poderoso para cambiar desde la raíz.</li>
+                            <li>Conectar con personas reales que…</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- TESTIMONIOS: DEBAJO DEL CONTENEDOR PRINCIPAL -->
+        <div class="testimonials-desktop-wide">
+            <blockquote>“Muy dinámica! Me sentí muy enganchado toda la sesión y me llevo ideas para mi plan de acción para mejorar.”</blockquote>
+            <blockquote>“Excelente, motivadora, inspiradora. ¡Me voy renovada! ¡¡¡Gracias!!!”</blockquote>
+            <blockquote>“Muy claros los ejemplos y dinámicos. Me llevo muchos puntos que debo trabajar y herramientas que me pueden ayudar.”</blockquote>
+        </div>
+        <div class="participant-attribution">- Participantes Experto en Ti Mismo</div>
+    </section>
 
-#section-mobile-1 .next-session-mobile {
-    color: #36c1ea;
-    font-weight: 800;
-    font-size: 0.9rem;
-    margin: 8px 0;
-    text-align: center;
-    width: 100%;
-    max-width: 280px;
-    margin-left: auto;
-    margin-right: auto;
-}
+    <!-- SECTION 1 MOBILE -->
+    <section id="section-mobile-1" class="mobile-only" style="background: url('Assets/img/FONDOS-06.jpg') no-repeat center; background-size: cover; min-height: 100vh; padding: 20px; background-color: #1a1a1a; position: relative; z-index: 2; display: block !important;">
+        <div class="section-mobile-container">
+            <h2 class="hero-title-mobile">
+                Descubre qué te está frenando<br>
+                y <span class="blue">empieza a avanzar en serio</span>
+            </h2>
+            <p class="hero-subtitle-mobile">
+                Una clase en vivo que cambiará cómo te ves... y cómo actúas.
+            </p>
+            <div class="countdown-cta-container-mobile">
+                <div class="countdown-box-mobile" id="countdown-mobile">
+                    <div class="countdown-item-mobile"><span id="days-m">35</span><small>DÍAS</small></div>
+                    <div class="countdown-item-mobile"><span id="hours-m">21</span><small>HORAS</small></div>
+                    <div class="countdown-item-mobile"><span id="minutes-m">1</span><small>MIN</small></div>
+                    <div class="countdown-item-mobile"><span id="seconds-m">34</span><small>SEG</small></div>
+                </div>
+                <p class="next-session-mobile">¡Próxima sesión grupal gratuita!</p>
+                <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec" class="cta-btn-mobile">
+                    ELIGE TU FECHA Y ÚNETE GRATIS
+                </a>
+                <p class="session-duration-mobile">Duración: 90 minutos</p>
+            </div>
+            <div class="video-embed-mobile">
+                <iframe width="100%" height="200"
+                    src="https://www.youtube.com/embed/4WalvlpryC8?si=XqN-NFYRy1Z15W-s"
+                    title="Bienvenida a Experto en Ti Mismo" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <a href="https://www.youtube.com" target="_blank" class="youtube-link">Mirar en YouTube</a>
+            </div>
+            <div class="benefits-box-mobile">
+                <h3>¿Qué te llevas de la primera sesión?</h3>
+                <ul>
+                    <li>Ver con claridad por qué no logras eso que tanto quieres.</li>
+                    <li>Entender lo que sí controlas y cómo enfocarlo hacia tus metas.</li>
+                    <li>Aprender un modelo simple y poderoso para cambiar desde la raíz.</li>
+                    <li>Conectar con personas reales que…</li>
+                </ul>
+            </div>
+            <div class="testimonials-box-mobile">
+                <blockquote>“Muy dinámica! Me sentí muy enganchado toda la sesión y me llevo ideas para mi plan de acción para mejorar.”</blockquote>
+                <blockquote>“Excelente, motivadora, inspiradora. ¡Me voy renovada! ¡¡¡Gracias!!!”</blockquote>
+                <blockquote>“Muy claros los ejemplos y dinámicos. Me llevo muchos puntos que debo trabajar y herramientas que me pueden ayudar.”</blockquote>
+            </div>
+            <div class="participant-attribution-mobile">- Participantes Experto en Ti Mismo</div>
+        </div>
+    </section>
 
-#section-mobile-1 .cta-btn-mobile {
-    background: #36c1ea;
-    color: #fff;
-    font-weight: 600;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 0;
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(32,180,227,0.1);
-    text-decoration: none;
-    letter-spacing: 0.5px;
-    width: 100%;
-    max-width: 280px;
-    text-align: center;
-    display: block;
-    margin-left: 0;
-}
-#section-mobile-1 .cta-btn-mobile:hover,
-#section-mobile-1 .cta-btn-mobile:focus {
-    background: #FFB100;
-    color: #fff;
-}
-
-#section-mobile-1 .session-duration-mobile {
-    color: #b6b6b6;
-    font-size: 0.75rem;
-    margin-bottom: 20px;
-    text-align: center;
-    width: 100%;
-    max-width: 280px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* VIDEO EMBED MOBILE */
-#section-mobile-1 .video-embed-mobile {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-}
-#section-mobile-1 .video-embed-mobile iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-}
-#section-mobile-1 .youtube-link {
-    display: block;
-    text-align: center;
-    color: #36c1ea;
-    font-size: 0.8rem;
-    margin-top: 5px;
-    text-decoration: none;
-}
-
-/* BENEFITS MOBILE */
-#section-mobile-1 .benefits-box-mobile {
-    background: rgba(14, 19, 26, 0.93);
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-#section-mobile-1 .benefits-box-mobile h3 {
-    color: #36c1ea;
-    font-size: 1rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-}
-#section-mobile-1 .benefits-box-mobile ul {
-    list-style: disc;
-    margin: 0 0 0 15px;
-    padding: 0;
-}
-#section-mobile-1 .benefits-box-mobile li {
-    font-size: 0.85rem;
-    margin-bottom: 5px;
-    color: #fff;
-    line-height: 1.4;
-}
-
-/* TESTIMONIALS MOBILE */
-#section-mobile-1 .testimonials-box-mobile {
-    margin-bottom: 20px;
-}
-#section-mobile-1 .testimonials-box-mobile blockquote {
-    font-size: 0.9rem;
-    color: #fff;
-    border-left: 3px solid #36c1ea;
-    background: none;
-    padding: 0 0 0 10px;
-    margin: 0 0 15px 0;
-    opacity: 0.92;
-    font-style: italic;
-    line-height: 1.4;
-}
-#section-mobile-1 .participant-attribution-mobile {
-    color: #b6b6b6;
-    font-size: 0.7rem;
-    text-align: center;
-    margin-bottom: 20px;
-}
+    <!-- Vinculación de scripts -->
+    <script src="Assets/JS/main.js"></script>
+    <!-- Desktop Scripts -->
+    <script src="Assets/JS/Sections.js/Desktop/Desktop.js"></script>
+    <!-- Mobile Scripts -->
+    <script src="Assets/JS/Sections.js/Mobile/Mobile.js"></script>  
+    <!-- JavaScript de la animación del logo Desktop -->
+    <script src="Assets/JS/Label.js"></script>
+    <!-- Eventos para Google Ads y LinkedIn -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var verInvitacionBtn = document.getElementById('verInvitacionBtn');
+            if (verInvitacionBtn) {
+                verInvitacionBtn.addEventListener('click', function() {
+                    gtag('event', 'ClicenVerInvitacionMobile', {
+                        'event_category': 'Mobile Button',
+                        'event_label': 'Ver Invitacion',
+                        'value': 1
+                    });
+                    console.log('Evento enviado: ClicenVerInvitacionMobile');
+                });
+            }
+            var reservaCupoBtn1 = document.getElementById('reservaCupoBtn1');
+            if (reservaCupoBtn1) {
+                reservaCupoBtn1.addEventListener('click', function() {
+                    gtag('event', 'ClicReservaCupo1', {
+                        'event_category': 'Boton',
+                        'event_label': 'Reserva Tu Cupo Botón 1',
+                        'value': 1
+                    });
+                    console.log('Evento enviado: ClicReservaCupo1');
+                });
+            }
+            var Verotrasfechasbtn1 = document.getElementById('Verotrasfechasbtn1');
+            if (Verotrasfechasbtn1) {
+                Verotrasfechasbtn1.addEventListener('click', function() {
+                    gtag('event', 'Verotrasfechasbtn1', {
+                        'event_category': 'Boton',
+                        'event_label': 'Ver otras fechas Botón 1',
+                        'value': 1
+                    });
+                    console.log('Evento enviado: ClicReservaCupo2');
+                });
+            }
+            var ReservaCupoBtn2mobile = document.getElementById('ReservaCupoBtn2mobile');
+            if (ReservaCupoBtn2mobile) {
+                ReservaCupoBtn2mobile.addEventListener('click', function() {
+                    gtag('event', 'ReservaCupoBtn2mobile', {
+                        'event_category': 'Boton',
+                        'event_label': 'Reserva Tu Cupo Botón 2',
+                        'value': 1
+                    });
+                    console.log('Evento enviado: ClicReservaCupo2');
+                });
+            }
+            var reservaCupoBtn2 = document.getElementById('reservaCupoBtn2');
+            if (reservaCupoBtn2) {
+                reservaCupoBtn2.addEventListener('click', function() {
+                    gtag('event', 'Verotrasfechasbtn1', {
+                        'event_category': 'Boton',
+                        'event_label': 'Reserva Tu Cupo Botón 2',
+                        'value': 1
+                    });
+                    console.log('Evento enviado: ClicReservaCupo2');
+                });
+            }
+        });
+    </script>
+    <script>
+        function trackLinkedInConversion(conversionId) {
+            window.lintrk('track', { conversion_id: conversionId });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            var deskReservaCupoBtn1 = document.getElementById('verInvitacionBtn');
+            if (deskReservaCupoBtn1) {
+                deskReservaCupoBtn1.addEventListener('click', function() {
+                    trackLinkedInConversion(19841578);
+                });
+            }
+            var deskVerOtrasFechasBtn = document.getElementById('DeskverOtrasFechasBtn');
+            if (deskVerOtrasFechasBtn) {
+                deskVerOtrasFechasBtn.addEventListener('click', function() {
+                    trackLinkedInConversion(19841578);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
