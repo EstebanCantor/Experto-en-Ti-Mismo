@@ -25,7 +25,7 @@
 
 #section-desktop-1 .section1-desktop-left {
     flex: 0 1 600px;
-    min-width: 600px;
+    min-width: 300px; /* Reducido para pantallas más pequeñas */
     max-width: 600px;
     display: flex;
     flex-direction: column;
@@ -75,12 +75,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 80px;
-    height: 100px;
+    min-width: 70px; /* Reducido para pantallas pequeñas */
+    height: 90px; /* Reducido para pantallas pequeñas */
     box-shadow: 0 2px 13px rgba(0,0,0,0.13);
 }
 #section-desktop-1 .countdown-item span {
-    font-size: 2.2rem;
+    font-size: 1.8rem; /* Reducido para pantallas pequeñas */
     font-weight: 600;
     color: #000;
     line-height: 1;
@@ -88,7 +88,7 @@
     text-align: center;
 }
 #section-desktop-1 .countdown-item small {
-    font-size: 0.65rem;
+    font-size: 0.6rem; /* Reducido para pantallas pequeñas */
     margin-top: auto;
     margin-bottom: 0;
     letter-spacing: 1px;
@@ -112,8 +112,8 @@
     font-weight: 600;
     border: none;
     border-radius: 0;
-    padding: 14px 0;
-    font-size: 1.16rem;
+    padding: 12px 0; /* Reducido para pantallas pequeñas */
+    font-size: 1.1rem; /* Reducido para pantallas pequeñas */
     margin-bottom: 20px;
     margin-top: 10px;
     cursor: pointer;
@@ -121,7 +121,7 @@
     text-decoration: none;
     letter-spacing: 1px;
     width: 100%;
-    max-width: 400px;
+    max-width: 320px; /* Reducido para pantallas pequeñas */
     text-align: center;
     display: block;
     transition: background 0.18s;
@@ -135,7 +135,7 @@
 
 #section-desktop-1 .session-duration {
     color: #b6b6b6;
-    font-size: 1.01rem;
+    font-size: 0.9rem; /* Reducido para pantallas pequeñas */
     margin-bottom: 20px;
     margin-top: 0;
     text-align: center;
@@ -145,14 +145,14 @@
 /* ------- COLUMNA INVISIBLE CENTRAL ------- */
 #section-desktop-1 .section1-desktop-spacer {
     flex: 0 0 120px;
-    min-width: 120px;
+    min-width: 80px; /* Reducido para pantallas pequeñas */
     max-width: 120px;
 }
 
 /* ------- DERECHA ------- */
 #section-desktop-1 .section1-desktop-right {
     flex: 0 1 640px;
-    min-width: 640px;
+    min-width: 300px; /* Reducido para pantallas más pequeñas */
     max-width: 640px;
     display: flex;
     flex-direction: column;
@@ -164,7 +164,7 @@
 /* CONTENEDOR VIDEO Y BENEFICIOS PEGADOS */
 #section-desktop-1 .video-benefits-stack {
     width: 100%;
-    max-width: 700px;
+    max-width: 600px; /* Reducido para pantallas pequeñas */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -173,8 +173,8 @@
 /* VIDEO 16:9 RESTAURADO PARA DESKTOP */
 #section-desktop-1 .video-embed {
     width: 100%;
-    max-width: 700px;
-    aspect-ratio: 16 / 9; /* Restaurado a 16:9 para desktop */
+    max-width: 600px; /* Reducido para pantallas pequeñas */
+    aspect-ratio: 16 / 9;
     margin-bottom: 0;
     border-radius: 0;
     overflow: hidden;
@@ -197,11 +197,11 @@
 /* BENEFICIOS */
 #section-desktop-1 .benefits-box {
     background: rgba(14, 19, 26, 0.93);
-    padding: 15px 34px 25px 34px;
+    padding: 15px 25px 20px 25px; /* Reducido para pantallas pequeñas */
     border-radius: 0;
     box-shadow: none;
     min-width: 0;
-    max-width: 700px;
+    max-width: 600px; /* Reducido para pantallas pequeñas */
     width: 100%;
     text-align: left;
     margin: 0;
@@ -209,20 +209,20 @@
 }
 #section-desktop-1 .benefits-box h3 {
     color: #36c1ea;
-    font-size: 1.13rem;
+    font-size: 1rem; /* Reducido para pantallas pequeñas */
     font-weight: 800;
     margin-bottom: 10px;
 }
 #section-desktop-1 .benefits-box ul {
     list-style: disc;
-    margin: 0 0 0 22px;
+    margin: 0 0 0 18px; /* Reducido para pantallas pequeñas */
     padding: 0;
 }
 #section-desktop-1 .benefits-box li {
-    font-size: 1rem;
-    margin-bottom: 6px;
+    font-size: 0.9rem; /* Reducido para pantallas pequeñas */
+    margin-bottom: 5px; /* Reducido para pantallas pequeñas */
     color: #fff;
-    line-height: 1.51;
+    line-height: 1.4; /* Ajustado para pantallas pequeñas */
     font-family: 'Poppins', sans-serif;
 }
 
@@ -231,31 +231,31 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 58px;
+    gap: 40px; /* Reducido para pantallas pequeñas */
     max-width: 1400px;
     width: 90vw;
-    margin: 60px auto 0 auto;
+    margin: 40px auto 0 auto; /* Reducido para pantallas pequeñas */
     padding: 0;
     text-align: center;
 }
 #section-desktop-1 .testimonials-desktop-wide blockquote {
-    font-size: 1.07rem;
+    font-size: 0.95rem; /* Reducido para pantallas pequeñas */
     color: #fff;
-    border-left: 3.5px solid #36c1ea;
+    border-left: 3px solid #36c1ea; /* Reducido para pantallas pequeñas */
     background: none;
-    padding: 0 0 0 18px;
+    padding: 0 0 0 15px; /* Reducido para pantallas pequeñas */
     margin: 0;
     opacity: 0.92;
     font-style: italic;
-    min-width: 258px;
-    max-width: 340px;
-    line-height: 1.46;
+    min-width: 220px; /* Reducido para pantallas pequeñas */
+    max-width: 300px; /* Reducido para pantallas pequeñas */
+    line-height: 1.4; /* Ajustado para pantallas pequeñas */
 }
 #section-desktop-1 .participant-attribution {
     color: #b6b6b6;
-    font-size: 0.85rem;
+    font-size: 0.75rem; /* Reducido para pantallas pequeñas */
     text-align: center;
-    margin-top: 10px;
+    margin-top: 8px; /* Reducido para pantallas pequeñas */
 }
 
 /* --------- Responsive --------- */
@@ -274,7 +274,7 @@
     }
     #section-desktop-1 .section1-desktop-spacer {
         flex: 0 0 200px;
-        min-width: 200px;
+        min-width: 150px; /* Ajustado */
         max-width: 200px;
     }
     #section-desktop-1 .testimonials-desktop-wide {
@@ -282,6 +282,48 @@
         width: 85vw;
     }
 }
+
+@media (max-width: 1200px) {
+    #section-desktop-1 .section1-desktop-left {
+        flex: 0 1 500px;
+        min-width: 250px;
+        max-width: 500px;
+    }
+    #section-desktop-1 .section1-desktop-right {
+        flex: 0 1 540px;
+        min-width: 250px;
+        max-width: 540px;
+    }
+    #section-desktop-1 .video-benefits-stack,
+    #section-desktop-1 .video-embed,
+    #section-desktop-1 .benefits-box {
+        max-width: 540px;
+    }
+    #section-desktop-1 .countdown-item {
+        min-width: 60px;
+        height: 80px;
+    }
+    #section-desktop-1 .countdown-item span {
+        font-size: 1.5rem;
+    }
+    #section-desktop-1 .countdown-item small {
+        font-size: 0.5rem;
+    }
+    #section-desktop-1 .cta-btn {
+        max-width: 280px;
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+    #section-desktop-1 .session-duration {
+        font-size: 0.8rem;
+    }
+    #section-desktop-1 .section1-desktop-spacer {
+        flex: 0 0 100px;
+        min-width: 60px;
+        max-width: 100px;
+    }
+}
+
 @media (max-width: 1100px) {
     #section-desktop-1 .section1-desktop-container {
         flex-direction: column;
@@ -309,7 +351,7 @@
         align-items: center;
         gap: 22px;
         max-width: 85vw;
-        margin: 60px auto 0 auto;
+        margin: 40px auto 0 auto;
     }
 }
 
