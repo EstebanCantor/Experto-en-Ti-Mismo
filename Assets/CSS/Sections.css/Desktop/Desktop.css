@@ -60,7 +60,7 @@
 /* COUNTDOWN */
 #section-desktop-1 .countdown-box {
     display: flex;
-    gap: 18px;
+    gap: 10px;
     margin-bottom: 15px;
     margin-top: 5px;
     justify-content: flex-start;
@@ -182,7 +182,7 @@
     background: transparent;
 }
 #section-desktop-1 .video-embed iframe {
-    width: 100%;
+    width: 90%;
     height: 100%;
     border: none;
     display: block;
