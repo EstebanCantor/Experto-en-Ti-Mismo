@@ -42,7 +42,7 @@
     text-align: left;
     border-left: 3.5px solid #36c1ea;
     padding-left: 15px;
-    max-width: 350px; /* Limit width to allow line breaks */
+    max-width: 350px;
 }
 #section-desktop-1 .hero-title .blue {
     color: #36c1ea;
@@ -84,6 +84,7 @@
     color: #000;
     line-height: 1;
     margin-bottom: 4px;
+    text-align: center; /* Ensure horizontal centering */
 }
 #section-desktop-1 .countdown-item small {
     font-size: 0.85rem;
@@ -119,7 +120,7 @@
     text-decoration: none;
     letter-spacing: 1px;
     width: 100%;
-    max-width: 400px;
+    max-width: 360px; /* Match the total width of 4 countdown items (90px * 4) */
     text-align: center;
     display: block;
     transition: background 0.18s;
@@ -168,11 +169,11 @@
     align-items: flex-start;
 }
 
-/* VIDEO 16:10 PARA MÁS ALTURA Y ELIMINAR BORDES NEGROS */
+/* VIDEO 16:11 PARA MÁS ALTURA Y ELIMINAR BORDES NEGROS */
 #section-desktop-1 .video-embed {
     width: 100%;
     max-width: 720px;
-    aspect-ratio: 16 / 10; /* More vertical to eliminate side black borders */
+    aspect-ratio: 16 / 11; /* More vertical to eliminate side black borders */
     margin-bottom: 0;
     border-radius: 0;
     overflow: hidden;
@@ -195,7 +196,7 @@
 /* BENEFICIOS */
 #section-desktop-1 .benefits-box {
     background: rgba(14, 19, 26, 0.93);
-    padding: 15px 34px 25px 34px; /* Reduced top padding, increased bottom for space */
+    padding: 15px 34px 25px 34px;
     border-radius: 0;
     box-shadow: none;
     min-width: 0;
@@ -203,7 +204,7 @@
     width: 100%;
     text-align: left;
     margin: 0;
-    margin-top: -10px; /* Subir texto para reducir espacio con video */
+    margin-top: -10px;
 }
 #section-desktop-1 .benefits-box h3 {
     color: #36c1ea;
@@ -232,7 +233,7 @@
     gap: 58px;
     max-width: 1400px;
     width: 90vw;
-    margin: 40px auto 0 auto;
+    margin: 60px auto 0 auto; /* Increased margin-top to lower testimonials */
     padding: 0;
     text-align: center;
 }
