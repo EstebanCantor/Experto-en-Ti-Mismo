@@ -34,15 +34,15 @@
 }
 
 #section-desktop-1 .hero-title {
-    font-size: 2.0rem;
-    font-weight: 900;
+    font-size: 2.5rem;
+    font-weight: 800;
     line-height: 1.2;
     margin-bottom: 20px;
     letter-spacing: -1.1px;
     text-align: left;
     border-left: 3.5px solid #36c1ea;
     padding-left: 15px;
-    max-width: 350px;
+    max-width: 450px;
 }
 #section-desktop-1 .hero-title .blue {
     color: #36c1ea;
