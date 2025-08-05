@@ -101,7 +101,7 @@
     color: #36c1ea;
     font-weight: 800;
     font-size: 1.13rem;
-    margin: 20px 0 10px 0;
+    margin: 10px 0 10px 0;
     text-align: center;
     width: 100%;
 }
@@ -120,14 +120,14 @@
     text-decoration: none;
     letter-spacing: 1px;
     width: 100%;
-    max-width: 450px; /* Match the total width of 4 countdown items (90px * 4) */
+    max-width: 500px; /* Match the total width of 4 countdown items (90px * 4) */
     text-align: center;
     display: block;
     transition: background 0.18s;
 }
 #section-desktop-1 .cta-btn:hover, 
 #section-desktop-1 .cta-btn:focus {
-    background: #229bbd;
+    background: #FFB100;
     color: #fff;
 }
 #section-desktop-1 .cta-btn .arrow { display: none; }
