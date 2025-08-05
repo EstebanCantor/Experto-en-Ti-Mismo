@@ -15,7 +15,7 @@
 #section-desktop-1 .section1-desktop-container {
     display: flex;
     gap: 0;
-    max-width: 1400px; /* Increased to allow more space and centering */
+    max-width: 1400px;
     width: 90vw;
     margin: 0 auto;
     padding-left: 20px;
@@ -24,9 +24,9 @@
 }
 
 #section-desktop-1 .section1-desktop-left {
-    flex: 0 1 400px; /* Slightly wider left column */
-    min-width: 300px;
-    max-width: 400px;
+    flex: 0 1 400px;
+    min-width: 400px;
+    max-width: 400px; /* Fixed width to match countdown */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -36,12 +36,13 @@
 #section-desktop-1 .hero-title {
     font-size: 2.0rem;
     font-weight: 900;
-    line-height: 1.1;
-    margin-bottom: 25px; /* Increased for more space */
+    line-height: 1.1; /* Reduced to avoid extra line breaks */
+    margin-bottom: 20px;
     letter-spacing: -1.1px;
     text-align: left;
     border-left: 3.5px solid #36c1ea;
     padding-left: 15px;
+    white-space: nowrap; /* Prevent line breaks */
 }
 #section-desktop-1 .hero-title .blue {
     color: #36c1ea;
@@ -51,7 +52,7 @@
     font-size: 1.15rem;
     font-weight: 400;
     opacity: 0.92;
-    margin-bottom: 45px; /* Increased for more space */
+    margin-bottom: 30px;
     line-height: 1.47;
     text-align: left;
 }
@@ -60,9 +61,10 @@
 #section-desktop-1 .countdown-box {
     display: flex;
     gap: 22px;
-    margin-bottom: 25px; /* Increased for more space */
+    margin-bottom: 20px;
     margin-top: 5px;
     justify-content: flex-start;
+    width: 100%; /* Ensure it matches left column width */
 }
 #section-desktop-1 .countdown-item {
     background: #fff;
@@ -72,13 +74,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 86px;
+    min-width: 90px; /* Uniform width for all items */
     height: 130px;
     box-shadow: 0 2px 13px rgba(0,0,0,0.13);
 }
 #section-desktop-1 .countdown-item span {
-    font-size: 2.4rem;
-    font-weight: 900;
+    font-size: 2.2rem; /* Slightly reduced size */
+    font-weight: 600; /* Reduced weight */
     color: #000;
     line-height: 1;
     margin-bottom: 4px;
@@ -98,8 +100,8 @@
     color: #36c1ea;
     font-weight: 800;
     font-size: 1.13rem;
-    margin: 25px 0 12px 0; /* Increased for more space */
-    text-align: left;
+    margin: 20px 0 10px 0;
+    text-align: center; /* Centered */
     width: 100%;
 }
 #section-desktop-1 .cta-btn {
@@ -110,7 +112,7 @@
     border-radius: 0;
     padding: 16px 0;
     font-size: 1.16rem;
-    margin-bottom: 25px; /* Increased for more space */
+    margin-bottom: 20px;
     margin-top: 10px;
     cursor: pointer;
     box-shadow: 0 2px 13px rgba(32,180,227,0.13);
@@ -132,15 +134,15 @@
 #section-desktop-1 .session-duration {
     color: #b6b6b6;
     font-size: 1.01rem;
-    margin-bottom: 20px; /* Increased for more space */
+    margin-bottom: 20px;
     margin-top: 0;
-    text-align: left;
+    text-align: center; /* Centered */
     width: 100%;
 }
 
 /* ------- COLUMNA INVISIBLE CENTRAL ------- */
 #section-desktop-1 .section1-desktop-spacer {
-    flex: 0 0 250px; /* Increased to match referent spacing more closely */
+    flex: 0 0 250px;
     min-width: 250px;
     max-width: 250px;
 }
@@ -187,6 +189,7 @@
     top: 0;
     left: 0;
     background: transparent;
+    object-fit: cover; /* Ensure no black margins */
 }
 
 /* BENEFICIOS */
@@ -227,9 +230,9 @@
     justify-content: center;
     align-items: flex-start;
     gap: 58px;
-    max-width: 1400px; /* Increased to match container */
+    max-width: 1400px;
     width: 90vw;
-    margin: 82px auto 0 auto;
+    margin: 40px auto 0 auto; /* Reduced margin-top to bring testimonials up */
     padding: 0;
     text-align: center;
 }
@@ -268,7 +271,7 @@
         min-width: 0;
     }
     #section-desktop-1 .section1-desktop-spacer {
-        flex: 0 0 200px; /* Reduced spacer on smaller screens */
+        flex: 0 0 200px;
         min-width: 200px;
         max-width: 200px;
     }
@@ -297,7 +300,7 @@
         max-width: 85vw;
     }
     #section-desktop-1 .section1-desktop-spacer {
-        display: none; /* Hide spacer on mobile */
+        display: none;
     }
     #section-desktop-1 .testimonials-desktop-wide {
         flex-direction: column;
