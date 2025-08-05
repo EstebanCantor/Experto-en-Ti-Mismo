@@ -172,8 +172,7 @@
 /* VIDEO 16:11 PARA MÁS ALTURA Y ELIMINAR BORDES NEGROS */
 #section-desktop-1 .video-embed {
     width: 100%;
-    max-width: 720px;
-    aspect-ratio: 20 / 9; /* More vertical to eliminate side black borders */
+    max-width: 700px;
     margin-bottom: 0;
     border-radius: 0;
     overflow: hidden;
@@ -200,7 +199,7 @@
     border-radius: 0;
     box-shadow: none;
     min-width: 0;
-    max-width: 720px;
+    max-width: 700px;
     width: 100%;
     text-align: left;
     margin: 0;
