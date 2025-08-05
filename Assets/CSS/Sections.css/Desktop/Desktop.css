@@ -24,8 +24,8 @@
 }
 
 #section-desktop-1 .section1-desktop-left {
-    flex: 0 1 400px;
-    min-width: 400px;
+    flex: 0 1 500px;
+    min-width: 500px;
     max-width: 600px;
     display: flex;
     flex-direction: column;
