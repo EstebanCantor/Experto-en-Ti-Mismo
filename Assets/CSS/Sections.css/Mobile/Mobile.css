@@ -2,13 +2,16 @@
    SECTION MOBILE 1 (KOETE LANDING)
    =============================== */
 #section-mobile-1 {
-    display: none;
+    display: none; /* Controlled by media queries in Responsive.css */
     min-height: 100vh;
     position: relative;
     z-index: 1;
     padding: 20px;
     font-family: 'Poppins', sans-serif;
+    background: url('Assets/img/FONDOS-06.jpg') no-repeat center;
     background-size: cover;
+    background-color: #1a1a1a; /* Fallback color if image fails */
+    color: #fff; /* Ensure text is visible against dark background */
 }
 
 #section-mobile-1 .section-mobile-container {
@@ -30,6 +33,7 @@
     border-left: 3px solid #36c1ea;
     padding-left: 10px;
     max-width: 100%;
+    color: #fff;
 }
 #section-mobile-1 .hero-title-mobile .blue {
     color: #36c1ea;
@@ -43,6 +47,7 @@
     line-height: 1.5;
     text-align: left;
     max-width: 100%;
+    color: #fff;
 }
 
 /* COUNTDOWN AND CTA CONTAINER MOBILE */
