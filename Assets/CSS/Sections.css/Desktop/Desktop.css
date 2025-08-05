@@ -164,7 +164,7 @@
 /* CONTENEDOR VIDEO Y BENEFICIOS PEGADOS */
 #section-desktop-1 .video-benefits-stack {
     width: 100%;
-    max-width: 700px;
+    max-width: 695px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
