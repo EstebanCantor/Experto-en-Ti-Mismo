@@ -65,7 +65,7 @@
     margin-bottom: 15px;
     margin-top: 5px;
     justify-content: flex-start; /* Align countdown to the left with the title */
-    width: 100%;
+    width: auto;
 }
 #section-desktop-1 .countdown-item {
     background: #fff;
@@ -105,9 +105,10 @@
     margin: 10px 0;
     text-align: center; /* Centered with button and countdown */
     width: auto;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    display: block;
+    max-width: 380px; /* Match the button's max-width */
 }
 
 #section-desktop-1 .cta-btn {
@@ -144,9 +145,10 @@
     margin-top: 0;
     text-align: center; /* Centered with button and countdown */
     width: auto;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    display: block;
+    max-width: 380px; /* Match the button's max-width */
 }
 
 /* ------- COLUMNA INVISIBLE CENTRAL ------- */
