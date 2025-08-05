@@ -2,13 +2,13 @@
    SECTION MOBILE 1 (KOETE LANDING)
    =============================== */
 #section-mobile-1 {
-    display: none; /* Controlled by media queries in Responsive.css */
+    display: none; /* Controlled by media queries in Global.css */
     min-height: 100vh;
     position: relative;
-    z-index: 1;
+    z-index: 2; /* Superior al fondo global del body */
     padding: 20px;
     font-family: 'Poppins', sans-serif;
-    background: url('Assets/img/FONDOS-06.jpg') no-repeat center;
+    background: url('../../img/FONDOS-06.jpg') no-repeat center; /* Ruta relativa desde Mobile.css */
     background-size: cover;
     background-color: #1a1a1a; /* Fallback color if image fails */
     color: #fff; /* Ensure text is visible */
