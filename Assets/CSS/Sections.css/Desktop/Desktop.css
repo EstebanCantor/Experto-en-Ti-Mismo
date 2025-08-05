@@ -75,7 +75,7 @@
     align-items: center; /* Center numbers horizontally */
     justify-content: center; /* Center numbers vertically */
     min-width: 90px;
-    height: 100px;
+    height: 60px;
     box-shadow: 0 2px 13px rgba(0,0,0,0.13);
 }
 #section-desktop-1 .countdown-item span {
