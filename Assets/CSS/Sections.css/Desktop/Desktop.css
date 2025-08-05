@@ -87,11 +87,11 @@
     text-align: center; /* Ensure horizontal centering */
 }
 #section-desktop-1 .countdown-item small {
-    font-size: 0.85rem;
+    font-size: 0.65rem;
     margin-top: auto;
     margin-bottom: 0;
     letter-spacing: 1px;
-    font-weight: 600;
+    font-weight: 400;
     color: #111;
     align-self: center;
 }
