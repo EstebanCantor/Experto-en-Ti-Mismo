@@ -121,11 +121,11 @@
     text-decoration: none;
     letter-spacing: 1px;
     width: 100%;
-    max-width: 355px; /* Ajustado a 70px * 4 + 25px * 3 (gap) para alinear con el temporizador */
+    max-width: 380px; /* Aumentado a 380px para encajar mejor con el temporizador */
     text-align: center;
     display: block;
     transition: background 0.18s;
-    margin-left: 0; /* Asegurar alineación desde el inicio */
+    margin-left: 0;
 }
 #section-desktop-1 .cta-btn:hover, 
 #section-desktop-1 .cta-btn:focus {
@@ -311,7 +311,7 @@
         font-size: 0.5rem;
     }
     #section-desktop-1 .cta-btn {
-        max-width: 280px; /* Ajustado para 60px * 4 + 25px * 3 */
+        max-width: 305px; /* Ajustado a 60px * 4 + 25px * 3 + un poco más para encajar */
         font-size: 1rem;
         padding: 10px 0;
     }
