@@ -11,7 +11,7 @@
     background: url('Assets/img/FONDOS-06.jpg') no-repeat center;
     background-size: cover;
     background-color: #1a1a1a; /* Fallback color if image fails */
-    color: #fff; /* Ensure text is visible against dark background */
+    color: #fff; /* Ensure text is visible */
 }
 
 #section-mobile-1 .section-mobile-container {
