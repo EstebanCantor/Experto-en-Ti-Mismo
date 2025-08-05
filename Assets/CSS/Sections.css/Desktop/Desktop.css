@@ -29,7 +29,7 @@
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* Centered alignment for all children */
     margin-left: 0;
 }
 
@@ -64,7 +64,7 @@
     gap: 25px;
     margin-bottom: 15px;
     margin-top: 5px;
-    justify-content: flex-start;
+    justify-content: center; /* Centered alignment for countdown */
     width: 100%;
 }
 #section-desktop-1 .countdown-item {
@@ -102,10 +102,11 @@
     color: #36c1ea;
     font-weight: 800;
     font-size: 1.13rem;
-    margin: 10px 0 10px 0;
+    margin: 10px 0;
     text-align: center;
-    width: 70%;
+    width: auto; /* Removed fixed width to allow centering */
 }
+
 #section-desktop-1 .cta-btn {
     background: #36c1ea;
     color: #fff;
@@ -121,11 +122,12 @@
     text-decoration: none;
     letter-spacing: 1px;
     width: 100%;
-    max-width: 380px; /* Aumentado a 380px para encajar mejor con el temporizador */
+    max-width: 380px;
     text-align: center;
     display: block;
     transition: background 0.18s;
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto; /* Centered button */
 }
 #section-desktop-1 .cta-btn:hover, 
 #section-desktop-1 .cta-btn:focus {
@@ -140,7 +142,7 @@
     margin-bottom: 20px;
     margin-top: 0;
     text-align: center;
-    width: 70%;
+    width: auto; /* Removed fixed width to allow centering */
 }
 
 /* ------- COLUMNA INVISIBLE CENTRAL ------- */
@@ -311,7 +313,7 @@
         font-size: 0.5rem;
     }
     #section-desktop-1 .cta-btn {
-        max-width: 305px; /* Ajustado a 60px * 4 + 25px * 3 + un poco más para encajar */
+        max-width: 305px;
         font-size: 1rem;
         padding: 10px 0;
     }
@@ -334,7 +336,7 @@
     }
     #section-desktop-1 .section1-desktop-right,
     #section-desktop-1 .section1-desktop-left {
-        align-items: stretch;
+        align-items: center; /* Maintain centering in column layout */
         max-width: 100%;
     }
     #section-desktop-1 .video-benefits-stack,
