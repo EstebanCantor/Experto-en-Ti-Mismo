@@ -58,7 +58,14 @@
     max-width: 55%;
 }
 
-/* COUNTDOWN */
+/* COUNTDOWN AND CTA CONTAINER */
+#section-desktop-1 .countdown-cta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align left with title */
+    width: auto;
+}
+
 #section-desktop-1 .countdown-box {
     display: flex;
     gap: 25px;
@@ -104,11 +111,9 @@
     font-size: 1.13rem;
     margin: 10px 0;
     text-align: center; /* Centered with button and countdown */
-    width: auto;
-    display: block;
+    width: 380px; /* Match the button's max-width */
     margin-left: auto;
     margin-right: auto;
-    max-width: 380px; /* Match the button's max-width */
 }
 
 #section-desktop-1 .cta-btn {
@@ -144,11 +149,9 @@
     margin-bottom: 20px;
     margin-top: 0;
     text-align: center; /* Centered with button and countdown */
-    width: auto;
-    display: block;
+    width: 380px; /* Match the button's max-width */
     margin-left: auto;
     margin-right: auto;
-    max-width: 380px; /* Match the button's max-width */
 }
 
 /* ------- COLUMNA INVISIBLE CENTRAL ------- */
