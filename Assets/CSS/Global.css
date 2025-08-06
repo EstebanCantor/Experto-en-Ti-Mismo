@@ -1,226 +1,186 @@
-/* Mostrar solo en escritorio */
+/* =========================================================
+   GLOBAL STYLES (Desktop/Mobile toggles + label behavior)
+   ========================================================= */
+
+/* Show desktop, hide mobile */
 @media (min-width: 768px) {
-    #section-desktop-1 {
-        display: block; /* Asegura que se muestre en pantallas grandes */
-    }
-    #section-mobile-1 {
-        display: none; /* Oculta la versión móvil en pantallas grandes */
-    }
-    #label-section .label-koete img {
-        max-width: 120px; /* Tamaño original en desktop */
-    }
+  #section-desktop-1 { display: block; }
+  #section-mobile-1 { display: none; }
+  #label-section .label-koete img { max-width: 120px; } /* desktop label size */
 }
 
-/* Mostrar solo en móvil */
+/* Show mobile, hide desktop */
 @media (max-width: 767px) {
-    #section-mobile-1 {
-        display: block; /* Muestra la versión móvil en pantallas pequeñas */
-    }
-    #section-desktop-1 {
-        display: none; /* Oculta la versión de escritorio en pantallas pequeñas */
-    }
-    #label-section .label-koete img {
-        max-width: 60px; /* Reducir más en móvil */
-    }
+  #section-mobile-1 { display: block; }
+  #section-desktop-1 { display: none; }
+  #label-section .label-koete img { max-width: 60px; } /* mobile label size */
 }
 
-/* Solución global para evitar desbordamiento horizontal */
+/* Global reset / overflow control */
 html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Evita desplazamiento horizontal */
-    width: 100vw; /* Asegura que el contenido ocupe solo el ancho del viewport */
-    box-sizing: border-box; /* Aplica box-sizing a todos los elementos */
-    background: transparent; /* Eliminamos el fondo oscuro para no interferir */
-    color: #fff;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;        /* prevent horizontal scroll */
+  width: 100vw;
+  box-sizing: border-box;
+  background: transparent;
+  color: #fff;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
+* { box-sizing: inherit; }
 
-* {
-    box-sizing: inherit; /* Hereda el box-sizing desde el body */
-}
-
-/* Opcional: Aplicar a contenedores específicos que podrían causar desbordamiento */
 .container, .wrapper, section {
-    max-width: 100vw; /* Asegura que todos los contenedores ocupen solo el ancho del viewport */
-    overflow-x: hidden; /* Evita desbordamiento dentro de secciones */
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
-/* Contenedor del label (logo) */
+/* =========================
+   LABEL (KOETE) BEHAVIOR
+   =========================
+   Fixed by default + slide-in on load.
+   Hides on scroll down, reappears on scroll up.
+   (Toggle the 'is-hidden' class on #label-section via JS)
+*/
 #label-section .label-koete {
-    position: fixed; /* Hace que el logo esté fijo en la pantalla */
-    top: 10px; /* Pegada arriba con un pequeño margen */
-    left: 10px; /* Un poco más a la izquierda */
-    z-index: 9999; /* Asegura que el logo esté por encima de todo */
-    transition: transform 0.3s ease; /* Suaviza la animación de ocultar/mostrar */
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+  transform: translateY(0);
+  transition: transform .28s ease, opacity .28s ease;
+  will-change: transform, opacity;
+  animation: slideDown 0.8s ease forwards; /* initial entrance */
 }
 
-/* Estado inicial del logo (visible) */
-#label-section .label-koete {
-    transform: translateY(0); /* Posición normal */
+/* Hidden state (applied when scrolling down) */
+#label-section.is-hidden .label-koete {
+  transform: translateY(-120%);
+  opacity: 0;
+  pointer-events: none;
 }
 
-/* Ocultar el logo al hacer scroll hacia abajo */
-@media (min-width: 0px) {
-    body {
-        --scroll-direction: 0; /* Variable para detectar dirección del scroll */
-    }
-    @supports (scroll-behavior: smooth) {
-        @media (prefers-reduced-motion: no-preference) {
-            html {
-                scroll-behavior: smooth;
-            }
-            body {
-                position: relative;
-            }
-            body:not(:hover) #label-section .label-koete {
-                transform: translateY(calc(var(--scroll-direction) * -100%));
-            }
-        }
-    }
-}
-
-/* Animación para que el logo aparezca con una transición suave al cargar */
+/* Entrance animation keyframes */
 @keyframes slideDown {
-    from {
-        transform: translateY(-100%); /* Comienza fuera de la pantalla */
-    }
-    to {
-        transform: translateY(0); /* Aparece en su posición final */
-    }
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(0); }
 }
 
-#label-section .label-koete {
-    animation: slideDown 0.8s ease forwards; /* Ejecuta la animación al cargar la página */
-}
+/* (Removed the older --scroll-direction hack; JS now controls visibility) */
 
-/* Sección 10 - Botón flotante */
+
+/* =========================
+   SECTION 10 - Floating CTA
+   ========================= */
 #section-10 {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-/* Botón flotante */
 #section-10 .unique-floating-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background: url('https://koete.co/wp-content/uploads/2022/04/cropped-koete-lfav.png') no-repeat center center;
-    background-size: cover;
-    border: none;
-    border-radius: 0; /* Sin bordes redondeados */
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    transition: transform 0.3s;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: url('https://koete.co/wp-content/uploads/2022/04/cropped-koete-lfav.png') no-repeat center center;
+  background-size: cover;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s;
 }
+#section-10 .unique-floating-button:hover { transform: scale(1.1); }
 
-#section-10 .unique-floating-button:hover {
-    transform: scale(1.1);
-}
-
-/* Mensaje emergente pequeño */
+/* Small popup */
 #section-10 .unique-popup-message {
-    display: none;
-    position: fixed;
-    bottom: 90px;
-    right: 20px;
-    background-color: #fff;
-    color: #000;
-    padding: 10px 20px;
-    border: 1px solid #ccc;
-    border-radius: 0; /* Sin bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 999;
-    font-size: 16px;
-    max-width: 200px;
-    word-wrap: break-word;
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  font-size: 16px;
+  max-width: 200px;
+  word-wrap: break-word;
 }
 
-/* Mensaje emergente grande */
+/* Large popup */
 #section-10 .unique-large-popup-message {
-    display: none;
-    position: fixed;
-    bottom: 100px;
-    right: 20px;
-    width: 300px;
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 0; /* Sin bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    font-size: 16px;
-    text-align: center;
-    color: #000; /* Texto en negro */
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  font-size: 16px;
+  text-align: center;
+  color: #000;
 }
 
-/* Estilo del texto sobre los botones */
 #section-10 .unique-large-popup-message p {
-    margin: 0 0 20px;
-    color: #000; /* Aseguramos que el texto sea negro */
-    font-size: 16px;
+  margin: 0 0 20px;
+  color: #000;
+  font-size: 16px;
 }
 
-/* Botón cerrar */
+/* Close button */
 #section-10 .unique-close-button {
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    background: #3BB0D9;
-    border: none;
-    border-radius: 0; /* Sin bordes redondeados */
-    width: 25px;
-    height: 25px;
-    font-size: 16px;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background: #3BB0D9;
+  border: none;
+  border-radius: 0;
+  width: 25px;
+  height: 25px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos generales para los botones de acción dentro del mensaje grande */
+/* Action buttons inside large popup */
 #section-10 .unique-large-popup-message .action-button {
-    display: block;
-    width: 100%;
-    background-color: #3BB0D9;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 0; /* Sin bordes redondeados */
-    transition: background-color 0.3s;
-    margin: 5px 0; /* Espacio entre botones */
+  display: block;
+  width: 100%;
+  background-color: #3BB0D9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 0;
+  transition: background-color 0.3s;
+  margin: 5px 0;
 }
 
-/* Estilos específicos para el botón de Typeform */
-#section-10 .unique-large-popup-message .typeform-button {
-    background-color: #FF30A3; /* Rosado */
-}
+/* Specific buttons */
+#section-10 .unique-large-popup-message .typeform-button { background-color: #FF30A3; }
+#section-10 .unique-large-popup-message .typeform-button:hover { background-color: #FF8F2B; }
 
-#section-10 .unique-large-popup-message .typeform-button:hover {
-    background-color: #FF8F2B; /* Rosado más claro */
-}
+#section-10 .unique-large-popup-message .whatsapp-button { background-color: #ff9900; }
+#section-10 .unique-large-popup-message .whatsapp-button:hover { background-color: #ffad33; }
 
-/* Estilos específicos para el botón de WhatsApp */
-#section-10 .unique-large-popup-message .whatsapp-button {
-    background-color: #ff9900; /* Naranja */
-}
-
-#section-10 .unique-large-popup-message .whatsapp-button:hover {
-    background-color: #ffad33; /* Naranja más claro */
-}
-
-/* Estilos para los íconos dentro de los botones */
+/* Icons inside action buttons */
 #section-10 .unique-large-popup-message .action-button i {
-    margin-right: 8px;
-    font-size: 18px;
-    vertical-align: middle;
+  margin-right: 8px;
+  font-size: 18px;
+  vertical-align: middle;
 }
