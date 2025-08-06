@@ -1,9 +1,9 @@
 /* Mostrar solo en escritorio */
 @media (min-width: 768px) {
-    .desktop-only {
-        display: block; /* Asegura que se muestren en pantallas grandes */
+    #section-desktop-1 {
+        display: block; /* Asegura que se muestre en pantallas grandes */
     }
-    .mobile-only {
+    #section-mobile-1 {
         display: none; /* Oculta la versión móvil en pantallas grandes */
     }
     #label-section .label-koete img {
@@ -13,10 +13,10 @@
 
 /* Mostrar solo en móvil */
 @media (max-width: 767px) {
-    .mobile-only {
+    #section-mobile-1 {
         display: block; /* Muestra la versión móvil en pantallas pequeñas */
     }
-    .desktop-only {
+    #section-desktop-1 {
         display: none; /* Oculta la versión de escritorio en pantallas pequeñas */
     }
     #label-section .label-koete img {
@@ -31,7 +31,7 @@ html, body {
     overflow-x: hidden; /* Evita desplazamiento horizontal */
     width: 100vw; /* Asegura que el contenido ocupe solo el ancho del viewport */
     box-sizing: border-box; /* Aplica box-sizing a todos los elementos */
-    background: #191c23; /* Base background color, overridden by sections */
+    background: transparent; /* Eliminamos el fondo oscuro para no interferir */
     color: #fff;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
@@ -47,7 +47,7 @@ html, body {
 }
 
 /* Contenedor del label (logo) */
-.label-koete {
+#label-section .label-koete {
     position: fixed; /* Hace que el logo esté fijo en la pantalla */
     top: 10px; /* Pegada arriba con un pequeño margen */
     left: 10px; /* Un poco más a la izquierda */
@@ -56,7 +56,7 @@ html, body {
 }
 
 /* Estado inicial del logo (visible) */
-.label-koete {
+#label-section .label-koete {
     transform: translateY(0); /* Posición normal */
 }
 
@@ -73,7 +73,7 @@ html, body {
             body {
                 position: relative;
             }
-            body:not(:hover) .label-koete {
+            body:not(:hover) #label-section .label-koete {
                 transform: translateY(calc(var(--scroll-direction) * -100%));
             }
         }
@@ -90,7 +90,7 @@ html, body {
     }
 }
 
-.label-koete {
+#label-section .label-koete {
     animation: slideDown 0.8s ease forwards; /* Ejecuta la animación al cargar la página */
 }
 
@@ -224,34 +224,3 @@ html, body {
     font-size: 18px;
     vertical-align: middle;
 }
-/* ... (tu CSS existente) ... */
-
-/* Ajuste del logo fijo */
-#label-section .label-koete img {
-    max-width: 100px; /* Reducir tamaño */
-    height: auto;
-}
-@media (max-width: 767px) {
-    .mobile-only {
-        display: block;
-    }
-    .desktop-only {
-        display: none;
-    }
-    #label-section .label-koete img {
-        max-width: 80px; /* Más pequeño en móvil */
-    }
-}
-@media (min-width: 768px) {
-    .mobile-only {
-        display: none;
-    }
-    .desktop-only {
-        display: block;
-    }
-    #label-section .label-koete img {
-        max-width: 120px; /* Tamaño original en desktop */
-    }
-}
-
-/* ... (resto de tu CSS) ... */
