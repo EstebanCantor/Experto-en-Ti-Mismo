@@ -6,10 +6,11 @@
     position: relative;
     z-index: 100;
     padding: 20px;
+    padding-bottom: 64px;              /* extra space at the bottom */
     font-family: 'Poppins', sans-serif;
     background: url('../../../img/FONDOS-06.jpg') no-repeat center;
     background-size: cover;
-    background-color: #0e131a; /* fallback */
+    background-color: #0e131a;         /* fallback */
     color: #fff;
 }
 
@@ -20,41 +21,42 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;        /* keep global centering for most blocks */
+    align-items: center;
     padding-top: 48px;
 }
 
-/* Title */
+/* ===== HEADLINE & SUBTITLE ===== */
 #section-mobile-1 .hero-title-mobile {
-    font-size: 2rem;
+    font-size: 1.75rem;                /* smaller title */
     font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 16px;
-    letter-spacing: -1px;
-    text-align: left;           /* ← left-justified */
+    line-height: 1.18;
+    margin-bottom: 8px;                /* tighter gap to subtitle */
+    letter-spacing: -0.9px;
+    text-align: left;
     border-left: 3.5px solid #36c1ea;
-    padding-left: 12px;
-    max-width: 92%;
+    padding-left: 12px;                /* space after the blue line */
+    margin-left: 32px;                 /* shift away from fixed label */
+    max-width: calc(92% - 32px);       /* respect right edge after shifting */
     color: #fff;
-    align-self: flex-start;     /* ← ignore container centering */
+    align-self: flex-start;
 }
 #section-mobile-1 .hero-title-mobile .blue { color: #36c1ea; }
 
-/* Subtitle */
 #section-mobile-1 .hero-subtitle-mobile {
-    font-size: 1rem;
+    font-size: 0.98rem;
     font-weight: 400;
     opacity: 0.92;
     margin-bottom: 16px;
-    line-height: 1.47;
-    text-align: left;           /* ← left-justified */
-    max-width: 92%;
+    line-height: 1.45;
+    text-align: left;
+    padding-left: 12px;                /* align text with title’s content */
+    margin-left: 32px;                 /* same horizontal shift as title */
+    max-width: calc(92% - 32px);
     color: #fff;
-    align-self: flex-start;     /* ← ignore container centering */
-    padding-left: 12px;         /* align text with title (after its border) */
+    align-self: flex-start;
 }
 
-/* COUNTDOWN + CTA */
+/* ===== COUNTDOWN + "NEXT SESSION" ===== */
 #section-mobile-1 .countdown-cta-container-mobile {
     display: flex;
     flex-direction: column;
@@ -103,16 +105,16 @@
 #section-mobile-1 .next-session-mobile {
     color: #36c1ea;
     font-weight: 800;
-    font-size: 1.05rem;
+    font-size: 1.02rem;
     margin: 10px 0;
     text-align: center;
     width: 100%;
-    max-width: 380px;
+    max-width: 360px;                  /* align with CTA width */
     margin-left: auto;
     margin-right: auto;
 }
 
-/* CTA */
+/* ===== CTA BUTTONS ===== */
 #section-mobile-1 .cta-btn-mobile {
     position: relative;
     background: #36c1ea;
@@ -120,15 +122,15 @@
     font-weight: 600;
     border: none;
     border-radius: 0;
-    padding: 12px 56px 12px 16px;
-    font-size: 1.05rem;
+    padding: 11px 48px 11px 14px;      /* a little tighter */
+    font-size: 0.92rem;                /* smaller so it stays on one line */
     margin-bottom: 16px;
     cursor: pointer;
     box-shadow: 0 2px 13px rgba(32,180,227,0.13);
     text-decoration: none;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;             /* slightly reduced */
     width: 100%;
-    max-width: 380px;
+    max-width: 360px;                  /* narrower to match benchmark feel */
     text-align: center;
     display: block;
     margin-left: auto;
@@ -140,14 +142,14 @@
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    width: 38px;
-    height: 38px;
+    width: 34px;                       /* smaller arrow box */
+    height: 34px;
     border-radius: 6px;
     background: #0e131a;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1;
 }
 #section-mobile-1 .cta-btn-mobile:hover,
@@ -158,16 +160,16 @@
 
 #section-mobile-1 .session-duration-mobile {
     color: #b6b6b6;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     margin-bottom: 20px;
     text-align: center;
     width: 100%;
-    max-width: 380px;
+    max-width: 360px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* VIDEO */
+/* ===== VIDEO ===== */
 #section-mobile-1 .video-embed-mobile {
     width: 100%;
     max-width: 600px;
@@ -200,7 +202,7 @@
     text-decoration: none;
 }
 
-/* BENEFITS */
+/* ===== BENEFITS ===== */
 #section-mobile-1 .benefits-box-mobile {
     background: rgba(14, 19, 26, 0.93);
     padding: 15px 18px 18px 18px;
@@ -228,15 +230,15 @@
     line-height: 1.42;
 }
 
-/* TESTIMONIALS */
+/* ===== TESTIMONIALS ===== */
 #section-mobile-1 .testimonials-box-mobile {
     margin-bottom: 8px;
     width: 100%;
     max-width: 600px;
-    padding: 0 20px;                 /* ← more side margins */
+    padding: 0 28px;                    /* more side margins */
 }
 #section-mobile-1 .testimonials-box-mobile blockquote {
-    font-size: 0.88rem;              /* ← smaller type */
+    font-size: 0.88rem;                 /* restored size */
     color: #fff;
     border-left: 3px solid #36c1ea;
     background: none;
@@ -244,27 +246,27 @@
     margin: 0 0 14px 0;
     opacity: 0.92;
     font-style: italic;
-    line-height: 1.42;
+    line-height: 1.42;                  /* restored line-height */
     text-align: left;
 }
 #section-mobile-1 .participant-attribution-mobile {
     color: #b6b6b6;
-    font-size: 0.72rem;
+    font-size: 0.72rem;                 /* restored size */
     text-align: center;
-    margin: 4px 0 18px;
-    padding: 0 20px;                 /* keep same side margins as testimonials */
+    margin: 6px 0 24px;
+    padding: 0 28px;                    /* match side margins */
 }
 
 /* Bottom CTA variant */
 #section-mobile-1 .cta-btn-mobile--bottom {
-    margin-top: 10px;
-    margin-bottom: 28px;
+    margin-top: 12px;
+    margin-bottom: 48px;                /* extra gap to site bottom */
 }
 
-/* Optional tiny screens fine-tuning */
+/* Fine-tuning for very small screens */
 @media (max-width: 360px) {
-    #section-mobile-1 .hero-title-mobile { font-size: 1.8rem; }
-    #section-mobile-1 .countdown-item-mobile { min-width: 62px; height: 82px; }
-    #section-mobile-1 .countdown-item-mobile span { font-size: 1.4rem; }
+    #section-mobile-1 .hero-title-mobile { font-size: 1.6rem; margin-left: 28px; max-width: calc(92% - 28px); }
+    #section-mobile-1 .hero-subtitle-mobile { margin-left: 28px; max-width: calc(92% - 28px); }
+    #section-mobile-1 .cta-btn-mobile { font-size: 0.9rem; padding: 10px 46px 10px 12px; }
 }
 
