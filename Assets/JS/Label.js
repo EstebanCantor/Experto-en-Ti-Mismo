@@ -1,42 +1,39 @@
-// Hide the label when scrolling down, keep it hidden below the video,
-// and show it smoothly only when scrolling up ABOVE the video.
-// Also hide near the bottom to avoid iOS rubber-band "bounce".
+// Assets/JS/Label.js
+// Hide on scroll down; keep hidden below the video; avoid bottom "bounce";
+// show (slow, via CSS) on scroll up. Works on desktop & mobile.
 
 (function () {
   const wrapper = document.getElementById('label-section');
   if (!wrapper) return;
 
-  // Clean any old inline transforms from previous scripts
+  // Clear any old inline styles
   const labelEl = wrapper.querySelector('.label-koete');
   if (labelEl) {
     labelEl.style.transform = '';
     labelEl.style.transition = '';
   }
 
-  // Compute the Y position (document coordinates) at which the label
-  // must remain hidden. We use the top of the video currently visible.
+  // Helper: is element visible (not display:none and in layout)?
+  function isVisible(el) {
+    if (!el) return false;
+    if (el.offsetParent === null) return false;
+    const cs = getComputedStyle(el);
+    return cs.display !== 'none' && cs.visibility !== 'hidden';
+  }
+
+  // Find the Y position (document coords) of the visible video (mobile or desktop)
   function computeTriggerY() {
-    const candidates = [
-      document.querySelector('#section-mobile-1 .video-embed-mobile'),
-      document.querySelector('#section-desktop-1 .video-embed'),
-    ];
+    const mobileVideo = document.querySelector('#section-mobile-1 .video-embed-mobile');
+    const desktopVideo = document.querySelector('#section-desktop-1 .video-embed');
+    const target = isVisible(mobileVideo) ? mobileVideo : (isVisible(desktopVideo) ? desktopVideo : null);
 
-    const ys = [];
-
-    candidates.forEach((el) => {
-      if (!el) return;
-      const cs = window.getComputedStyle(el);
-      // Ignore hidden elements (display:none) from the non-active layout
-      if (cs.display === 'none' || el.offsetParent === null) return;
-      const rect = el.getBoundingClientRect();
-      ys.push(rect.top + window.scrollY);
-    });
-
-    // Fallback if we didn't find a visible video
-    if (ys.length === 0) return 500;
-
-    // Small buffer so the label hides slightly before the video
-    return Math.max(0, Math.min(...ys) - 4);
+    if (!target) {
+      // No video visible (rare) -> never force-hide by trigger
+      return Number.POSITIVE_INFINITY;
+    }
+    const r = target.getBoundingClientRect();
+    // Hide slightly before reaching the video
+    return r.top + window.scrollY - 4;
   }
 
   let triggerY = computeTriggerY();
@@ -45,30 +42,32 @@
 
   function update() {
     const y = window.scrollY || 0;
+    const doc = document.documentElement;
+    const contentScrollable = doc.scrollHeight - window.innerHeight > 8;
 
-    // 1) Hide when we're past the trigger (below the video area)
+    // Always visible very near the top
+    if (y <= 50) {
+      wrapper.classList.remove('is-hidden');
+      lastY = y; ticking = false; return;
+    }
+
+    // Keep hidden once we are below the video region
     if (y >= triggerY) {
       wrapper.classList.add('is-hidden');
-      lastY = y;
-      ticking = false;
-      return;
+      lastY = y; ticking = false; return;
     }
 
-    // 2) Hide when near the bottom (prevents "bounce" reappearing)
-    const doc = document.documentElement;
-    const atBottom = y + window.innerHeight >= doc.scrollHeight - 2;
+    // Avoid bounce at the bottom (only if the page actually scrolls)
+    const atBottom = contentScrollable && (y + window.innerHeight >= doc.scrollHeight - 2);
     if (atBottom) {
       wrapper.classList.add('is-hidden');
-      lastY = y;
-      ticking = false;
-      return;
+      lastY = y; ticking = false; return;
     }
 
-    // 3) Direction-based behavior above the video:
-    // down = hide (quick), up = show (slow, handled in CSS)
-    if (y > lastY && y > 50) {
+    // Direction-based: down -> hide, up -> show
+    if (y > lastY) {
       wrapper.classList.add('is-hidden');
-    } else if (y < lastY || y <= 50) {
+    } else if (y < lastY) {
       wrapper.classList.remove('is-hidden');
     }
 
@@ -85,11 +84,10 @@
 
   function onResize() {
     triggerY = computeTriggerY();
-    // Re-evaluate immediately to sync state
     update();
   }
 
-  // Init
+  // Initialize
   triggerY = computeTriggerY();
   update();
 
