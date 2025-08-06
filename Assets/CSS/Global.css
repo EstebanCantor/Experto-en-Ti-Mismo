@@ -41,22 +41,27 @@ html, body {
    Hides on scroll down, reappears on scroll up.
    (Toggle the 'is-hidden' class on #label-section via JS)
 */
+
+/* Visible state — slower SHOW on scroll up */
 #label-section .label-koete {
   position: fixed;
   top: 10px;
   left: 10px;
   z-index: 9999;
   transform: translateY(0);
-  transition: transform .28s ease, opacity .28s ease;
+  /* slower, smooth ease-out when appearing */
+  transition: transform .45s cubic-bezier(.22,1,.36,1), opacity .45s cubic-bezier(.22,1,.36,1);
   will-change: transform, opacity;
-  animation: slideDown 0.8s ease forwards; /* initial entrance */
+  animation: slideDown 0.8s ease forwards; /* entrance on initial load */
 }
 
-/* Hidden state (applied when scrolling down) */
+/* Hidden state — faster HIDE on scroll down */
 #label-section.is-hidden .label-koete {
   transform: translateY(-120%);
   opacity: 0;
   pointer-events: none;
+  /* quicker ease-in when hiding */
+  transition: transform .22s ease-in, opacity .22s ease-in;
 }
 
 /* Entrance animation keyframes */
@@ -64,9 +69,6 @@ html, body {
   from { transform: translateY(-100%); }
   to   { transform: translateY(0); }
 }
-
-/* (Removed the older --scroll-direction hack; JS now controls visibility) */
-
 
 /* =========================
    SECTION 10 - Floating CTA
@@ -93,7 +95,10 @@ html, body {
   z-index: 1000;
   transition: transform 0.3s;
 }
-#section-10 .unique-floating-button:hover { transform: scale(1.1); }
+
+#section-10 .unique-floating-button:hover {
+  transform: scale(1.1);
+}
 
 /* Small popup */
 #section-10 .unique-popup-message {
