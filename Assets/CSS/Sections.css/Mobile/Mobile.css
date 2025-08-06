@@ -20,22 +20,21 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrar horizontalmente todos los elementos */
-    padding-top: 120px; /* Bajar el contenido */
+    align-items: center; /* Centrar todo el contenido general */
+    padding-top: 80px; /* Bajar el contenido desde el título */
 }
 
 #section-mobile-1 .hero-title-mobile {
     font-size: 1.8rem;
     font-weight: 800;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     letter-spacing: -0.8px;
-    text-align: left; /* Justificado a la izquierda */
+    text-align: center; /* Centrado */
     border-left: 3px solid #36c1ea;
     padding-left: 10px;
     max-width: 90%;
     color: #fff;
-    border-radius: 0; /* Sin bordes redondeados */
 }
 #section-mobile-1 .hero-title-mobile .blue {
     color: #36c1ea;
@@ -45,33 +44,32 @@
     font-size: 0.9rem;
     font-weight: 400;
     opacity: 0.92;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     line-height: 1.5;
-    text-align: left; /* Justificado a la izquierda */
+    text-align: center; /* Centrado */
     max-width: 90%;
     color: #fff;
-    border-radius: 0; /* Sin bordes redondeados */
 }
 
 /* COUNTDOWN AND CTA CONTAINER MOBILE */
 #section-mobile-1 .countdown-cta-container-mobile {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrado horizontalmente */
+    align-items: center; /* Centrado */
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 #section-mobile-1 .countdown-box-mobile {
     display: flex;
     gap: 10px;
-    margin-bottom: 15px;
-    justify-content: center; /* Centrado horizontalmente */
+    margin-bottom: 10px;
+    justify-content: center; /* Centrado */
     width: 100%;
 }
 #section-mobile-1 .countdown-item-mobile {
     background: #fff;
-    border-radius: 0; /* Sin bordes redondeados */
+    border-radius: 5px;
     padding: 8px;
     display: flex;
     flex-direction: column;
@@ -102,13 +100,12 @@
     color: #36c1ea;
     font-weight: 800;
     font-size: 0.9rem;
-    margin: 10px 0;
-    text-align: center; /* Centrado horizontalmente */
+    margin: 8px 0;
+    text-align: center; /* Centrado */
     width: 100%;
     max-width: 280px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 0; /* Sin bordes redondeados */
 }
 
 #section-mobile-1 .cta-btn-mobile {
@@ -116,8 +113,8 @@
     color: #fff;
     font-weight: 600;
     border: none;
-    border-radius: 0; /* Sin bordes redondeados */
-    padding: 12px 0;
+    border-radius: 5px;
+    padding: 10px 0;
     font-size: 0.95rem;
     margin-bottom: 15px;
     cursor: pointer;
@@ -126,7 +123,7 @@
     letter-spacing: 0.5px;
     width: 100%;
     max-width: 280px;
-    text-align: center; /* Centrado horizontalmente */
+    text-align: center; /* Centrado */
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -140,27 +137,25 @@
 #section-mobile-1 .session-duration-mobile {
     color: #b6b6b6;
     font-size: 0.75rem;
-    margin-bottom: 25px;
-    text-align: center; /* Centrado horizontalmente */
+    margin-bottom: 20px;
+    text-align: center; /* Centrado */
     width: 100%;
     max-width: 280px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 0; /* Sin bordes redondeados */
 }
 
 /* VIDEO EMBED MOBILE */
 #section-mobile-1 .video-embed-mobile {
     width: 100%;
     aspect-ratio: 16 / 9;
-    margin-bottom: 25px;
-    border-radius: 0; /* Sin bordes redondeados */
+    margin-bottom: 20px;
+    border-radius: 5px;
     overflow: hidden;
     position: relative;
     display: block;
-    max-width: 90%;
     margin-left: auto;
-    margin-right: auto; /* Centrado horizontalmente */
+    margin-right: auto; /* Centrado */
 }
 #section-mobile-1 .video-embed-mobile iframe {
     width: 100%;
@@ -173,35 +168,33 @@
 }
 #section-mobile-1 .youtube-link {
     display: block;
-    text-align: center; /* Centrado horizontalmente */
+    text-align: center; /* Centrado */
     color: #36c1ea;
     font-size: 0.8rem;
     margin-top: 5px;
     text-decoration: none;
-    border-radius: 0; /* Sin bordes redondeados */
 }
 
 /* BENEFITS MOBILE */
 #section-mobile-1 .benefits-box-mobile {
     background: rgba(14, 19, 26, 0.93);
     padding: 15px;
-    border-radius: 0; /* Sin bordes redondeados */
+    border-radius: 5px;
     margin-bottom: 20px;
-    width: 90%; /* Centrado, pero contenido justificado a la izquierda */
-    align-self: center; /* Centrado horizontalmente */
+    width: 100%; /* Ajuste para mantener alineación izquierda */
 }
 #section-mobile-1 .benefits-box-mobile h3 {
     color: #36c1ea;
     font-size: 1rem;
     font-weight: 800;
     margin-bottom: 10px;
-    text-align: left; /* Justificado a la izquierda */
+    text-align: left; /* Alineación izquierda */
 }
 #section-mobile-1 .benefits-box-mobile ul {
     list-style: disc;
     margin: 0 0 0 15px;
     padding: 0;
-    text-align: left; /* Justificado a la izquierda */
+    text-align: left; /* Alineación izquierda */
 }
 #section-mobile-1 .benefits-box-mobile li {
     font-size: 0.85rem;
@@ -213,12 +206,10 @@
 /* TESTIMONIALS MOBILE */
 #section-mobile-1 .testimonials-box-mobile {
     margin-bottom: 20px;
-    width: 80%; /* Más pequeño, centrado */
-    align-self: center; /* Centrado horizontalmente */
-    border-radius: 0; /* Sin bordes redondeados */
+    width: 100%; /* Ajuste para mantener alineación izquierda */
 }
 #section-mobile-1 .testimonials-box-mobile blockquote {
-    font-size: 0.85rem; /* Reducido para ser más pequeño */
+    font-size: 0.9rem;
     color: #fff;
     border-left: 3px solid #36c1ea;
     background: none;
@@ -227,13 +218,11 @@
     opacity: 0.92;
     font-style: italic;
     line-height: 1.4;
-    text-align: left; /* Justificado a la izquierda */
+    text-align: left; /* Alineación izquierda */
 }
 #section-mobile-1 .participant-attribution-mobile {
     color: #b6b6b6;
     font-size: 0.7rem;
     text-align: right; /* Justificado a la derecha */
     margin-bottom: 20px;
-    width: 80%; /* Alineado con el contenedor de testimonios */
-    align-self: flex-end; /* Asegurar alineación derecha */
 }
