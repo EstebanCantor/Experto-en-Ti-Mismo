@@ -8,7 +8,7 @@
     z-index: 2; /* Superior al fondo global del body */
     padding: 20px;
     font-family: 'Poppins', sans-serif;
-    background: url('../../img/FONDOS-06.jpg') no-repeat center; /* Ruta relativa desde Mobile.css */
+    background: url('../../img/FONDOS-06.jpg') no-repeat center;
     background-size: cover;
     background-color: #1a1a1a; /* Fallback color if image fails */
     color: #fff; /* Ensure text is visible */
@@ -20,7 +20,8 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* Centrar todo el contenido general */
+    padding-top: 80px; /* Bajar el contenido desde el título */
 }
 
 #section-mobile-1 .hero-title-mobile {
@@ -29,10 +30,10 @@
     line-height: 1.2;
     margin-bottom: 15px;
     letter-spacing: -0.8px;
-    text-align: left;
+    text-align: center; /* Centrado */
     border-left: 3px solid #36c1ea;
     padding-left: 10px;
-    max-width: 100%;
+    max-width: 90%;
     color: #fff;
 }
 #section-mobile-1 .hero-title-mobile .blue {
@@ -45,8 +46,8 @@
     opacity: 0.92;
     margin-bottom: 15px;
     line-height: 1.5;
-    text-align: left;
-    max-width: 100%;
+    text-align: center; /* Centrado */
+    max-width: 90%;
     color: #fff;
 }
 
@@ -54,7 +55,7 @@
 #section-mobile-1 .countdown-cta-container-mobile {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* Centrado */
     width: 100%;
     margin-bottom: 20px;
 }
@@ -63,7 +64,7 @@
     display: flex;
     gap: 10px;
     margin-bottom: 10px;
-    justify-content: flex-start;
+    justify-content: center; /* Centrado */
     width: 100%;
 }
 #section-mobile-1 .countdown-item-mobile {
@@ -100,7 +101,7 @@
     font-weight: 800;
     font-size: 0.9rem;
     margin: 8px 0;
-    text-align: center;
+    text-align: center; /* Centrado */
     width: 100%;
     max-width: 280px;
     margin-left: auto;
@@ -122,9 +123,10 @@
     letter-spacing: 0.5px;
     width: 100%;
     max-width: 280px;
-    text-align: center;
+    text-align: center; /* Centrado */
     display: block;
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 #section-mobile-1 .cta-btn-mobile:hover,
 #section-mobile-1 .cta-btn-mobile:focus {
@@ -136,7 +138,7 @@
     color: #b6b6b6;
     font-size: 0.75rem;
     margin-bottom: 20px;
-    text-align: center;
+    text-align: center; /* Centrado */
     width: 100%;
     max-width: 280px;
     margin-left: auto;
@@ -151,6 +153,9 @@
     border-radius: 5px;
     overflow: hidden;
     position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centrado */
 }
 #section-mobile-1 .video-embed-mobile iframe {
     width: 100%;
@@ -163,7 +168,7 @@
 }
 #section-mobile-1 .youtube-link {
     display: block;
-    text-align: center;
+    text-align: center; /* Centrado */
     color: #36c1ea;
     font-size: 0.8rem;
     margin-top: 5px;
@@ -176,17 +181,20 @@
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 20px;
+    width: 100%; /* Ajuste para mantener alineación izquierda */
 }
 #section-mobile-1 .benefits-box-mobile h3 {
     color: #36c1ea;
     font-size: 1rem;
     font-weight: 800;
     margin-bottom: 10px;
+    text-align: left; /* Alineación izquierda */
 }
 #section-mobile-1 .benefits-box-mobile ul {
     list-style: disc;
     margin: 0 0 0 15px;
     padding: 0;
+    text-align: left; /* Alineación izquierda */
 }
 #section-mobile-1 .benefits-box-mobile li {
     font-size: 0.85rem;
@@ -198,6 +206,7 @@
 /* TESTIMONIALS MOBILE */
 #section-mobile-1 .testimonials-box-mobile {
     margin-bottom: 20px;
+    width: 100%; /* Ajuste para mantener alineación izquierda */
 }
 #section-mobile-1 .testimonials-box-mobile blockquote {
     font-size: 0.9rem;
@@ -209,10 +218,11 @@
     opacity: 0.92;
     font-style: italic;
     line-height: 1.4;
+    text-align: left; /* Alineación izquierda */
 }
 #section-mobile-1 .participant-attribution-mobile {
     color: #b6b6b6;
     font-size: 0.7rem;
-    text-align: center;
+    text-align: right; /* Justificado a la derecha */
     margin-bottom: 20px;
 }
