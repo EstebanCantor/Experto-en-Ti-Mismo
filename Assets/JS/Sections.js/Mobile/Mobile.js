@@ -34,12 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
 
-      // Mismo objetivo que desktop (zona horaria -05:00 para coherencia)
-      const countDownDate = new Date('September 1, 2025 19:30:00 GMT-0500').getTime();
+      // 01 de septiembre de 2025 a las 7:30 pm hora Colombia (UTC-05:00)
+      const TARGET_MS = new Date('2025-09-01T19:30:00-05:00').getTime();
 
       const interval = setInterval(function () {
         const now = Date.now();
-        const distance = countDownDate - now;
+        const distance = TARGET_MS - now;
 
         if (distance <= 0) {
           clearInterval(interval);
@@ -66,10 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   initSectionMobile1();
 
-  // ====== IMPORTANTE ======
-  // Eliminamos el código anterior que ocultaba el label desde aquí.
-  // Ahora la lógica del label está centralizada en Assets/JS/Label.js
-  // y se coordina con Global.css (#label-section.is-hidden ...).
+  // ====== (Nota) La lógica del label está en Assets/JS/Label.js ======
 
   // ====== Botones (si existen) ======
   const reserveButton = document.querySelector('#buttons-slide-mobile .cta-button-left');
