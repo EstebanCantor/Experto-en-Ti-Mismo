@@ -21,10 +21,6 @@
     }
     #label-section .label-koete img {
         max-width: 60px; /* Reducir más en móvil */
-        position: fixed;
-        top: 20px; /* Fija en la parte superior */
-        left: 20px; /* Ajuste a la izquierda */
-        transform: none; /* Elimina el centrado previo */
     }
 }
 
@@ -53,21 +49,38 @@ html, body {
 /* Contenedor del label (logo) */
 .label-koete {
     position: fixed; /* Hace que el logo esté fijo en la pantalla */
-    top: 0px; /* Posición fija en la parte superior */
-    left: 20px; /* Posición fija en la parte izquierda */
+    top: 10px; /* Pegada arriba con un pequeño margen */
+    left: 10px; /* Un poco más a la izquierda */
     z-index: 9999; /* Asegura que el logo esté por encima de todo */
-    transition: transform 0.5s ease; /* Suaviza la animación si es necesario */
+    transition: transform 0.3s ease; /* Suaviza la animación de ocultar/mostrar */
 }
 
-.label-koete img {
-    max-width: 80px; /* Ajusta el tamaño máximo del logo */
-    height: auto; /* Mantiene la proporción del logo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
-    border-radius: 0; /* Sin bordes redondeados */
-    min-height: 50px;
+/* Estado inicial del logo (visible) */
+.label-koete {
+    transform: translateY(0); /* Posición normal */
 }
 
-/* Animación para que el logo aparezca con una transición suave */
+/* Ocultar el logo al hacer scroll hacia abajo */
+@media (min-width: 0px) {
+    body {
+        --scroll-direction: 0; /* Variable para detectar dirección del scroll */
+    }
+    @supports (scroll-behavior: smooth) {
+        @media (prefers-reduced-motion: no-preference) {
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                position: relative;
+            }
+            body:not(:hover) .label-koete {
+                transform: translateY(calc(var(--scroll-direction) * -100%));
+            }
+        }
+    }
+}
+
+/* Animación para que el logo aparezca con una transición suave al cargar */
 @keyframes slideDown {
     from {
         transform: translateY(-100%); /* Comienza fuera de la pantalla */
