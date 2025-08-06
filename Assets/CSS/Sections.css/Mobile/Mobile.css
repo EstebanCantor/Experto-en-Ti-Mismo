@@ -20,21 +20,22 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrar todo el contenido general */
-    padding-top: 120px; /* Aumentar para bajar más el contenido */
+    align-items: center; /* Centrar horizontalmente todos los elementos */
+    padding-top: 120px; /* Bajar el contenido */
 }
 
 #section-mobile-1 .hero-title-mobile {
     font-size: 1.8rem;
     font-weight: 800;
     line-height: 1.2;
-    margin-bottom: 20px; /* Más espacio debajo del título */
+    margin-bottom: 20px;
     letter-spacing: -0.8px;
-    text-align: center; /* Centrado */
+    text-align: left; /* Justificado a la izquierda */
     border-left: 3px solid #36c1ea;
     padding-left: 10px;
     max-width: 90%;
     color: #fff;
+    border-radius: 0; /* Sin bordes redondeados */
 }
 #section-mobile-1 .hero-title-mobile .blue {
     color: #36c1ea;
@@ -44,32 +45,33 @@
     font-size: 0.9rem;
     font-weight: 400;
     opacity: 0.92;
-    margin-bottom: 20px; /* Más espacio */
+    margin-bottom: 20px;
     line-height: 1.5;
-    text-align: center; /* Centrado */
+    text-align: left; /* Justificado a la izquierda */
     max-width: 90%;
     color: #fff;
+    border-radius: 0; /* Sin bordes redondeados */
 }
 
 /* COUNTDOWN AND CTA CONTAINER MOBILE */
 #section-mobile-1 .countdown-cta-container-mobile {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrado */
+    align-items: center; /* Centrado horizontalmente */
     width: 100%;
-    margin-bottom: 25px; /* Más espacio */
+    margin-bottom: 25px;
 }
 
 #section-mobile-1 .countdown-box-mobile {
     display: flex;
     gap: 10px;
-    margin-bottom: 15px; /* Más espacio */
-    justify-content: center; /* Centrado */
+    margin-bottom: 15px;
+    justify-content: center; /* Centrado horizontalmente */
     width: 100%;
 }
 #section-mobile-1 .countdown-item-mobile {
     background: #fff;
-    border-radius: 5px;
+    border-radius: 0; /* Sin bordes redondeados */
     padding: 8px;
     display: flex;
     flex-direction: column;
@@ -100,12 +102,13 @@
     color: #36c1ea;
     font-weight: 800;
     font-size: 0.9rem;
-    margin: 10px 0; /* Más espacio */
-    text-align: center; /* Centrado */
+    margin: 10px 0;
+    text-align: center; /* Centrado horizontalmente */
     width: 100%;
     max-width: 280px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 0; /* Sin bordes redondeados */
 }
 
 #section-mobile-1 .cta-btn-mobile {
@@ -113,8 +116,8 @@
     color: #fff;
     font-weight: 600;
     border: none;
-    border-radius: 5px;
-    padding: 12px 0; /* Aumentar padding vertical */
+    border-radius: 0; /* Sin bordes redondeados */
+    padding: 12px 0;
     font-size: 0.95rem;
     margin-bottom: 15px;
     cursor: pointer;
@@ -123,7 +126,7 @@
     letter-spacing: 0.5px;
     width: 100%;
     max-width: 280px;
-    text-align: center; /* Centrado */
+    text-align: center; /* Centrado horizontalmente */
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -137,26 +140,27 @@
 #section-mobile-1 .session-duration-mobile {
     color: #b6b6b6;
     font-size: 0.75rem;
-    margin-bottom: 25px; /* Más espacio */
-    text-align: center; /* Centrado */
+    margin-bottom: 25px;
+    text-align: center; /* Centrado horizontalmente */
     width: 100%;
     max-width: 280px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 0; /* Sin bordes redondeados */
 }
 
 /* VIDEO EMBED MOBILE */
 #section-mobile-1 .video-embed-mobile {
     width: 100%;
     aspect-ratio: 16 / 9;
-    margin-bottom: 25px; /* Más espacio */
-    border-radius: 5px;
+    margin-bottom: 25px;
+    border-radius: 0; /* Sin bordes redondeados */
     overflow: hidden;
     position: relative;
     display: block;
-    max-width: 90%; /* Ajuste para centrar mejor */
+    max-width: 90%;
     margin-left: auto;
-    margin-right: auto; /* Centrado */
+    margin-right: auto; /* Centrado horizontalmente */
 }
 #section-mobile-1 .video-embed-mobile iframe {
     width: 100%;
@@ -169,34 +173,35 @@
 }
 #section-mobile-1 .youtube-link {
     display: block;
-    text-align: center; /* Centrado */
+    text-align: center; /* Centrado horizontalmente */
     color: #36c1ea;
     font-size: 0.8rem;
     margin-top: 5px;
     text-decoration: none;
+    border-radius: 0; /* Sin bordes redondeados */
 }
 
 /* BENEFITS MOBILE */
 #section-mobile-1 .benefits-box-mobile {
     background: rgba(14, 19, 26, 0.93);
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 0; /* Sin bordes redondeados */
     margin-bottom: 20px;
-    width: 90%; /* Ajuste para mantener alineación izquierda */
-    align-self: flex-start; /* Alineación izquierda */
+    width: 90%; /* Centrado, pero contenido justificado a la izquierda */
+    align-self: center; /* Centrado horizontalmente */
 }
 #section-mobile-1 .benefits-box-mobile h3 {
     color: #36c1ea;
     font-size: 1rem;
     font-weight: 800;
     margin-bottom: 10px;
-    text-align: left; /* Alineación izquierda */
+    text-align: left; /* Justificado a la izquierda */
 }
 #section-mobile-1 .benefits-box-mobile ul {
     list-style: disc;
     margin: 0 0 0 15px;
     padding: 0;
-    text-align: left; /* Alineación izquierda */
+    text-align: left; /* Justificado a la izquierda */
 }
 #section-mobile-1 .benefits-box-mobile li {
     font-size: 0.85rem;
@@ -208,11 +213,12 @@
 /* TESTIMONIALS MOBILE */
 #section-mobile-1 .testimonials-box-mobile {
     margin-bottom: 20px;
-    width: 90%; /* Ajuste para mantener alineación izquierda */
-    align-self: flex-start; /* Alineación izquierda */
+    width: 80%; /* Más pequeño, centrado */
+    align-self: center; /* Centrado horizontalmente */
+    border-radius: 0; /* Sin bordes redondeados */
 }
 #section-mobile-1 .testimonials-box-mobile blockquote {
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* Reducido para ser más pequeño */
     color: #fff;
     border-left: 3px solid #36c1ea;
     background: none;
@@ -221,13 +227,13 @@
     opacity: 0.92;
     font-style: italic;
     line-height: 1.4;
-    text-align: left; /* Alineación izquierda */
+    text-align: left; /* Justificado a la izquierda */
 }
 #section-mobile-1 .participant-attribution-mobile {
     color: #b6b6b6;
     font-size: 0.7rem;
     text-align: right; /* Justificado a la derecha */
     margin-bottom: 20px;
-    width: 90%; /* Alineado con los bloques */
+    width: 80%; /* Alineado con el contenedor de testimonios */
     align-self: flex-end; /* Asegurar alineación derecha */
 }
