@@ -224,3 +224,34 @@ html, body {
     font-size: 18px;
     vertical-align: middle;
 }
+/* ... (tu CSS existente) ... */
+
+/* Ajuste del logo fijo */
+#label-section .label-koete img {
+    max-width: 100px; /* Reducir tamaño */
+    height: auto;
+}
+@media (max-width: 767px) {
+    .mobile-only {
+        display: block;
+    }
+    .desktop-only {
+        display: none;
+    }
+    #label-section .label-koete img {
+        max-width: 80px; /* Más pequeño en móvil */
+    }
+}
+@media (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
+    .desktop-only {
+        display: block;
+    }
+    #label-section .label-koete img {
+        max-width: 120px; /* Tamaño original en desktop */
+    }
+}
+
+/* ... (resto de tu CSS) ... */
