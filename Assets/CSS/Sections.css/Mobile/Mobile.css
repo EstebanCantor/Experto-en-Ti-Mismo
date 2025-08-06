@@ -20,22 +20,23 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 48px; /* closer to benchmark spacing from top */
+    align-items: center;        /* keep global centering for most blocks */
+    padding-top: 48px;
 }
 
 /* Title */
 #section-mobile-1 .hero-title-mobile {
-    font-size: 2rem;            /* stronger headline */
+    font-size: 2rem;
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 16px;
     letter-spacing: -1px;
-    text-align: center;
+    text-align: left;           /* ← left-justified */
     border-left: 3.5px solid #36c1ea;
     padding-left: 12px;
     max-width: 92%;
     color: #fff;
+    align-self: flex-start;     /* ← ignore container centering */
 }
 #section-mobile-1 .hero-title-mobile .blue { color: #36c1ea; }
 
@@ -46,9 +47,11 @@
     opacity: 0.92;
     margin-bottom: 16px;
     line-height: 1.47;
-    text-align: center;
+    text-align: left;           /* ← left-justified */
     max-width: 92%;
     color: #fff;
+    align-self: flex-start;     /* ← ignore container centering */
+    padding-left: 12px;         /* align text with title (after its border) */
 }
 
 /* COUNTDOWN + CTA */
@@ -62,20 +65,20 @@
 
 #section-mobile-1 .countdown-box-mobile {
     display: flex;
-    gap: 14px;                   /* card spacing like benchmark */
+    gap: 14px;
     margin: 6px 0 12px;
     justify-content: center;
     width: 100%;
 }
 #section-mobile-1 .countdown-item-mobile {
     background: #fff;
-    border-radius: 0;            /* squared cards */
+    border-radius: 0;
     padding: 14px 14px 10px 14px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 70px;             /* larger like benchmark */
+    min-width: 70px;
     height: 90px;
     box-shadow: 0 2px 13px rgba(0,0,0,0.13);
 }
@@ -100,11 +103,11 @@
 #section-mobile-1 .next-session-mobile {
     color: #36c1ea;
     font-weight: 800;
-    font-size: 1.05rem;          /* a bit bigger */
+    font-size: 1.05rem;
     margin: 10px 0;
     text-align: center;
     width: 100%;
-    max-width: 380px;            /* match CTA width */
+    max-width: 380px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -117,7 +120,7 @@
     font-weight: 600;
     border: none;
     border-radius: 0;
-    padding: 12px 56px 12px 16px;  /* room for arrow square on right */
+    padding: 12px 56px 12px 16px;
     font-size: 1.05rem;
     margin-bottom: 16px;
     cursor: pointer;
@@ -125,7 +128,7 @@
     text-decoration: none;
     letter-spacing: 1px;
     width: 100%;
-    max-width: 380px;             /* same as desktop benchmark */
+    max-width: 380px;
     text-align: center;
     display: block;
     margin-left: auto;
@@ -140,7 +143,7 @@
     width: 38px;
     height: 38px;
     border-radius: 6px;
-    background: #0e131a;          /* dark square like benchmark */
+    background: #0e131a;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,7 +162,7 @@
     margin-bottom: 20px;
     text-align: center;
     width: 100%;
-    max-width: 380px;             /* aligned to CTA width */
+    max-width: 380px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -170,7 +173,7 @@
     max-width: 600px;
     aspect-ratio: 16 / 9;
     margin-bottom: 20px;
-    border-radius: 0;             /* squared corners like benchmark */
+    border-radius: 0;
     overflow: hidden;
     position: relative;
     display: block;
@@ -188,7 +191,7 @@
 }
 #section-mobile-1 .youtube-link {
     display: block;
-    text-align: left;             /* left-aligned under the video */
+    text-align: left;
     width: 100%;
     max-width: 600px;
     color: #36c1ea;
@@ -230,9 +233,10 @@
     margin-bottom: 8px;
     width: 100%;
     max-width: 600px;
+    padding: 0 20px;                 /* ← more side margins */
 }
 #section-mobile-1 .testimonials-box-mobile blockquote {
-    font-size: 0.95rem;
+    font-size: 0.88rem;              /* ← smaller type */
     color: #fff;
     border-left: 3px solid #36c1ea;
     background: none;
@@ -245,13 +249,22 @@
 }
 #section-mobile-1 .participant-attribution-mobile {
     color: #b6b6b6;
-    font-size: 0.75rem;
-    text-align: center;           /* centered like the reference */
+    font-size: 0.72rem;
+    text-align: center;
     margin: 4px 0 18px;
+    padding: 0 20px;                 /* keep same side margins as testimonials */
 }
 
-/* Bottom CTA variant (second button like benchmark) */
+/* Bottom CTA variant */
 #section-mobile-1 .cta-btn-mobile--bottom {
     margin-top: 10px;
     margin-bottom: 28px;
 }
+
+/* Optional tiny screens fine-tuning */
+@media (max-width: 360px) {
+    #section-mobile-1 .hero-title-mobile { font-size: 1.8rem; }
+    #section-mobile-1 .countdown-item-mobile { min-width: 62px; height: 82px; }
+    #section-mobile-1 .countdown-item-mobile span { font-size: 1.4rem; }
+}
+
