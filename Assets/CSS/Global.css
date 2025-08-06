@@ -21,10 +21,10 @@
     }
     #label-section .label-koete img {
         max-width: 60px; /* Reducir más en móvil */
-        position: absolute;
-        top: 20px; /* Ajustar posición si es necesario */
-        left: 50%;
-        transform: translateX(-50%); /* Centrar horizontalmente */
+        position: fixed;
+        top: 20px; /* Fija en la parte superior */
+        left: 20px; /* Ajuste a la izquierda */
+        transform: none; /* Elimina el centrado previo */
     }
 }
 
@@ -63,7 +63,7 @@ html, body {
     max-width: 80px; /* Ajusta el tamaño máximo del logo */
     height: auto; /* Mantiene la proporción del logo */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
-    border-radius: 0px; /* Sin bordes redondeados */
+    border-radius: 0; /* Sin bordes redondeados */
     min-height: 50px;
 }
 
@@ -99,7 +99,7 @@ html, body {
     background: url('https://koete.co/wp-content/uploads/2022/04/cropped-koete-lfav.png') no-repeat center center;
     background-size: cover;
     border: none;
-    border-radius: 50%;
+    border-radius: 0; /* Sin bordes redondeados */
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
@@ -120,7 +120,7 @@ html, body {
     color: #000;
     padding: 10px 20px;
     border: 1px solid #ccc;
-    border-radius: 0px;
+    border-radius: 0; /* Sin bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 999;
     font-size: 16px;
@@ -138,7 +138,7 @@ html, body {
     background-color: #fff;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 0; /* Sin bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     font-size: 16px;
@@ -160,7 +160,7 @@ html, body {
     left: -10px;
     background: #3BB0D9;
     border: none;
-    border-radius: 0%;
+    border-radius: 0; /* Sin bordes redondeados */
     width: 25px;
     height: 25px;
     font-size: 16px;
@@ -182,7 +182,7 @@ html, body {
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
-    border-radius: 0px;
+    border-radius: 0; /* Sin bordes redondeados */
     transition: background-color 0.3s;
     margin: 5px 0; /* Espacio entre botones */
 }
