@@ -20,6 +20,7 @@
     <noscript>
         <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=6834914&fmt=gif" />
     </noscript>
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -27,6 +28,7 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-58QPDKK9');</script>
     <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KOETE - Programa Experto en Ti Mismo ®</title>
@@ -65,7 +67,7 @@
         </div>
     </section>
 
-    <!-- SECTION 1 DESKTOP -->
+    <!-- ============ SECTION 1 DESKTOP ============ -->
     <section id="section-desktop-1" class="desktop-only" style="background: url('Assets/img/FONDOS_Mesa de trabajo 1-05.jpg') no-repeat center top; background-size: cover; min-height: 100vh;">
         <div class="section1-desktop-container">
             <!-- COLUMNA IZQUIERDA: COPY + COUNTDOWN + CTA -->
@@ -123,7 +125,7 @@
         <div class="participant-attribution">- Participantes Experto en Ti Mismo</div>
     </section>
 
-    <!-- SECTION 1 MOBILE -->
+    <!-- ============ SECTION 1 MOBILE ============ -->
     <section id="section-mobile-1" class="mobile-only" style="background: url('Assets/img/FONDOS-06.jpg') no-repeat center; background-size: cover; min-height: 100vh; padding: 20px; position: relative; z-index: 100;">
         <div class="section-mobile-container">
             <h2 class="hero-title-mobile">
@@ -135,10 +137,11 @@
             </p>
             <div class="countdown-cta-container-mobile">
                 <div class="countdown-box-mobile" id="countdown-mobile">
+                    <!-- LABELS UPDATED TO MATCH BENCHMARK -->
                     <div class="countdown-item-mobile"><span id="days-value">35</span><small>DÍAS</small></div>
                     <div class="countdown-item-mobile"><span id="hours-value">21</span><small>HORAS</small></div>
-                    <div class="countdown-item-mobile"><span id="minutes-value">1</span><small>MIN</small></div>
-                    <div class="countdown-item-mobile"><span id="seconds-value">34</span><small>SEG</small></div>
+                    <div class="countdown-item-mobile"><span id="minutes-value">1</span><small>MINUTOS</small></div>
+                    <div class="countdown-item-mobile"><span id="seconds-value">34</span><small>SEGUNDOS</small></div>
                 </div>
                 <p class="next-session-mobile">¡Próxima sesión grupal gratuita!</p>
                 <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec" class="cta-btn-mobile" id="ReservaCupoBtn2mobile">
@@ -146,6 +149,7 @@
                 </a>
                 <p class="session-duration-mobile">Duración: 90 minutos</p>
             </div>
+
             <div class="video-embed-mobile">
                 <iframe width="100%" height="200"
                     src="https://www.youtube.com/embed/4WalvlpryC8?si=XqN-NFYRy1Z15W-s"
@@ -154,6 +158,7 @@
                     allowfullscreen></iframe>
                 <a href="https://www.youtube.com" target="_blank" class="youtube-link">Mirar en YouTube</a>
             </div>
+
             <div class="benefits-box-mobile">
                 <h3>¿Qué te llevas de la primera sesión?</h3>
                 <ul>
@@ -163,12 +168,20 @@
                     <li>Conectar con personas reales que…</li>
                 </ul>
             </div>
+
             <div class="testimonials-box-mobile">
                 <blockquote>“Muy dinámica! Me sentí muy enganchado toda la sesión y me llevo ideas para mi plan de acción para mejorar.”</blockquote>
                 <blockquote>“Excelente, motivadora, inspiradora. ¡Me voy renovada! ¡¡¡Gracias!!!”</blockquote>
                 <blockquote>“Muy claros los ejemplos y dinámicos. Me llevo muchos puntos que debo trabajar y herramientas que me pueden ayudar.”</blockquote>
             </div>
             <div class="participant-attribution-mobile">- Participantes Experto en Ti Mismo</div>
+
+            <!-- SECOND CTA AT THE BOTTOM (LIKE BENCHMARK) -->
+            <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec"
+               class="cta-btn-mobile cta-btn-mobile--bottom"
+               id="reservaCupoBtnBottom">
+               ELIGE TU FECHA Y ÚNETE GRATIS
+            </a>
         </div>
     </section>
 
@@ -180,9 +193,11 @@
     <script src="Assets/JS/Sections.js/Mobile/Mobile.js"></script>  
     <!-- JavaScript de la animación del logo Desktop -->
     <script src="Assets/JS/Label.js"></script>
+
     <!-- Eventos para Google Ads y LinkedIn -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Legacy buttons (keep if present elsewhere)
             var verInvitacionBtn = document.getElementById('verInvitacionBtn');
             if (verInvitacionBtn) {
                 verInvitacionBtn.addEventListener('click', function() {
@@ -194,6 +209,7 @@
                     console.log('Evento enviado: ClicenVerInvitacionMobile');
                 });
             }
+
             var reservaCupoBtn1 = document.getElementById('reservaCupoBtn1');
             if (reservaCupoBtn1) {
                 reservaCupoBtn1.addEventListener('click', function() {
@@ -205,6 +221,7 @@
                     console.log('Evento enviado: ClicReservaCupo1');
                 });
             }
+
             var Verotrasfechasbtn1 = document.getElementById('Verotrasfechasbtn1');
             if (Verotrasfechasbtn1) {
                 Verotrasfechasbtn1.addEventListener('click', function() {
@@ -216,17 +233,32 @@
                     console.log('Evento enviado: ClicReservaCupo2');
                 });
             }
+
             var ReservaCupoBtn2mobile = document.getElementById('ReservaCupoBtn2mobile');
             if (ReservaCupoBtn2mobile) {
                 ReservaCupoBtn2mobile.addEventListener('click', function() {
                     gtag('event', 'ReservaCupoBtn2mobile', {
                         'event_category': 'Boton',
-                        'event_label': 'Reserva Tu Cupo Botón 2',
+                        'event_label': 'Reserva Tu Cupo Botón 2 (mobile top)',
                         'value': 1
                     });
-                    console.log('Evento enviado: ClicReservaCupo2');
+                    console.log('Evento enviado: ClicReservaCupo2 (mobile top)');
                 });
             }
+
+            // NEW: bottom CTA event
+            var reservaCupoBtnBottom = document.getElementById('reservaCupoBtnBottom');
+            if (reservaCupoBtnBottom) {
+                reservaCupoBtnBottom.addEventListener('click', function() {
+                    gtag('event', 'ReservaCupoBtn2mobile_Bottom', {
+                        'event_category': 'Boton',
+                        'event_label': 'Reserva Tu Cupo Botón 2 (mobile bottom)',
+                        'value': 1
+                    });
+                    console.log('Evento enviado: ClicReservaCupo2 (mobile bottom)');
+                });
+            }
+
             var reservaCupoBtn2 = document.getElementById('reservaCupoBtn2');
             if (reservaCupoBtn2) {
                 reservaCupoBtn2.addEventListener('click', function() {
@@ -240,6 +272,7 @@
             }
         });
     </script>
+
     <script>
         function trackLinkedInConversion(conversionId) {
             window.lintrk('track', { conversion_id: conversionId });
@@ -261,3 +294,4 @@
     </script>
 </body>
 </html>
+
