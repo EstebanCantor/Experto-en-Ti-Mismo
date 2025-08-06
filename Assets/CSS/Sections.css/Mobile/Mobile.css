@@ -2,59 +2,61 @@
    SECTION MOBILE 1 (KOETE LANDING)
    =============================== */
 #section-mobile-1 {
-    display: none; /* Controlled by media queries in Global.css */
+    /* Do NOT hide here; Global.css controls visibility by media queries */
     min-height: 100vh;
     position: relative;
-    z-index: 100; /* Superior al fondo global y otros elementos */
+    z-index: 100; /* Above global background */
     padding: 20px;
     font-family: 'Poppins', sans-serif;
-    background: url('../../img/FONDOS-06.jpg') no-repeat center;
+    background: url('../../../img/FONDOS-06.jpg') no-repeat center;
     background-size: cover;
-    color: #fff; /* Ensure text is visible */
+    background-color: #0e131a; /* fallback */
+    color: #fff;
 }
 
+/* Container */
 #section-mobile-1 .section-mobile-container {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrar todo el contenido general */
-    padding-top: 80px; /* Bajar el contenido desde el título */
+    align-items: center; /* center overall */
+    padding-top: 80px;   /* push content down under title */
 }
 
+/* Title */
 #section-mobile-1 .hero-title-mobile {
     font-size: 1.8rem;
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 15px;
     letter-spacing: -0.8px;
-    text-align: center; /* Centrado */
+    text-align: center;
     border-left: 3px solid #36c1ea;
     padding-left: 10px;
     max-width: 90%;
     color: #fff;
 }
-#section-mobile-1 .hero-title-mobile .blue {
-    color: #36c1ea;
-}
+#section-mobile-1 .hero-title-mobile .blue { color: #36c1ea; }
 
+/* Subtitle */
 #section-mobile-1 .hero-subtitle-mobile {
     font-size: 0.9rem;
     font-weight: 400;
     opacity: 0.92;
     margin-bottom: 15px;
     line-height: 1.5;
-    text-align: center; /* Centrado */
+    text-align: center;
     max-width: 90%;
     color: #fff;
 }
 
-/* COUNTDOWN AND CTA CONTAINER MOBILE */
+/* COUNTDOWN + CTA */
 #section-mobile-1 .countdown-cta-container-mobile {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrado */
+    align-items: center;
     width: 100%;
     margin-bottom: 20px;
 }
@@ -63,7 +65,7 @@
     display: flex;
     gap: 10px;
     margin-bottom: 10px;
-    justify-content: center; /* Centrado */
+    justify-content: center;
     width: 100%;
 }
 #section-mobile-1 .countdown-item-mobile {
@@ -100,7 +102,7 @@
     font-weight: 800;
     font-size: 0.9rem;
     margin: 8px 0;
-    text-align: center; /* Centrado */
+    text-align: center;
     width: 100%;
     max-width: 280px;
     margin-left: auto;
@@ -122,7 +124,7 @@
     letter-spacing: 0.5px;
     width: 100%;
     max-width: 280px;
-    text-align: center; /* Centrado */
+    text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -137,14 +139,14 @@
     color: #b6b6b6;
     font-size: 0.75rem;
     margin-bottom: 20px;
-    text-align: center; /* Centrado */
+    text-align: center;
     width: 100%;
     max-width: 280px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* VIDEO EMBED MOBILE */
+/* VIDEO */
 #section-mobile-1 .video-embed-mobile {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -154,7 +156,7 @@
     position: relative;
     display: block;
     margin-left: auto;
-    margin-right: auto; /* Centrado */
+    margin-right: auto;
 }
 #section-mobile-1 .video-embed-mobile iframe {
     width: 100%;
@@ -167,33 +169,33 @@
 }
 #section-mobile-1 .youtube-link {
     display: block;
-    text-align: center; /* Centrado */
+    text-align: center;
     color: #36c1ea;
     font-size: 0.8rem;
     margin-top: 5px;
     text-decoration: none;
 }
 
-/* BENEFITS MOBILE */
+/* BENEFITS */
 #section-mobile-1 .benefits-box-mobile {
     background: rgba(14, 19, 26, 0.93);
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 20px;
-    width: 100%; /* Ajuste para mantener alineación izquierda */
+    width: 100%;
 }
 #section-mobile-1 .benefits-box-mobile h3 {
     color: #36c1ea;
     font-size: 1rem;
     font-weight: 800;
     margin-bottom: 10px;
-    text-align: left; /* Alineación izquierda */
+    text-align: left;
 }
 #section-mobile-1 .benefits-box-mobile ul {
     list-style: disc;
     margin: 0 0 0 15px;
     padding: 0;
-    text-align: left; /* Alineación izquierda */
+    text-align: left;
 }
 #section-mobile-1 .benefits-box-mobile li {
     font-size: 0.85rem;
@@ -202,10 +204,10 @@
     line-height: 1.4;
 }
 
-/* TESTIMONIALS MOBILE */
+/* TESTIMONIALS */
 #section-mobile-1 .testimonials-box-mobile {
     margin-bottom: 20px;
-    width: 100%; /* Ajuste para mantener alineación izquierda */
+    width: 100%;
 }
 #section-mobile-1 .testimonials-box-mobile blockquote {
     font-size: 0.9rem;
@@ -217,11 +219,11 @@
     opacity: 0.92;
     font-style: italic;
     line-height: 1.4;
-    text-align: left; /* Alineación izquierda */
+    text-align: left;
 }
 #section-mobile-1 .participant-attribution-mobile {
     color: #b6b6b6;
     font-size: 0.7rem;
-    text-align: right; /* Justificado a la derecha */
+    text-align: right;
     margin-bottom: 20px;
 }
