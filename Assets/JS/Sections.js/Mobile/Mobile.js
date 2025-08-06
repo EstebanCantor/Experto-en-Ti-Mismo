@@ -528,3 +528,21 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('Estás siendo redirigido a WhatsApp para hablar con un asesor.');
     });
 });
+
+// JavaScript para ocultar/mostrar la etiqueta (logo) al desplazar
+document.addEventListener('DOMContentLoaded', function () {
+    let lastScroll = 0;
+    const label = document.querySelector('.label-koete');
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll > lastScroll) {
+            // Scroll hacia abajo
+            label.style.transform = 'translateY(-100%)';
+        } else {
+            // Scroll hacia arriba
+            label.style.transform = 'translateY(0)';
+        }
+        lastScroll = currentScroll <= 0 ? 0 : currentScroll; // Evita valores negativos
+    });
+});
