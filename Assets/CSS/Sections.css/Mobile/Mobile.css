@@ -1,6 +1,11 @@
 /* ===============================
    SECTION MOBILE 1 (KOETE LANDING)
    =============================== */
+
+/* Safe offset so the headline clears the fixed left label.
+   Adjust this value if needed after preview. */
+:root { --label-safe-left: 72px; }
+
 #section-mobile-1 {
     min-height: 100vh;
     position: relative;
@@ -27,7 +32,7 @@
 
 /* ===== HEADLINE & SUBTITLE ===== */
 #section-mobile-1 .hero-title-mobile {
-    font-size: 1.75rem;                /* smaller title */
+    font-size: 1.75rem;                /* smaller title for balance */
     font-weight: 800;
     line-height: 1.18;
     margin-bottom: 8px;                /* tighter gap to subtitle */
@@ -35,8 +40,8 @@
     text-align: left;
     border-left: 3.5px solid #36c1ea;
     padding-left: 12px;                /* space after the blue line */
-    margin-left: 32px;                 /* shift away from fixed label */
-    max-width: calc(92% - 32px);       /* respect right edge after shifting */
+    margin-left: var(--label-safe-left);
+    max-width: calc(92% - var(--label-safe-left));
     color: #fff;
     align-self: flex-start;
 }
@@ -50,8 +55,8 @@
     line-height: 1.45;
     text-align: left;
     padding-left: 12px;                /* align text with title’s content */
-    margin-left: 32px;                 /* same horizontal shift as title */
-    max-width: calc(92% - 32px);
+    margin-left: var(--label-safe-left);
+    max-width: calc(92% - var(--label-safe-left));
     color: #fff;
     align-self: flex-start;
 }
@@ -265,8 +270,7 @@
 
 /* Fine-tuning for very small screens */
 @media (max-width: 360px) {
-    #section-mobile-1 .hero-title-mobile { font-size: 1.6rem; margin-left: 28px; max-width: calc(92% - 28px); }
-    #section-mobile-1 .hero-subtitle-mobile { margin-left: 28px; max-width: calc(92% - 28px); }
+    :root { --label-safe-left: 64px; }  /* slightly smaller offset */
     #section-mobile-1 .cta-btn-mobile { font-size: 0.9rem; padding: 10px 46px 10px 12px; }
 }
 
