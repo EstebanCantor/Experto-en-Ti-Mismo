@@ -1,14 +1,13 @@
 function openVideo() {
     const videoModal = document.getElementById('videoModal');
-    videoModal.style.display = 'flex';
+    if (videoModal) videoModal.style.display = 'flex';
 }
 
 function closeVideo() {
     const videoModal = document.getElementById('videoModal');
     const videoFrame = document.getElementById('videoFrame');
-    videoModal.style.display = 'none';
-    // Pausa el video al cerrar el modal
-    videoFrame.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    if (videoModal) videoModal.style.display = 'none';
+    if (videoFrame) videoFrame.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -22,6 +21,12 @@ document.addEventListener('DOMContentLoaded', function () {
             const secondsElementMobile = document.querySelector('#section-mobile-1 #seconds-value');
             const countdownContainerMobile = document.querySelector('#section-mobile-1 .countdown');
 
+            // Verificar si los elementos existen
+            if (!daysElementMobile || !hoursElementMobile || !minutesElementMobile || !secondsElementMobile || !countdownContainerMobile) {
+                console.error('Uno o más elementos del temporizador no se encontraron en el DOM.');
+                return;
+            }
+
             const countDownDate = new Date("Sep 01, 2025 19:30:00").getTime();
             const countdownFunctionMobile = setInterval(function () {
                 const now = new Date().getTime();
@@ -34,17 +39,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
                 // Actualizar los elementos de la cuenta regresiva
-                if (daysElementMobile) daysElementMobile.textContent = days;
-                if (hoursElementMobile) hoursElementMobile.textContent = hours;
-                if (minutesElementMobile) minutesElementMobile.textContent = minutes;
-                if (secondsElementMobile) secondsElementMobile.textContent = seconds;
+                daysElementMobile.textContent = days < 10 ? `0${days}` : days;
+                hoursElementMobile.textContent = hours < 10 ? `0${hours}` : hours;
+                minutesElementMobile.textContent = minutes < 10 ? `0${minutes}` : minutes;
+                secondsElementMobile.textContent = seconds < 10 ? `0${seconds}` : seconds;
 
                 // Si la cuenta regresiva ha terminado
                 if (distance < 0) {
                     clearInterval(countdownFunctionMobile);
-                    if (countdownContainerMobile) {
-                        countdownContainerMobile.innerHTML = "¡La sesión ha comenzado!";
-                    }
+                    countdownContainerMobile.innerHTML = "¡La sesión ha comenzado!";
                 }
             }, 1000);
         }
@@ -60,27 +63,38 @@ document.addEventListener('DOMContentLoaded', function () {
     let lastScroll = 0;
     const label = document.querySelector('.label-koete');
 
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        if (currentScroll > lastScroll) {
-            // Scroll hacia abajo
-            label.style.transform = 'translateY(-100%)';
-        } else {
-            // Scroll hacia arriba
-            label.style.transform = 'translateY(0)';
-        }
-        lastScroll = currentScroll <= 0 ? 0 : currentScroll; // Evita valores negativos
-    });
+    if (label) {
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > lastScroll && currentScroll > 50) { // Ocultar solo si se desplaza más de 50px
+                label.style.transform = 'translateY(-100%)';
+                label.style.transition = 'transform 0.3s ease'; // Suavizar la transición
+            } else {
+                label.style.transform = 'translateY(0)';
+            }
+            lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    } else {
+        console.error('El elemento .label-koete no se encontró en el DOM.');
+    }
 
     // Manejo de botones
     const reserveButton = document.querySelector('#buttons-slide-mobile .cta-button-left');
     const whatsappButton = document.querySelector('#buttons-slide-mobile .cta-button-right');
 
-    reserveButton.addEventListener('click', function() {
-        alert('Estás siendo redirigido para reservar tu cupo.');
-    });
+    if (reserveButton) {
+        reserveButton.addEventListener('click', function() {
+            alert('Estás siendo redirigido para reservar tu cupo.');
+        });
+    } else {
+        console.error('El botón de reserva no se encontró en el DOM.');
+    }
 
-    whatsappButton.addEventListener('click', function() {
-        alert('Estás siendo redirigido a WhatsApp para hablar con un asesor.');
-    });
+    if (whatsappButton) {
+        whatsappButton.addEventListener('click', function() {
+            alert('Estás siendo redirigido a WhatsApp para hablar con un asesor.');
+        });
+    } else {
+        console.error('El botón de WhatsApp no se encontró en el DOM.');
+    }
 });
