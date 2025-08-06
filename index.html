@@ -125,7 +125,7 @@
         <div class="participant-attribution">- Participantes Experto en Ti Mismo</div>
     </section>
 
-    <!-- ============ SECTION 1 MOBILE ============ -->
+    <!-- ============ SECTION 1 MOBILE (ORDER MATCHES BENCHMARK) ============ -->
     <section id="section-mobile-1" class="mobile-only" style="background: url('Assets/img/FONDOS-06.jpg') no-repeat center; background-size: cover; min-height: 100vh; padding: 20px; position: relative; z-index: 100;">
         <div class="section-mobile-container">
             <h2 class="hero-title-mobile">
@@ -135,21 +135,19 @@
             <p class="hero-subtitle-mobile">
                 Una clase en vivo que cambiará cómo te ves... y cómo actúas.
             </p>
+
+            <!-- Countdown + next-session -->
             <div class="countdown-cta-container-mobile">
                 <div class="countdown-box-mobile" id="countdown-mobile">
-                    <!-- LABELS UPDATED TO MATCH BENCHMARK -->
                     <div class="countdown-item-mobile"><span id="days-value">35</span><small>DÍAS</small></div>
                     <div class="countdown-item-mobile"><span id="hours-value">21</span><small>HORAS</small></div>
                     <div class="countdown-item-mobile"><span id="minutes-value">1</span><small>MINUTOS</small></div>
                     <div class="countdown-item-mobile"><span id="seconds-value">34</span><small>SEGUNDOS</small></div>
                 </div>
                 <p class="next-session-mobile">¡Próxima sesión grupal gratuita!</p>
-                <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec" class="cta-btn-mobile" id="ReservaCupoBtn2mobile">
-                    ELIGE TU FECHA Y ÚNETE GRATIS
-                </a>
-                <p class="session-duration-mobile">Duración: 90 minutos</p>
             </div>
 
+            <!-- Video (now placed BEFORE CTA to match benchmark) -->
             <div class="video-embed-mobile">
                 <iframe width="100%" height="200"
                     src="https://www.youtube.com/embed/4WalvlpryC8?si=XqN-NFYRy1Z15W-s"
@@ -159,6 +157,13 @@
                 <a href="https://www.youtube.com" target="_blank" class="youtube-link">Mirar en YouTube</a>
             </div>
 
+            <!-- CTA + duración (moved below video) -->
+            <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec" class="cta-btn-mobile" id="ReservaCupoBtn2mobile">
+                ELIGE TU FECHA Y ÚNETE GRATIS
+            </a>
+            <p class="session-duration-mobile">Duración: 90 minutos</p>
+
+            <!-- Benefits -->
             <div class="benefits-box-mobile">
                 <h3>¿Qué te llevas de la primera sesión?</h3>
                 <ul>
@@ -169,6 +174,7 @@
                 </ul>
             </div>
 
+            <!-- Testimonials -->
             <div class="testimonials-box-mobile">
                 <blockquote>“Muy dinámica! Me sentí muy enganchado toda la sesión y me llevo ideas para mi plan de acción para mejorar.”</blockquote>
                 <blockquote>“Excelente, motivadora, inspiradora. ¡Me voy renovada! ¡¡¡Gracias!!!”</blockquote>
@@ -176,7 +182,7 @@
             </div>
             <div class="participant-attribution-mobile">- Participantes Experto en Ti Mismo</div>
 
-            <!-- SECOND CTA AT THE BOTTOM (LIKE BENCHMARK) -->
+            <!-- Bottom CTA -->
             <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec"
                class="cta-btn-mobile cta-btn-mobile--bottom"
                id="reservaCupoBtnBottom">
@@ -197,7 +203,7 @@
     <!-- Eventos para Google Ads y LinkedIn -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Legacy buttons (keep if present elsewhere)
+            // Legacy buttons (if present elsewhere)
             var verInvitacionBtn = document.getElementById('verInvitacionBtn');
             if (verInvitacionBtn) {
                 verInvitacionBtn.addEventListener('click', function() {
@@ -246,7 +252,7 @@
                 });
             }
 
-            // NEW: bottom CTA event
+            // Bottom CTA event
             var reservaCupoBtnBottom = document.getElementById('reservaCupoBtnBottom');
             if (reservaCupoBtnBottom) {
                 reservaCupoBtnBottom.addEventListener('click', function() {
@@ -294,4 +300,3 @@
     </script>
 </body>
 </html>
-
