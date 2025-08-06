@@ -5,12 +5,11 @@
     display: none; /* Controlled by media queries in Global.css */
     min-height: 100vh;
     position: relative;
-    z-index: 2; /* Superior al fondo global del body */
+    z-index: 100; /* Superior al fondo global y otros elementos */
     padding: 20px;
     font-family: 'Poppins', sans-serif;
     background: url('../../img/FONDOS-06.jpg') no-repeat center;
     background-size: cover;
-    background-color: #1a1a1a; /* Fallback color if image fails */
     color: #fff; /* Ensure text is visible */
 }
 
