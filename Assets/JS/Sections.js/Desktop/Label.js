@@ -1,12 +1,12 @@
-// Assets/JS/Label.js
-// Oculta el label cuando se hace scroll hacia abajo y lo muestra al subir.
-// Requiere las reglas de Global.css con #label-section.is-hidden .label-koete { ... }
+// Hide label when scrolling down; show when scrolling up.
+// Works on mobile & desktop. Requires Global.css rule for
+// #label-section.is-hidden .label-koete { transform: translateY(-120%); opacity:0; }
 
 (function () {
   const wrapper = document.getElementById('label-section');
   if (!wrapper) return;
 
-  // Limpia estilos inline previos, si los hubo
+  // Ensure no inline transforms from old code
   const labelEl = wrapper.querySelector('.label-koete');
   if (labelEl) {
     labelEl.style.transform = '';
@@ -16,25 +16,29 @@
   let lastY = window.scrollY || 0;
   let ticking = false;
 
-  function onScroll() {
+  function update() {
     const y = window.scrollY || 0;
 
+    // Hide when scrolling down past 50px; show when scrolling up
+    if (y > lastY && y > 50) {
+      wrapper.classList.add('is-hidden');
+    } else if (y < lastY || y <= 50) {
+      wrapper.classList.remove('is-hidden');
+    }
+
+    lastY = y;
+    ticking = false;
+  }
+
+  function onScroll() {
     if (!ticking) {
-      window.requestAnimationFrame(() => {
-        // Umbral para evitar jitter
-        if (y > lastY + 6 && y > 50) {
-          // Bajando -> ocultar
-          wrapper.classList.add('is-hidden');
-        } else if (y < lastY - 6 || y <= 50) {
-          // Subiendo o muy arriba -> mostrar
-          wrapper.classList.remove('is-hidden');
-        }
-        lastY = y;
-        ticking = false;
-      });
       ticking = true;
+      requestAnimationFrame(update);
     }
   }
 
+  // Initialize state and listeners
+  update();
   window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('touchmove', onScroll, { passive: true }); // iOS
 })();
