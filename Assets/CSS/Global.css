@@ -6,6 +6,9 @@
     .mobile-only {
         display: none; /* Oculta la versión móvil en pantallas grandes */
     }
+    #label-section .label-koete img {
+        max-width: 120px; /* Tamaño original en desktop */
+    }
 }
 
 /* Mostrar solo en móvil */
@@ -15,6 +18,13 @@
     }
     .desktop-only {
         display: none; /* Oculta la versión de escritorio en pantallas pequeñas */
+    }
+    #label-section .label-koete img {
+        max-width: 60px; /* Reducir más en móvil */
+        position: absolute;
+        top: 20px; /* Ajustar posición si es necesario */
+        left: 50%;
+        transform: translateX(-50%); /* Centrar horizontalmente */
     }
 }
 
