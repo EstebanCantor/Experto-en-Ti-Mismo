@@ -1,100 +1,88 @@
+// Assets/JS/Sections.js/Mobile/Mobile.js
+
 function openVideo() {
-    const videoModal = document.getElementById('videoModal');
-    if (videoModal) videoModal.style.display = 'flex';
+  const videoModal = document.getElementById('videoModal');
+  if (videoModal) videoModal.style.display = 'flex';
 }
 
 function closeVideo() {
-    const videoModal = document.getElementById('videoModal');
-    const videoFrame = document.getElementById('videoFrame');
-    if (videoModal) videoModal.style.display = 'none';
-    if (videoFrame) videoFrame.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+  const videoModal = document.getElementById('videoModal');
+  const videoFrame = document.getElementById('videoFrame');
+  if (videoModal) videoModal.style.display = 'none';
+  if (videoFrame) {
+    videoFrame.contentWindow.postMessage(
+      '{"event":"command","func":"pauseVideo","args":""}',
+      '*'
+    );
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Función para inicializar la Sección 1 móvil con temporizador
-    function initSectionMobile1() {
-        // Manejo del Contador de Cuenta Regresiva
-        function startCountdownMobile() {
-            const daysElementMobile = document.querySelector('#section-mobile-1 #days-value');
-            const hoursElementMobile = document.querySelector('#section-mobile-1 #hours-value');
-            const minutesElementMobile = document.querySelector('#section-mobile-1 #minutes-value');
-            const secondsElementMobile = document.querySelector('#section-mobile-1 #seconds-value');
-            const countdownContainerMobile = document.querySelector('#section-mobile-1 .countdown');
+  // ====== Sección 1 Móvil: temporizador ======
+  function initSectionMobile1() {
+    function startCountdownMobile() {
+      // Elementos del contador (IDs exactos del index móvil)
+      const daysEl = document.querySelector('#section-mobile-1 #days-value');
+      const hoursEl = document.querySelector('#section-mobile-1 #hours-value');
+      const minutesEl = document.querySelector('#section-mobile-1 #minutes-value');
+      const secondsEl = document.querySelector('#section-mobile-1 #seconds-value');
+      const containerEl = document.getElementById('countdown-mobile');
 
-            // Verificar si los elementos existen
-            if (!daysElementMobile || !hoursElementMobile || !minutesElementMobile || !secondsElementMobile || !countdownContainerMobile) {
-                console.error('Uno o más elementos del temporizador no se encontraron en el DOM.');
-                return;
-            }
+      // Verificación
+      if (!daysEl || !hoursEl || !minutesEl || !secondsEl || !containerEl) {
+        console.error('[Countdown Mobile] No se encontraron los elementos del contador.');
+        return;
+      }
 
-            const countDownDate = new Date("Sep 01, 2025 19:30:00").getTime();
-            const countdownFunctionMobile = setInterval(function () {
-                const now = new Date().getTime();
-                const distance = countDownDate - now;
+      // Mismo objetivo que desktop (zona horaria -05:00 para coherencia)
+      const countDownDate = new Date('September 1, 2025 19:30:00 GMT-0500').getTime();
 
-                // Calculo de días, horas, minutos y segundos restantes
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      const interval = setInterval(function () {
+        const now = Date.now();
+        const distance = countDownDate - now;
 
-                // Actualizar los elementos de la cuenta regresiva
-                daysElementMobile.textContent = days < 10 ? `0${days}` : days;
-                hoursElementMobile.textContent = hours < 10 ? `0${hours}` : hours;
-                minutesElementMobile.textContent = minutes < 10 ? `0${minutes}` : minutes;
-                secondsElementMobile.textContent = seconds < 10 ? `0${seconds}` : seconds;
-
-                // Si la cuenta regresiva ha terminado
-                if (distance < 0) {
-                    clearInterval(countdownFunctionMobile);
-                    countdownContainerMobile.innerHTML = "¡La sesión ha comenzado!";
-                }
-            }, 1000);
+        if (distance <= 0) {
+          clearInterval(interval);
+          containerEl.textContent = '¡La sesión ha comenzado!';
+          return;
         }
 
-        // Iniciar la cuenta regresiva
-        startCountdownMobile();
+        // Cálculos
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Actualiza con cero a la izquierda
+        daysEl.textContent = days < 10 ? `0${days}` : String(days);
+        hoursEl.textContent = hours < 10 ? `0${hours}` : String(hours);
+        minutesEl.textContent = minutes < 10 ? `0${minutes}` : String(minutes);
+        secondsEl.textContent = seconds < 10 ? `0${seconds}` : String(seconds);
+      }, 1000);
     }
 
-    // Inicializar la Sección 1 móvil cuando el DOM esté listo
-    initSectionMobile1();
+    startCountdownMobile();
+  }
 
-    // JavaScript para ocultar/mostrar la etiqueta (logo) al desplazar
-    let lastScroll = 0;
-    const label = document.querySelector('.label-koete');
+  initSectionMobile1();
 
-    if (label) {
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            if (currentScroll > lastScroll && currentScroll > 50) { // Ocultar solo si se desplaza más de 50px
-                label.style.transform = 'translateY(-100%)';
-                label.style.transition = 'transform 0.3s ease'; // Suavizar la transición
-            } else {
-                label.style.transform = 'translateY(0)';
-            }
-            lastScroll = currentScroll <= 0 ? 0 : currentScroll;
-        });
-    } else {
-        console.error('El elemento .label-koete no se encontró en el DOM.');
-    }
+  // ====== IMPORTANTE ======
+  // Eliminamos el código anterior que ocultaba el label desde aquí.
+  // Ahora la lógica del label está centralizada en Assets/JS/Label.js
+  // y se coordina con Global.css (#label-section.is-hidden ...).
 
-    // Manejo de botones
-    const reserveButton = document.querySelector('#buttons-slide-mobile .cta-button-left');
-    const whatsappButton = document.querySelector('#buttons-slide-mobile .cta-button-right');
+  // ====== Botones (si existen) ======
+  const reserveButton = document.querySelector('#buttons-slide-mobile .cta-button-left');
+  if (reserveButton) {
+    reserveButton.addEventListener('click', function () {
+      alert('Estás siendo redirigido para reservar tu cupo.');
+    });
+  }
 
-    if (reserveButton) {
-        reserveButton.addEventListener('click', function() {
-            alert('Estás siendo redirigido para reservar tu cupo.');
-        });
-    } else {
-        console.error('El botón de reserva no se encontró en el DOM.');
-    }
-
-    if (whatsappButton) {
-        whatsappButton.addEventListener('click', function() {
-            alert('Estás siendo redirigido a WhatsApp para hablar con un asesor.');
-        });
-    } else {
-        console.error('El botón de WhatsApp no se encontró en el DOM.');
-    }
+  const whatsappButton = document.querySelector('#buttons-slide-mobile .cta-button-right');
+  if (whatsappButton) {
+    whatsappButton.addEventListener('click', function () {
+      alert('Estás siendo redirigido a WhatsApp para hablar con un asesor.');
+    });
+  }
 });
