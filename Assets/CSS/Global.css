@@ -38,14 +38,14 @@ html, body {
    LABEL (KOETE) BEHAVIOR
    =========================
    Fixed by default + slide-in on load.
-   Hides on scroll down, reappears on scroll up.
-   (Toggle the 'is-hidden' class on #label-section via JS)
+   Hides fast on scroll down / below video, reappears slowly on scroll up.
+   JS toggles the 'is-hidden' class on #label-section.
 */
 
 /* Visible state — slower SHOW on scroll up */
 #label-section .label-koete {
   position: fixed;
-  top: 10px;
+  top: 0;                     /* flush with the top edge */
   left: 10px;
   z-index: 9999;
   transform: translateY(0);
@@ -55,7 +55,7 @@ html, body {
   animation: slideDown 0.8s ease forwards; /* entrance on initial load */
 }
 
-/* Hidden state — faster HIDE on scroll down */
+/* Hidden state — faster HIDE on scroll down / below video */
 #label-section.is-hidden .label-koete {
   transform: translateY(-120%);
   opacity: 0;
