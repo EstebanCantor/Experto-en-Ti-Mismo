@@ -2,8 +2,7 @@
    SECTION MOBILE 1 (KOETE LANDING)
    =============================== */
 
-/* Safe offset so the headline clears the fixed left label.
-   Adjust this value if needed after preview. */
+/* Safe offset so the headline clears the fixed left label. */
 :root { --label-safe-left: 72px; }
 
 #section-mobile-1 {
@@ -11,11 +10,10 @@
     position: relative;
     z-index: 100;
     padding: 20px;
-    padding-bottom: 64px;              /* extra space at the bottom */
+    padding-bottom: 64px;
     font-family: 'Poppins', sans-serif;
-    background: url('../../../img/FONDOS-06.jpg') no-repeat center;
-    background-size: cover;
-    background-color: #0e131a;         /* fallback */
+    /* background removed to avoid duplicate download (set inline in index.html as WebP) */
+    background-color: #0e131a;
     color: #fff;
 }
 
@@ -32,14 +30,14 @@
 
 /* ===== HEADLINE & SUBTITLE ===== */
 #section-mobile-1 .hero-title-mobile {
-    font-size: 1.75rem;                /* smaller title for balance */
+    font-size: 1.75rem;
     font-weight: 800;
     line-height: 1.18;
-    margin-bottom: 8px;                /* tighter gap to subtitle */
+    margin-bottom: 8px;
     letter-spacing: -0.9px;
     text-align: left;
     border-left: 3.5px solid #36c1ea;
-    padding-left: 12px;                /* space after the blue line */
+    padding-left: 12px;
     margin-left: var(--label-safe-left);
     max-width: calc(92% - var(--label-safe-left));
     color: #fff;
@@ -54,7 +52,7 @@
     margin-bottom: 16px;
     line-height: 1.45;
     text-align: left;
-    padding-left: 12px;                /* align text with title’s content */
+    padding-left: 12px;
     margin-left: var(--label-safe-left);
     max-width: calc(92% - var(--label-safe-left));
     color: #fff;
@@ -114,7 +112,7 @@
     margin: 10px 0;
     text-align: center;
     width: 100%;
-    max-width: 360px;                  /* align with CTA width */
+    max-width: 360px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -127,15 +125,15 @@
     font-weight: 600;
     border: none;
     border-radius: 0;
-    padding: 11px 48px 11px 14px;      /* a little tighter */
-    font-size: 0.92rem;                /* smaller so it stays on one line */
+    padding: 11px 48px 11px 14px;
+    font-size: 0.92rem;
     margin-bottom: 16px;
     cursor: pointer;
     box-shadow: 0 2px 13px rgba(32,180,227,0.13);
     text-decoration: none;
-    letter-spacing: 0.8px;             /* slightly reduced */
+    letter-spacing: 0.8px;
     width: 100%;
-    max-width: 360px;                  /* narrower to match benchmark feel */
+    max-width: 360px;
     text-align: center;
     display: block;
     margin-left: auto;
@@ -147,7 +145,7 @@
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    width: 34px;                       /* smaller arrow box */
+    width: 34px;
     height: 34px;
     border-radius: 6px;
     background: #0e131a;
@@ -158,13 +156,10 @@
     line-height: 1;
 }
 #section-mobile-1 .cta-btn-mobile:hover,
-#section-mobile-1 .cta-btn-mobile:focus {
-    background: #FFB100;
-    color: #fff;
-}
+#section-mobile-1 .cta-btn-mobile:focus { background: #FFB100; color: #fff; }
 
 #section-mobile-1 .session-duration-mobile {
-    color: #white;
+    color: #fff; /* fixed from #white */
     font-size: 0.85rem;
     margin-bottom: 30px;
     text-align: center;
@@ -192,8 +187,7 @@
     height: 100%;
     border: none;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     object-fit: cover;
 }
 #section-mobile-1 .youtube-link {
@@ -223,27 +217,18 @@
     font-weight: 800;
     margin-bottom: 10px;
 }
-#section-mobile-1 .benefits-box-mobile ul {
-    list-style: disc;
-    margin: 0 0 0 18px;
-    padding: 0;
-}
-#section-mobile-1 .benefits-box-mobile li {
-    font-size: 0.9rem;
-    margin-bottom: 6px;
-    color: #fff;
-    line-height: 1.42;
-}
+#section-mobile-1 .benefits-box-mobile ul { list-style: disc; margin: 0 0 0 18px; padding: 0; }
+#section-mobile-1 .benefits-box-mobile li { font-size: 0.9rem; margin-bottom: 6px; color: #fff; line-height: 1.42; }
 
 /* ===== TESTIMONIALS ===== */
 #section-mobile-1 .testimonials-box-mobile {
     margin-bottom: 8px;
     width: 100%;
     max-width: 600px;
-    padding: 0 28px;                    /* more side margins */
+    padding: 0 28px;
 }
 #section-mobile-1 .testimonials-box-mobile blockquote {
-    font-size: 0.88rem;                 /* restored size */
+    font-size: 0.88rem;
     color: #fff;
     border-left: 3px solid #36c1ea;
     background: none;
@@ -251,26 +236,25 @@
     margin: 0 0 14px 0;
     opacity: 0.92;
     font-style: italic;
-    line-height: 1.42;                  /* restored line-height */
+    line-height: 1.42;
     text-align: left;
 }
 #section-mobile-1 .participant-attribution-mobile {
     color: #b6b6b6;
-    font-size: 0.72rem;                 /* restored size */
+    font-size: 0.72rem;
     text-align: center;
     margin: 6px 0 24px;
-    padding: 0 28px;                    /* match side margins */
+    padding: 0 28px;
 }
 
 /* Bottom CTA variant */
 #section-mobile-1 .cta-btn-mobile--bottom {
     margin-top: 12px;
-    margin-bottom: 48px;                /* extra gap to site bottom */
+    margin-bottom: 48px;
 }
 
 /* Fine-tuning for very small screens */
 @media (max-width: 360px) {
-    :root { --label-safe-left: 64px; }  /* slightly smaller offset */
+    :root { --label-safe-left: 64px; }
     #section-mobile-1 .cta-btn-mobile { font-size: 0.9rem; padding: 10px 46px 10px 12px; }
 }
-
