@@ -7,8 +7,7 @@
     z-index: 1;
     padding-top: 100px;
     font-family: 'Poppins', sans-serif;
-    background: url('../../../../img/FONDOS_Mesa de trabajo 1-05.jpg') no-repeat center top;
-    background-size: cover;
+    /* background removed to avoid duplicate download (set inline in index.html as WebP) */
 }
 
 /* CONTENEDOR PRINCIPAL EN 3 COLUMNAS */
@@ -29,7 +28,7 @@
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the left with the title */
+    align-items: flex-start;
     margin-left: 0;
 }
 
@@ -44,9 +43,7 @@
     padding-left: 15px;
     max-width: 100%;
 }
-#section-desktop-1 .hero-title .blue {
-    color: #36c1ea;
-}
+#section-desktop-1 .hero-title .blue { color: #36c1ea; }
 
 #section-desktop-1 .hero-subtitle {
     font-size: 1rem;
@@ -54,7 +51,7 @@
     opacity: 0.92;
     margin-bottom: 20px;
     line-height: 1.47;
-    text-align: left; /* Left-justified with the title */
+    text-align: left;
     max-width: 55%;
 }
 
@@ -62,7 +59,7 @@
 #section-desktop-1 .countdown-cta-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align left with title */
+    align-items: flex-start;
     width: auto;
 }
 
@@ -71,7 +68,7 @@
     gap: 25px;
     margin-bottom: 15px;
     margin-top: 5px;
-    justify-content: flex-start; /* Align countdown to the left with the title */
+    justify-content: flex-start;
     width: auto;
 }
 #section-desktop-1 .countdown-item {
@@ -104,14 +101,14 @@
     align-self: center;
 }
 
-/* CTA Y FECHAS */
+/* CTA & FECHAS */
 #section-desktop-1 .next-session {
     color: #36c1ea;
     font-weight: 800;
     font-size: 1.13rem;
     margin: 10px 0;
-    text-align: center; /* Centered with button and countdown */
-    width: 380px; /* Match the button's max-width */
+    text-align: center;
+    width: 380px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -134,34 +131,29 @@
     max-width: 380px;
     text-align: center;
     display: block;
-    margin-left: 0; /* Align button to the left with the title */
+    margin-left: 0;
 }
-#section-desktop-1 .cta-btn:hover, 
-#section-desktop-1 .cta-btn:focus {
-    background: #FFB100;
-    color: #fff;
-}
-#section-desktop-1 .cta-btn .arrow { display: none; }
+#section-desktop-1 .cta-btn:hover,
+#section-desktop-1 .cta-btn:focus { background: #FFB100; color: #fff; }
 
 #section-desktop-1 .session-duration {
     color: #b6b6b6;
     font-size: 0.9rem;
     margin-bottom: 20px;
     margin-top: 0;
-    text-align: center; /* Centered with button and countdown */
-    width: 380px; /* Match the button's max-width */
+    text-align: center;
+    width: 380px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* ------- COLUMNA INVISIBLE CENTRAL ------- */
+/* ------- Spacer / Right -------- */
 #section-desktop-1 .section1-desktop-spacer {
     flex: 0 0 120px;
     min-width: 80px;
     max-width: 120px;
 }
 
-/* ------- DERECHA ------- */
 #section-desktop-1 .section1-desktop-right {
     flex: 0 1 640px;
     min-width: 300px;
@@ -173,7 +165,6 @@
     margin-right: 20px;
 }
 
-/* CONTENEDOR VIDEO Y BENEFICIOS PEGADOS */
 #section-desktop-1 .video-benefits-stack {
     width: 100%;
     max-width: 600px;
@@ -182,7 +173,7 @@
     align-items: flex-start;
 }
 
-/* VIDEO 16:9 RESTAURADO PARA DESKTOP */
+/* VIDEO 16:9 */
 #section-desktop-1 .video-embed {
     width: 100%;
     max-width: 600px;
@@ -190,7 +181,6 @@
     margin-bottom: 0;
     border-radius: 0;
     overflow: hidden;
-    display: block;
     position: relative;
     background: transparent;
 }
@@ -198,10 +188,8 @@
     width: 100%;
     height: 100%;
     border: none;
-    display: block;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     background: transparent;
     object-fit: cover;
 }
@@ -212,7 +200,6 @@
     padding: 15px 25px 20px 25px;
     border-radius: 0;
     box-shadow: none;
-    min-width: 0;
     max-width: 600px;
     width: 100%;
     text-align: left;
@@ -225,150 +212,55 @@
     font-weight: 800;
     margin-bottom: 10px;
 }
-#section-desktop-1 .benefits-box ul {
-    list-style: disc;
-    margin: 0 0 0 18px;
-    padding: 0;
-}
+#section-desktop-1 .benefits-box ul { list-style: disc; margin: 0 0 0 18px; padding: 0; }
 #section-desktop-1 .benefits-box li {
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-    color: #fff;
-    line-height: 1.4;
+    font-size: 0.9rem; margin-bottom: 5px; color: #fff; line-height: 1.4;
     font-family: 'Poppins', sans-serif;
 }
 
 /* ------- TESTIMONIOS ------- */
 #section-desktop-1 .testimonials-desktop-wide {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    max-width: 1400px;
-    width: 90vw;
-    margin: 40px auto 0 auto;
-    padding: 0;
-    text-align: center;
+    display: flex; justify-content: center; align-items: flex-start; gap: 40px;
+    max-width: 1400px; width: 90vw; margin: 40px auto 0; padding: 0; text-align: center;
 }
 #section-desktop-1 .testimonials-desktop-wide blockquote {
-    font-size: 0.95rem;
-    color: #fff;
-    border-left: 3px solid #36c1ea;
-    background: none;
-    padding: 0 0 0 15px;
-    margin: 0;
-    opacity: 0.92;
-    font-style: italic;
-    min-width: 220px;
-    max-width: 300px;
-    line-height: 1.4;
+    font-size: 0.95rem; color: #fff; border-left: 3px solid #36c1ea; background: none;
+    padding: 0 0 0 15px; margin: 0; opacity: 0.92; font-style: italic;
+    min-width: 220px; max-width: 300px; line-height: 1.4;
 }
 #section-desktop-1 .participant-attribution {
-    color: #b6b6b6;
-    font-size: 0.75rem;
-    text-align: center;
-    margin-top: 8px;
+    color: #b6b6b6; font-size: 0.75rem; text-align: center; margin-top: 8px;
 }
 
 /* --------- Responsive --------- */
 @media (max-width: 1400px) {
-    #section-desktop-1 .section1-desktop-container {
-        max-width: 85vw;
-        width: 85vw;
-    }
+    #section-desktop-1 .section1-desktop-container { max-width: 85vw; width: 85vw; }
     #section-desktop-1 .section1-desktop-right,
     #section-desktop-1 .video-benefits-stack,
     #section-desktop-1 .video-embed,
-    #section-desktop-1 .benefits-box {
-        max-width: 85vw;
-        width: 100%;
-        min-width: 0;
-    }
-    #section-desktop-1 .section1-desktop-spacer {
-        flex: 0 0 200px;
-        min-width: 150px;
-        max-width: 200px;
-    }
-    #section-desktop-1 .testimonials-desktop-wide {
-        max-width: 85vw;
-        width: 85vw;
-    }
+    #section-desktop-1 .benefits-box { max-width: 85vw; width: 100%; min-width: 0; }
+    #section-desktop-1 .section1-desktop-spacer { flex: 0 0 200px; min-width: 150px; max-width: 200px; }
+    #section-desktop-1 .testimonials-desktop-wide { max-width: 85vw; width: 85vw; }
 }
 
 @media (max-width: 1200px) {
-    #section-desktop-1 .section1-desktop-left {
-        flex: 0 1 500px;
-        min-width: 250px;
-        max-width: 500px;
-    }
-    #section-desktop-1 .section1-desktop-right {
-        flex: 0 1 540px;
-        min-width: 250px;
-        max-width: 540px;
-    }
-    #section-desktop-1 .video-benefits-stack,
-    #section-desktop-1 .video-embed,
-    #section-desktop-1 .benefits-box {
-        max-width: 540px;
-    }
-    #section-desktop-1 .countdown-item {
-        min-width: 60px;
-        height: 80px;
-    }
-    #section-desktop-1 .countdown-item span {
-        font-size: 1.5rem;
-    }
-    #section-desktop-1 .countdown-item small {
-        font-size: 0.5rem;
-    }
-    #section-desktop-1 .cta-btn {
-        max-width: 305px;
-        font-size: 1rem;
-        padding: 10px 0;
-    }
-    #section-desktop-1 .session-duration {
-        font-size: 0.8rem;
-    }
-    #section-desktop-1 .section1-desktop-spacer {
-        flex: 0 0 100px;
-        min-width: 60px;
-        max-width: 100px;
-    }
+    #section-desktop-1 .section1-desktop-left { flex: 0 1 500px; min-width: 250px; max-width: 500px; }
+    #section-desktop-1 .section1-desktop-right { flex: 0 1 540px; min-width: 250px; max-width: 540px; }
+    #section-desktop-1 .video-benefits-stack, #section-desktop-1 .video-embed, #section-desktop-1 .benefits-box { max-width: 540px; }
+    #section-desktop-1 .countdown-item { min-width: 60px; height: 80px; }
+    #section-desktop-1 .countdown-item span { font-size: 1.5rem; }
+    #section-desktop-1 .countdown-item small { font-size: 0.5rem; }
+    #section-desktop-1 .cta-btn { max-width: 305px; font-size: 1rem; padding: 10px 0; }
+    #section-desktop-1 .session-duration { font-size: 0.8rem; }
+    #section-desktop-1 .section1-desktop-spacer { flex: 0 0 100px; min-width: 60px; max-width: 100px; }
 }
 
 @media (max-width: 1100px) {
-    #section-desktop-1 .section1-desktop-container {
-        flex-direction: column;
-        gap: 40px;
-        max-width: 85vw;
-        padding-top: 44px;
-    }
-    #section-desktop-1 .section1-desktop-right,
-    #section-desktop-1 .section1-desktop-left {
-        align-items: flex-start; /* Maintain left alignment in column layout */
-        max-width: 100%;
-    }
-    #section-desktop-1 .video-benefits-stack,
-    #section-desktop-1 .video-embed,
-    #section-desktop-1 .benefits-box {
-        width: 85vw;
-        min-width: 0;
-        max-width: 85vw;
-    }
-    #section-desktop-1 .section1-desktop-spacer {
-        display: none;
-    }
-    #section-desktop-1 .testimonials-desktop-wide {
-        flex-direction: column;
-        align-items: center;
-        gap: 22px;
-        max-width: 85vw;
-        margin: 40px auto 0 auto;
-    }
+    #section-desktop-1 .section1-desktop-container { flex-direction: column; gap: 40px; max-width: 85vw; padding-top: 44px; }
+    #section-desktop-1 .section1-desktop-right, #section-desktop-1 .section1-desktop-left { align-items: flex-start; max-width: 100%; }
+    #section-desktop-1 .video-benefits-stack, #section-desktop-1 .video-embed, #section-desktop-1 .benefits-box { width: 85vw; min-width: 0; max-width: 85vw; }
+    #section-desktop-1 .section1-desktop-spacer { display: none; }
+    #section-desktop-1 .testimonials-desktop-wide { flex-direction: column; align-items: center; gap: 22px; max-width: 85vw; margin: 40px auto 0; }
 }
 
-@media (max-width: 800px) {
-    #section-desktop-1 {
-        display: none;
-    }
-}
+@media (max-width: 800px) { #section-desktop-1 { display: none; } }
