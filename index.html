@@ -1,47 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- LinkedIn para Google Tag Manager -->
-  <script type="text/javascript">
-    _linkedin_partner_id = "6834914";
-    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-  </script>
-  <script type="text/javascript">
-    (function(l) {
-      if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
-      window.lintrk.q=[]}
-      var s = document.getElementsByTagName("script")[0];
-      var b = document.createElement("script");
-      b.type = "text/javascript";b.async = true;
-      b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-      s.parentNode.insertBefore(b, s);})(window.lintrk);
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=6834914&fmt=gif" />
-  </noscript>
-
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-58QPDKK9');</script>
-  <!-- End Google Tag Manager -->
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KOETE - Programa Experto en Ti Mismo ®</title>
   <meta property="og:image" content="http://www.expertoentimismo.com/Assets/img/favicon redondo.png"/>
   <meta name="description" content="Únete al programa Experto en Ti Mismo y descubre cómo maximizar tu potencial personal y profesional con los programas de KOETE ¡Empieza hoy tu transformación!">
 
-  <!-- Google Analytics -->
+  <!-- Google Analytics (direct, minimal) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCKPF52Y8R"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-DCKPF52Y8R');
+    gtag('config', 'G-DCKPF52Y8R', { send_page_view: true });
   </script>
 
   <!-- Performance: preconnects -->
@@ -52,71 +24,61 @@
   <!-- Favicon -->
   <link rel="icon" href="Assets/img/favicon redondo.png" type="image/png">
 
-  <!-- Global Styles -->
+  <!-- CSS: Global always / Desktop only on desktop / Mobile only on mobile -->
   <link rel="stylesheet" href="Assets/CSS/Global.css">
-  <!-- Desktop Styles -->
-  <link rel="stylesheet" href="Assets/CSS/Sections.css/Desktop/Desktop.css">
-  <!-- Mobile Styles -->
-  <link rel="stylesheet" href="Assets/CSS/Sections.css/Mobile/Mobile.css">
+  <link rel="stylesheet" href="Assets/CSS/Sections.css/Desktop/Desktop.css" media="(min-width: 768px)">
+  <link rel="stylesheet" href="Assets/CSS/Sections.css/Mobile/Mobile.css" media="(max-width: 767px)">
 
-  <!-- Critical backgrounds (one source of truth; WebP + JPG fallback) -->
+  <!-- Preload hero backgrounds (only one loads thanks to media) -->
+  <link rel="preload" as="image" href="Assets/img/fondos_Mesa-de-trabajo-1-05.webp" media="(min-width:768px)" fetchpriority="high">
+  <link rel="preload" as="image" href="Assets/img/FONDOS-06.webp" media="(max-width:767px)" fetchpriority="high">
+
+  <!-- Critical backgrounds: WebP + JPG fallback -->
   <style>
-    /* Desktop background */
     @media (min-width: 768px) {
-      #section-desktop-1 {
-        background-image: image-set(
+      #section-desktop-1{
+        background-image:image-set(
           url('Assets/img/fondos_Mesa-de-trabajo-1-05.webp') type('image/webp'),
           url("Assets/img/FONDOS_Mesa de trabajo 1-05.jpg") type('image/jpeg')
         );
-        background-position: center top;
-        background-size: cover;
-        background-repeat: no-repeat;
+        background-position:center top;background-size:cover;background-repeat:no-repeat;
       }
     }
-    /* Mobile background */
     @media (max-width: 767px) {
-      #section-mobile-1 {
-        background-image: image-set(
+      #section-mobile-1{
+        background-image:image-set(
           url('Assets/img/FONDOS-06.webp') type('image/webp'),
           url('Assets/img/FONDOS-06.jpg') type('image/jpeg')
         );
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        background-position:center;background-size:cover;background-repeat:no-repeat;
       }
     }
+    /* Lite YouTube */
+    .yt-wrap{position:relative;width:100%;height:100%}
+    .yt-lite{position:absolute;inset:0;background:#000 center/cover no-repeat;cursor:pointer}
+    .yt-lite::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.25),rgba(0,0,0,0));pointer-events:none}
+    .lty-playbtn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:48px;border:0;border-radius:10px;background:rgba(0,0,0,.6)}
+    .lty-playbtn:before{content:"";display:block;margin:0 auto;width:0;height:0;border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent #fff}
+    .lty-visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);border:0}
   </style>
 </head>
 
 <body style="background: transparent; min-height: 100vh;">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58QPDKK9"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <!-- Logo fijo -->
+  <!-- Label -->
   <section id="label-section" class="label-koete-section">
     <div class="label-koete">
-      <img
-        src="Assets/img/Logo-Koete_HOME.png"
-        alt="KOETE desarrollo acelerado"
-        width="120" height="120"
-        decoding="async">
+      <img src="Assets/img/Logo-Koete_HOME.png" alt="KOETE desarrollo acelerado" width="120" height="120" decoding="async">
     </div>
   </section>
 
-  <!-- ============ SECTION 1 DESKTOP ============ -->
+  <!-- ========= DESKTOP ========= -->
   <section id="section-desktop-1" class="desktop-only">
     <div class="section1-desktop-container">
-      <!-- COLUMNA IZQUIERDA: COPY + COUNTDOWN + CTA -->
       <div class="section1-desktop-left">
-        <h2 class="hero-title">
-          Descubre qué te está frenando
+        <h2 class="hero-title">Descubre qué te está frenando
           y <span class="blue">empieza a avanzar en serio</span>
         </h2>
-        <p class="hero-subtitle">
-          Una clase en vivo que cambiará cómo te ves... y cómo actúas.
-        </p>
+        <p class="hero-subtitle">Una clase en vivo que cambiará cómo te ves... y cómo actúas.</p>
         <div class="countdown-cta-container">
           <div class="countdown-box" id="countdown-desktop">
             <div class="countdown-item"><span id="days">35</span><small>DÍAS</small></div>
@@ -125,25 +87,27 @@
             <div class="countdown-item"><span id="seconds">34</span><small>SEGUNDOS</small></div>
           </div>
           <p class="next-session">¡Próxima sesión grupal gratuita!</p>
-          <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec" class="cta-btn" id="reservaCupoBtn1">
-            ELIGE TU FECHA Y ÚNETE GRATIS
-          </a>
+          <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec" class="cta-btn" id="reservaCupoBtn1">ELIGE TU FECHA Y ÚNETE GRATIS</a>
           <p class="session-duration">Duración: 90 minutos</p>
         </div>
       </div>
-      <!-- COLUMNA INVISIBLE CENTRAL -->
+
       <div class="section1-desktop-spacer"></div>
-      <!-- COLUMNA DERECHA: VIDEO + BENEFICIOS -->
+
       <div class="section1-desktop-right">
         <div class="video-benefits-stack">
           <div class="video-embed">
-            <iframe
-              loading="lazy"
-              src="https://www.youtube.com/embed/4WalvlpryC8?si=XqN-NFYRy1Z15W-s"
-              title="Bienvenida a Experto en Ti Mismo" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+            <div class="yt-wrap">
+              <div class="yt-lite" data-ytid="4WalvlpryC8" aria-label="Reproducir video: Bienvenida a Experto en Ti Mismo">
+                <button class="lty-playbtn" aria-label="Reproducir"></button>
+                <span class="lty-visually-hidden">Reproducir video</span>
+              </div>
+            </div>
+            <noscript>
+              <iframe loading="lazy" src="https://www.youtube.com/embed/4WalvlpryC8" title="Bienvenida a Experto en Ti Mismo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0"></iframe>
+            </noscript>
           </div>
+
           <div class="benefits-box">
             <h3>¿Qué te llevas de la primera sesión de Experto en Ti Mismo?</h3>
             <ul>
@@ -156,7 +120,7 @@
         </div>
       </div>
     </div>
-    <!-- TESTIMONIOS: DEBAJO DEL CONTENEDOR PRINCIPAL -->
+
     <div class="testimonials-desktop-wide">
       <blockquote>“Muy dinámica! Me sentí muy enganchado toda la sesión y me llevo ideas para mi plan de acción para mejorar.”</blockquote>
       <blockquote>“Excelente, motivadora, inspiradora. ¡Me voy renovada! ¡¡¡Gracias!!!”</blockquote>
@@ -165,18 +129,13 @@
     <div class="participant-attribution">- Participantes Experto en Ti Mismo</div>
   </section>
 
-  <!-- ============ SECTION 1 MOBILE (ORDER MATCHES BENCHMARK) ============ -->
+  <!-- ========= MOBILE ========= -->
   <section id="section-mobile-1" class="mobile-only">
     <div class="section-mobile-container">
-      <h2 class="hero-title-mobile">
-        Descubre qué te está frenando
-        y <span class="blue">empieza a avanzar en serio</span>
-      </h2>
-      <p class="hero-subtitle-mobile">
-        Una clase en vivo que cambiará cómo te ves... y cómo actúas.
-      </p>
+      <h2 class="hero-title-mobile">Descubre qué te está frenando
+        y <span class="blue">empieza a avanzar en serio</span></h2>
+      <p class="hero-subtitle-mobile">Una clase en vivo que cambiará cómo te ves... y cómo actúas.</p>
 
-      <!-- Countdown + next-session -->
       <div class="countdown-cta-container-mobile">
         <div class="countdown-box-mobile" id="countdown-mobile">
           <div class="countdown-item-mobile"><span id="days-value">35</span><small>DÍAS</small></div>
@@ -187,24 +146,22 @@
         <p class="next-session-mobile">¡Próxima sesión grupal gratuita!</p>
       </div>
 
-      <!-- Video (now placed BEFORE CTA to match benchmark) -->
       <div class="video-embed-mobile">
-        <iframe
-          loading="lazy" width="100%" height="200"
-          src="https://www.youtube.com/embed/4WalvlpryC8?si=XqN-NFYRy1Z15W-s"
-          title="Bienvenida a Experto en Ti Mismo" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+        <div class="yt-wrap">
+          <div class="yt-lite" data-ytid="4WalvlpryC8" aria-label="Reproducir video: Bienvenida a Experto en Ti Mismo">
+            <button class="lty-playbtn" aria-label="Reproducir"></button>
+            <span class="lty-visually-hidden">Reproducir video</span>
+          </div>
+        </div>
+        <noscript>
+          <iframe loading="lazy" width="100%" height="200" src="https://www.youtube.com/embed/4WalvlpryC8" title="Bienvenida a Experto en Ti Mismo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0"></iframe>
+        </noscript>
         <a href="https://www.youtube.com" target="_blank" class="youtube-link">Mirar en YouTube</a>
       </div>
 
-      <!-- CTA + duración (moved below video) -->
-      <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec" class="cta-btn-mobile" id="ReservaCupoBtn2mobile">
-        ELIGE TU FECHA Y ÚNETE GRATIS
-      </a>
+      <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec" class="cta-btn-mobile" id="ReservaCupoBtn2mobile">ELIGE TU FECHA Y ÚNETE GRATIS</a>
       <p class="session-duration-mobile">Duración: 90 minutos</p>
 
-      <!-- Benefits -->
       <div class="benefits-box-mobile">
         <h3>¿Qué te llevas de la primera sesión?</h3>
         <ul>
@@ -215,7 +172,6 @@
         </ul>
       </div>
 
-      <!-- Testimonials -->
       <div class="testimonials-box-mobile">
         <blockquote>“Muy dinámica! Me sentí muy enganchado toda la sesión y me llevo ideas para mi plan de acción para mejorar.”</blockquote>
         <blockquote>“Excelente, motivadora, inspiradora. ¡Me voy renovada! ¡¡¡Gracias!!!”</blockquote>
@@ -223,122 +179,45 @@
       </div>
       <div class="participant-attribution-mobile">- Participantes Experto en Ti Mismo</div>
 
-      <!-- Bottom CTA -->
-      <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec"
-         class="cta-btn-mobile cta-btn-mobile--bottom"
-         id="reservaCupoBtnBottom">
-         ELIGE TU FECHA Y ÚNETE GRATIS
-      </a>
+      <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec" class="cta-btn-mobile cta-btn-mobile--bottom" id="reservaCupoBtnBottom">ELIGE TU FECHA Y ÚNETE GRATIS</a>
     </div>
   </section>
 
-  <!-- Vinculación de scripts -->
-  <script src="Assets/JS/main.js"></script>
-  <!-- Desktop Scripts -->
-  <script src="Assets/JS/Sections.js/Desktop/Desktop.js"></script>
-  <!-- Mobile Scripts -->
-  <script src="Assets/JS/Sections.js/Mobile/Mobile.js"></script>  
-  <!-- JavaScript de la animación del logo (label) -->
-  <script src="Assets/JS/Label.js"></script>
+  <!-- Scripts (all deferred) -->
+  <script src="Assets/JS/Sections.js/Desktop/Desktop.js" defer></script>
+  <script src="Assets/JS/Sections.js/Mobile/Mobile.js" defer></script>
+  <script src="Assets/JS/Label.js" defer></script>
 
-  <!-- Eventos para Google Ads y LinkedIn -->
+  <!-- Lite YouTube boot -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Legacy buttons (if present elsewhere)
-      var verInvitacionBtn = document.getElementById('verInvitacionBtn');
-      if (verInvitacionBtn) {
-        verInvitacionBtn.addEventListener('click', function() {
-          gtag('event', 'ClicenVerInvitacionMobile', {
-            'event_category': 'Mobile Button',
-            'event_label': 'Ver Invitacion',
-            'value': 1
-          });
-          console.log('Evento enviado: ClicenVerInvitacionMobile');
-        });
+    (function () {
+      function setupLite(el) {
+        var id = el.getAttribute('data-ytid');
+        el.style.backgroundImage = "url('https://i.ytimg.com/vi/" + id + "/hqdefault.jpg')";
+        el.addEventListener('click', function () {
+          var f = document.createElement('iframe');
+          f.setAttribute('loading','lazy'); f.setAttribute('allowfullscreen','');
+          f.setAttribute('title', el.getAttribute('aria-label') || 'YouTube video');
+          f.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+          Object.assign(f.style,{position:'absolute',inset:'0',width:'100%',height:'100%',border:'0'});
+          f.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+          el.parentNode.replaceChild(f, el);
+        }, { once:true });
       }
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.yt-lite').forEach(setupLite);
 
-      var reservaCupoBtn1 = document.getElementById('reservaCupoBtn1');
-      if (reservaCupoBtn1) {
-        reservaCupoBtn1.addEventListener('click', function() {
-          gtag('event', 'ClicReservaCupo1', {
-            'event_category': 'Boton',
-            'event_label': 'Reserva Tu Cupo Botón 1',
-            'value': 1
+        // GA events for CTAs
+        var ids = ['reservaCupoBtn1','ReservaCupoBtn2mobile','reservaCupoBtnBottom'];
+        ids.forEach(function(id){
+          var el = document.getElementById(id);
+          if(!el) return;
+          el.addEventListener('click', function(){
+            gtag('event','cta_click',{event_category:'CTA',event_label:id});
           });
-          console.log('Evento enviado: ClicReservaCupo1');
         });
-      }
-
-      var Verotrasfechasbtn1 = document.getElementById('Verotrasfechasbtn1');
-      if (Verotrasfechasbtn1) {
-        Verotrasfechasbtn1.addEventListener('click', function() {
-          gtag('event', 'Verotrasfechasbtn1', {
-            'event_category': 'Boton',
-            'event_label': 'Ver otras fechas Botón 1',
-            'value': 1
-          });
-          console.log('Evento enviado: ClicReservaCupo2');
-        });
-      }
-
-      var ReservaCupoBtn2mobile = document.getElementById('ReservaCupoBtn2mobile');
-      if (ReservaCupoBtn2mobile) {
-        ReservaCupoBtn2mobile.addEventListener('click', function() {
-          gtag('event', 'ReservaCupoBtn2mobile', {
-            'event_category': 'Boton',
-            'event_label': 'Reserva Tu Cupo Botón 2 (mobile top)',
-            'value': 1
-          });
-          console.log('Evento enviado: ClicReservaCupo2 (mobile top)');
-        });
-      }
-
-      // Bottom CTA event
-      var reservaCupoBtnBottom = document.getElementById('reservaCupoBtnBottom');
-      if (reservaCupoBtnBottom) {
-        reservaCupoBtnBottom.addEventListener('click', function() {
-          gtag('event', 'ReservaCupoBtn2mobile_Bottom', {
-            'event_category': 'Boton',
-            'event_label': 'Reserva Tu Cupo Botón 2 (mobile bottom)',
-            'value': 1
-          });
-          console.log('Evento enviado: ClicReservaCupo2 (mobile bottom)');
-        });
-      }
-
-      var reservaCupoBtn2 = document.getElementById('reservaCupoBtn2');
-      if (reservaCupoBtn2) {
-        reservaCupoBtn2.addEventListener('click', function() {
-          gtag('event', 'Verotrasfechasbtn1', {
-            'event_category': 'Boton',
-            'event_label': 'Reserva Tu Cupo Botón 2',
-            'value': 1
-          });
-          console.log('Evento enviado: ClicReservaCupo2');
-        });
-      }
-    });
-  </script>
-
-  <script>
-    function trackLinkedInConversion(conversionId) {
-      window.lintrk('track', { conversion_id: conversionId });
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-      var deskReservaCupoBtn1 = document.getElementById('verInvitacionBtn');
-      if (deskReservaCupoBtn1) {
-        deskReservaCupoBtn1.addEventListener('click', function() {
-          trackLinkedInConversion(19841578);
-        });
-      }
-      var deskVerOtrasFechasBtn = document.getElementById('DeskverOtrasFechasBtn');
-      if (deskVerOtrasFechasBtn) {
-        deskVerOtrasFechasBtn.addEventListener('click', function() {
-          trackLinkedInConversion(19841578);
-        });
-      }
-    });
+      });
+    })();
   </script>
 </body>
 </html>
-
