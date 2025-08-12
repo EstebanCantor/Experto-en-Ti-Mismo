@@ -15,23 +15,24 @@
   font-family: 'Poppins', sans-serif;
   color: #fff;
 
-  /* Solid fallback color + STAR BACKGROUND (absolute path, always works) */
+  /* Solid fallback color + STAR BACKGROUND (absolute path, lowercase filename) */
   background-color: #0e131a;
-  background-image: url('/Assets/img/FONDOS-06.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url('/Assets/img/fondos-06.webp') !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
 
-/* If the browser supports image-set, upgrade to WebP but keep JPG as fallback */
-@supports (background-image: image-set(url("Assets/img/fondos-06.webp") 1x)) {
+/* If you also export a JPG fallback, uncomment this block:
+@supports (background-image: image-set(url("x") 1x)) {
   #section-mobile-1 {
     background-image: image-set(
-      url('/Assets/img/FONDOS-06.webp') type('image/webp') 1x,
-      url('/Assets/img/FONDOS-06.jpg')  type('image/jpeg') 1x
-    );
+      url('/Assets/img/fondos-06.webp') type('image/webp') 1x,
+      url('/Assets/img/fondos-06.jpg')  type('image/jpeg') 1x
+    ) !important;
   }
 }
+*/
 
 /* Container */
 #section-mobile-1 .section-mobile-container {
@@ -290,5 +291,3 @@
     padding: 10px 46px 10px 12px;
   }
 }
-
-
