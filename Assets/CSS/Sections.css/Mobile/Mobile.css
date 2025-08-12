@@ -24,7 +24,7 @@
 }
 
 /* If the browser supports image-set, upgrade to WebP but keep JPG as fallback */
-@supports (background-image: image-set(url("x") 1x)) {
+@supports (background-image: image-set(url("Assets/img/fondos-06.webp") 1x)) {
   #section-mobile-1 {
     background-image: image-set(
       url('/Assets/img/FONDOS-06.webp') type('image/webp') 1x,
