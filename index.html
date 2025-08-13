@@ -7,6 +7,21 @@
   <meta property="og:image" content="http://www.expertoentimismo.com/Assets/img/favicon redondo.png"/>
   <meta name="description" content="Únete al programa Experto en Ti Mismo y descubre cómo maximizar tu potencial personal y profesional con los programas de KOETE ¡Empieza hoy tu transformación!">
 
+  <!-- Meta Pixel Code (Facebook) -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '3246343072183570');
+  fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+
   <!-- Google Analytics (direct, minimal) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCKPF52Y8R"></script>
   <script>
@@ -31,7 +46,7 @@
 
   <!-- Preload hero backgrounds (only one loads thanks to media) -->
   <link rel="preload" as="image" href="Assets/img/fondos_Mesa-de-trabajo-1-05.webp" media="(min-width:768px)" fetchpriority="high">
-  <link rel="preload" as="image" href="Assets/img/FONDOS-06.webp" media="(max-width:767px)" fetchpriority="high">
+  <link rel="preload" as="image" href="Assets/img/fondos-06.webp" media="(max-width:767px)" fetchpriority="high">
 
   <!-- Critical backgrounds: WebP + JPG fallback -->
   <style>
@@ -42,15 +57,17 @@
           url("Assets/img/FONDOS_Mesa de trabajo 1-05.jpg") type('image/jpeg')
         );
         background-position:center top;background-size:cover;background-repeat:no-repeat;
+        min-height: 100vh;
       }
     }
     @media (max-width: 767px) {
       #section-mobile-1{
         background-image:image-set(
-          url('Assets/img/FONDOS-06.webp') type('image/webp'),
-          url('Assets/img/FONDOS-06.jpg') type('image/jpeg')
+          url('Assets/img/fondos-06.webp') type('image/webp'),
+          url('Assets/img/fondos-06.jpg') type('image/jpeg')
         );
         background-position:center;background-size:cover;background-repeat:no-repeat;
+        min-height: 100vh;
       }
     }
     /* Lite YouTube */
@@ -64,6 +81,12 @@
 </head>
 
 <body style="background: transparent; min-height: 100vh;">
+  <!-- Meta Pixel (noscript image) -->
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=3246343072183570&ev=PageView&noscript=1" />
+  </noscript>
+
   <!-- Label -->
   <section id="label-section" class="label-koete-section">
     <div class="label-koete">
@@ -188,7 +211,7 @@
   <script src="Assets/JS/Sections.js/Mobile/Mobile.js" defer></script>
   <script src="Assets/JS/Label.js" defer></script>
 
-  <!-- Lite YouTube boot -->
+  <!-- Lite YouTube boot + analytics/Pixel CTA events -->
   <script>
     (function () {
       function setupLite(el) {
@@ -204,16 +227,18 @@
           el.parentNode.replaceChild(f, el);
         }, { once:true });
       }
+
       document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.yt-lite').forEach(setupLite);
 
-        // GA events for CTAs
+        // Track CTA clicks in GA + Meta Pixel
         var ids = ['reservaCupoBtn1','ReservaCupoBtn2mobile','reservaCupoBtnBottom'];
         ids.forEach(function(id){
           var el = document.getElementById(id);
           if(!el) return;
           el.addEventListener('click', function(){
-            gtag('event','cta_click',{event_category:'CTA',event_label:id});
+            try { gtag('event','cta_click',{event_category:'CTA',event_label:id}); } catch(e){}
+            try { fbq('track','Lead',{button_id:id}); } catch(e){}
           });
         });
       });
