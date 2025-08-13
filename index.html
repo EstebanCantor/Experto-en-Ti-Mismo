@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KOETE - Programa Experto en Ti Mismo ®</title>
-  <meta property="og:image" content="http://www.expertoentimismo.com/Assets/img/favicon redondo.png"/>
+  <meta property="og:image" content="http://www.expertoentimismo.com/Assets/img/favicon%20redondo.png"/>
   <meta name="description" content="Únete al programa Experto en Ti Mismo y descubre cómo maximizar tu potencial personal y profesional con los programas de KOETE ¡Empieza hoy tu transformación!">
 
   <!-- Meta Pixel Code (Facebook) -->
@@ -20,6 +20,10 @@
   fbq('init', '3246343072183570');
   fbq('track', 'PageView');
   </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=3246343072183570&ev=PageView&noscript=1" />
+  </noscript>
   <!-- End Meta Pixel Code -->
 
   <!-- Google Analytics (direct, minimal) -->
@@ -81,11 +85,6 @@
 </head>
 
 <body style="background: transparent; min-height: 100vh;">
-  <!-- Meta Pixel (noscript image) -->
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=3246343072183570&ev=PageView&noscript=1" />
-  </noscript>
 
   <!-- Label -->
   <section id="label-section" class="label-koete-section">
@@ -110,7 +109,8 @@
             <div class="countdown-item"><span id="seconds">34</span><small>SEGUNDOS</small></div>
           </div>
           <p class="next-session">¡Próxima sesión grupal gratuita!</p>
-          <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec" class="cta-btn" id="reservaCupoBtn1">ELIGE TU FECHA Y ÚNETE GRATIS</a>
+          <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec?utm_source=meta&utm_medium=paid_social&utm_campaign=etm_sesion_gratis&utm_content=cta_lp_desktop"
+             class="cta-btn" id="reservaCupoBtn1">ELIGE TU FECHA Y ÚNETE GRATIS</a>
           <p class="session-duration">Duración: 90 minutos</p>
         </div>
       </div>
@@ -179,10 +179,11 @@
         <noscript>
           <iframe loading="lazy" width="100%" height="200" src="https://www.youtube.com/embed/4WalvlpryC8" title="Bienvenida a Experto en Ti Mismo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0"></iframe>
         </noscript>
-        <a href="https://www.youtube.com" target="_blank" class="youtube-link">Mirar en YouTube</a>
+        <a href="https://www.youtube.com" target="_blank" class="youtube-link" rel="noopener">Mirar en YouTube</a>
       </div>
 
-      <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec" class="cta-btn-mobile" id="ReservaCupoBtn2mobile">ELIGE TU FECHA Y ÚNETE GRATIS</a>
+      <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec?utm_source=meta&utm_medium=paid_social&utm_campaign=etm_sesion_gratis&utm_content=cta_lp_mobile_top"
+         class="cta-btn-mobile" id="ReservaCupoBtn2mobile">ELIGE TU FECHA Y ÚNETE GRATIS</a>
       <p class="session-duration-mobile">Duración: 90 minutos</p>
 
       <div class="benefits-box-mobile">
@@ -202,7 +203,8 @@
       </div>
       <div class="participant-attribution-mobile">- Participantes Experto en Ti Mismo</div>
 
-      <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec" class="cta-btn-mobile cta-btn-mobile--bottom" id="reservaCupoBtnBottom">ELIGE TU FECHA Y ÚNETE GRATIS</a>
+      <a href="https://8vl4j1kkdr3.typeform.com/to/OZAtI6ec?utm_source=meta&utm_medium=paid_social&utm_campaign=etm_sesion_gratis&utm_content=cta_lp_mobile_bottom"
+         class="cta-btn-mobile cta-btn-mobile--bottom" id="reservaCupoBtnBottom">ELIGE TU FECHA Y ÚNETE GRATIS</a>
     </div>
   </section>
 
@@ -231,7 +233,7 @@
       document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.yt-lite').forEach(setupLite);
 
-        // Track CTA clicks in GA + Meta Pixel
+        // Track CTA clicks in GA + Meta Pixel (Lead = conversión por clic al formulario)
         var ids = ['reservaCupoBtn1','ReservaCupoBtn2mobile','reservaCupoBtnBottom'];
         ids.forEach(function(id){
           var el = document.getElementById(id);
@@ -246,3 +248,4 @@
   </script>
 </body>
 </html>
+
